@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { CtaSection } from "@/components/cta-section";
+import { Star } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Clemencia Sandoval — Co-Owner of JunkMD+ San Diego",
@@ -17,13 +18,33 @@ export default function ClemenciaPage() {
       <section className="py-12 bg-white">
         <div className="container-x grid lg:grid-cols-[1fr_2fr] gap-10">
           <div>
-            <div className="relative aspect-square rounded-xl overflow-hidden shadow-lg">
-              <Image src="/images/crew-action.jpeg" alt="Clemencia Sandoval — Co-Owner of JunkMD+" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 400px" />
+            <div className="rounded-xl overflow-hidden shadow-lg bg-gradient-to-br from-[color:var(--brand-green)] to-[color:var(--brand-green-dark)] p-8 text-center text-white">
+              <div className="bg-white/95 rounded-lg p-4 mb-4 inline-block">
+                <Image
+                  src="/images/logo.jpeg"
+                  alt="JunkMD+ logo"
+                  width={180}
+                  height={60}
+                  className="h-16 w-auto object-contain mx-auto"
+                />
+              </div>
+              <p className="font-display text-3xl uppercase text-white leading-tight">Clemencia Sandoval</p>
+              <p className="text-sm uppercase tracking-wider mt-1 opacity-95">Co-Owner · Since 2018</p>
+              <div className="flex items-center justify-center gap-1 mt-3">
+                {[1, 2, 3, 4, 5].map((i) => (
+                  <Star key={i} className="h-4 w-4 fill-white text-white" />
+                ))}
+              </div>
+              <p className="text-xs mt-2 opacity-90">Operations · Customer Care · Community</p>
             </div>
-            <div className="mt-4 p-4 rounded-lg bg-[color:var(--brand-bg-soft)] border border-[color:var(--brand-border)]">
-              <p className="font-display text-2xl uppercase">Clemencia Sandoval</p>
-              <p className="text-sm text-[color:var(--brand-green-dark)] font-bold uppercase">Co-Owner — Since 2018</p>
-              <p className="text-sm text-[color:var(--brand-text)] mt-2">Operations · Customer care · Community partnerships · Goodwill & Salvation Army outreach.</p>
+            <div className="mt-4 p-4 rounded-lg bg-[color:var(--brand-bg-soft)] border border-[color:var(--brand-border)] text-sm">
+              <p className="font-bold text-[color:var(--brand-ink)] mb-1">Quick Facts</p>
+              <ul className="space-y-1 text-[color:var(--brand-text)]">
+                <li>· Co-owner since 2018</li>
+                <li>· Background: business management &amp; customer care</li>
+                <li>· Leads ops, dispatch, and charity partnerships</li>
+                <li>· Goodwill &amp; Salvation Army donation coordinator</li>
+              </ul>
             </div>
           </div>
           <div className="prose-brand">

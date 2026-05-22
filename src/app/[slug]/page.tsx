@@ -344,12 +344,29 @@ function LocationPage({ slug }: { slug: string }) {
     { slug: "same-day-junk-removal", title: "Same-Day Service" },
   ];
 
+  const isSanDiego = l.name === "San Diego";
+  const zipList = l.zips?.join(", ") ?? "";
   const locationFaqs = [
-    { q: `Do you serve all of ${l.name}?`, a: `Yes — JunkMD+ serves every street in ${l.name}, San Diego. ${l.zips ? `Common zip codes: ${l.zips.join(", ")}.` : ""} Two-hour arrival windows Mon–Sat.` },
-    { q: `How fast can you arrive in ${l.name}?`, a: `Most weekdays we offer same-day or next-day service in ${l.name}. Call before noon for best chance of same-day.` },
-    { q: `What's the most popular service in ${l.name}?`, a: `Furniture removal, garage cleanouts, and mattress disposal are our most-requested in ${l.name}. We also handle estate cleanouts, demolition, and dumpster rentals.` },
-    { q: `Are you insured in ${l.name}?`, a: `Yes — fully insured statewide, including ${l.name} and all of San Diego County. We provide COI to landlords and property managers on request.` },
-    { q: `Do you offer the $20 first-appointment discount in ${l.name}?`, a: `Yes — every first-time JunkMD+ booking in ${l.name} earns $20 off any Small Load or larger.` },
+    {
+      q: `Do you serve all of ${l.name}?`,
+      a: `Yes — JunkMD+ serves every street in ${l.name}${isSanDiego ? "" : ", San Diego County"}.${zipList ? ` Common zip codes we cover: ${zipList}.` : ""} Two-hour arrival windows are available Monday through Saturday.`,
+    },
+    {
+      q: `How fast can you arrive in ${l.name}?`,
+      a: `Most weekdays we offer same-day or next-day service in ${l.name}. Call before noon for the best chance of same-day; next-day is almost always available. Text photos to (858) 869-9448 for the fastest quote.`,
+    },
+    {
+      q: `What's the most popular service in ${l.name}?`,
+      a: `Furniture removal, garage cleanouts, and mattress disposal are our most-requested services in ${l.name}. We also handle estate cleanouts, hoarder cleanouts, light demolition, and dumpster rentals.`,
+    },
+    {
+      q: `Are you insured for work in ${l.name}?`,
+      a: `Yes — JunkMD+ is fully insured statewide, including ${l.name} and the rest of San Diego County. We provide a Certificate of Insurance to landlords, HOAs, and property managers on request.`,
+    },
+    {
+      q: `Do you offer the $20 first-appointment discount in ${l.name}?`,
+      a: `Yes — every first-time JunkMD+ booking in ${l.name} earns $20 off any Small Load or larger. Mention it when booking or it applies automatically during the on-site quote.`,
+    },
   ];
 
   return (
@@ -389,9 +406,9 @@ function LocationPage({ slug }: { slug: string }) {
       <section className="py-12 bg-white">
         <div className="container-x grid lg:grid-cols-[2fr_1fr] gap-10">
           <div className="prose-brand max-w-none">
-            <h2>Why San Diegans in {l.name} Pick JunkMD+</h2>
+            <h2>Why {isSanDiego ? "San Diego" : `${l.name} Residents`} Pick JunkMD+</h2>
             <p>
-              {l.name} residents trust JunkMD+ because we treat every house call like the only one we're
+              {l.name} {isSanDiego ? "is our home base — we're located right on Morena Blvd in Bay Park. Locals" : "residents"} trust JunkMD+ because we treat every house call like the only one we're
               doing that day. We arrive uniformed, on time, and ready to quote a flat rate before we touch
               your stuff. Whether you're clearing a garage in {l.neighborhoods?.[0] ?? l.name} or hauling
               an old fridge out of a {l.name} rental, we make the process easy.
@@ -444,12 +461,20 @@ function LocationPage({ slug }: { slug: string }) {
                 Same-day &amp; next-day · 2-hr windows · Save $20 first appt
               </p>
             </div>
-            {l.zips && (
+            {l.zips && l.zips.length > 0 && (
               <div className="bg-white border border-[color:var(--brand-border)] rounded-xl p-5">
                 <h3 className="font-display text-lg uppercase mb-2">Zip Codes We Serve</h3>
-                <div className="flex flex-wrap gap-1.5">
+                <p className="text-sm text-[color:var(--brand-text)] mb-3">
+                  {l.zips.join(" · ")}
+                </p>
+                <div className="flex flex-wrap gap-2">
                   {l.zips.map((z) => (
-                    <span key={z} className="text-xs px-2 py-1 rounded bg-[color:var(--brand-bg-muted)]">{z}</span>
+                    <span
+                      key={z}
+                      className="inline-block text-xs font-bold px-2.5 py-1 rounded bg-[color:var(--brand-green)]/10 text-[color:var(--brand-green-dark)] border border-[color:var(--brand-green)]/30"
+                    >
+                      {z}
+                    </span>
                   ))}
                 </div>
               </div>
