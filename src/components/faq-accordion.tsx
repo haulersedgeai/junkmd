@@ -7,7 +7,7 @@ export interface FaqItem {
   a: string;
 }
 
-function ToggleGlyph() {
+function PlusToggle() {
   return (
     <span
       aria-hidden="true"
@@ -21,47 +21,24 @@ function ToggleGlyph() {
 
 export function FaqAccordion({ items, title }: { items: FaqItem[]; title?: string }) {
   return (
-    <section className="section bg-paper-pure border-y border-border">
-      <div className="container-x max-w-4xl mx-auto">
+    <section className="section bg-bg">
+      <div className="container-x max-w-3xl mx-auto">
         {title && (
-          <div className="mb-12">
-            <p className="eyebrow mb-4">Questions, answered</p>
-            <h2
-              style={{
-                fontSize: "clamp(2rem, 4vw, 2.75rem)",
-                lineHeight: 1.05,
-                letterSpacing: "-0.02em",
-                fontWeight: 500,
-              }}
-            >
-              {title}
-            </h2>
+          <div className="mb-10">
+            <p className="label mb-3">Questions, answered</p>
+            <h2>{title}</h2>
           </div>
         )}
         <Accordion.Root type="single" collapsible className="border-t border-border">
           {items.map((item, i) => (
-            <Accordion.Item
-              key={i}
-              value={String(i)}
-              className="border-b border-border group"
-            >
+            <Accordion.Item key={i} value={String(i)} className="border-b border-border group">
               <Accordion.Header>
-                <Accordion.Trigger
-                  className="group flex w-full items-center justify-between gap-6 py-6 text-left transition-colors"
-                  style={{ cursor: "pointer" }}
-                >
-                  <span
-                    className="text-ink text-[17px]"
-                    style={{ fontWeight: 500, letterSpacing: "-0.005em" }}
-                  >
-                    {item.q}
-                  </span>
-                  <ToggleGlyph />
+                <Accordion.Trigger className="flex w-full items-center justify-between gap-6 py-4 text-left transition-colors" style={{ cursor: "pointer" }}>
+                  <span className="text-ink text-[16px]" style={{ fontWeight: 500, letterSpacing: "-0.005em" }}>{item.q}</span>
+                  <PlusToggle />
                 </Accordion.Trigger>
               </Accordion.Header>
-              <Accordion.Content className="pb-6 pr-10 text-ink-soft text-[16px] leading-relaxed">
-                {item.a}
-              </Accordion.Content>
+              <Accordion.Content className="pb-5 pr-8 text-ink-soft text-[15px] leading-[1.6]">{item.a}</Accordion.Content>
             </Accordion.Item>
           ))}
         </Accordion.Root>

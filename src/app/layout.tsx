@@ -1,25 +1,25 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Fraunces } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
-import { Save20Bar } from "@/components/save-20-bar";
+import { AnnouncementBar } from "@/components/announcement-bar";
 import { MobileStickyCTA } from "@/components/mobile-sticky-cta";
 import { JsonLd } from "@/components/json-ld";
 import { localBusinessSchema } from "@/lib/jsonld";
 import { PRODUCTION_URL, SITE } from "@/lib/constants";
 
-const inter = Inter({
-  variable: "--font-inter",
+const geistSans = Geist({
+  variable: "--font-geist-sans",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   display: "swap",
 });
 
-const fraunces = Fraunces({
-  variable: "--font-fraunces",
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
   subsets: ["latin"],
-  axes: ["SOFT", "opsz"],
+  weight: ["400", "500"],
   display: "swap",
 });
 
@@ -47,40 +47,31 @@ export const metadata: Metadata = {
     url: PRODUCTION_URL,
     siteName: SITE.name,
     title: `${SITE.name} — ${SITE.tagline}`,
-    description:
-      "Same-day and next-day junk removal in San Diego. Flat-rate pricing. Save $20 on your first appointment.",
+    description: "Same-day junk removal in San Diego. Flat-rate pricing. Save $20 on your first appointment.",
     images: [{ url: "/images/truck-hero.webp", width: 1024, height: 534 }],
   },
   twitter: {
     card: "summary_large_image",
     title: `${SITE.name} — ${SITE.tagline}`,
-    description: "Same-day and next-day junk removal in San Diego. Save $20 on your first appointment.",
+    description: "Same-day junk removal in San Diego. Save $20 on your first appointment.",
     images: ["/images/truck-hero.webp"],
   },
-  icons: {
-    icon: "/images/favicon-src.jpg",
-    apple: "/images/favicon-src.jpg",
-  },
+  icons: { icon: "/images/favicon-src.jpg", apple: "/images/favicon-src.jpg" },
   robots: { index: true, follow: true },
 };
 
 export const viewport: Viewport = {
-  themeColor: "#0E1A0E",
+  themeColor: "#0A0A0A",
   width: "device-width",
   initialScale: 1,
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{ children: React.ReactNode }>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html
-      lang="en"
-      className={`${inter.variable} ${fraunces.variable} h-full`}
-    >
-      <body className="min-h-full flex flex-col bg-paper text-ink">
+    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} h-full`}>
+      <body className="min-h-full flex flex-col bg-bg text-ink font-sans">
         <JsonLd id="ld-business" data={localBusinessSchema()} />
-        <Save20Bar />
+        <AnnouncementBar />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

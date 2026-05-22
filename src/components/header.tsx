@@ -13,55 +13,41 @@ const NAV = [
     href: "/about",
     items: [
       { label: "About JunkMD+", href: "/about" },
-      { label: "Our Company", href: "/our-company" },
-      { label: "Why Choose Us", href: "/why-choose-us" },
+      { label: "Our company", href: "/our-company" },
+      { label: "Why choose us", href: "/why-choose-us" },
       { label: "David Leddick — Owner", href: "/david-leddick" },
       { label: "Clemencia Sandoval — Co-Owner", href: "/clemencia-sandoval" },
       { label: "Careers", href: "/careers" },
     ],
   },
   {
-    label: "Junk Removal",
+    label: "Services",
     href: "/junk-removal-services",
     items: [
       { label: "Residential", href: "/residential-junk-removal" },
       { label: "Commercial", href: "/commercial-junk-removal" },
-      { label: "Furniture Removal", href: "/furniture-removal" },
-      { label: "Appliance Removal", href: "/appliance-removal" },
-      { label: "Mattress Disposal", href: "/mattress-disposal" },
-      { label: "Estate Cleanout", href: "/estate-cleanout" },
-      { label: "Hoarder Cleanouts", href: "/hoarder-cleanouts" },
-      { label: "Garage Cleanout", href: "/garage-cleanout" },
-      { label: "Yard Waste Removal", href: "/yard-waste-removal" },
-      { label: "Hot Tub Removal", href: "/hot-tub-removal" },
-      { label: "What We Take →", href: "/what-we-take" },
+      { label: "Furniture removal", href: "/furniture-removal" },
+      { label: "Appliance removal", href: "/appliance-removal" },
+      { label: "Mattress disposal", href: "/mattress-disposal" },
+      { label: "Estate cleanout", href: "/estate-cleanout" },
+      { label: "Hoarder cleanouts", href: "/hoarder-cleanouts" },
+      { label: "Demolition", href: "/demolition-cleanup" },
+      { label: "Eco-friendly", href: "/eco-friendly-junk-removal" },
+      { label: "What we take →", href: "/what-we-take" },
     ],
   },
   {
     label: "Dumpsters",
     href: "/dumpster-rental-services",
     items: [
-      { label: "Sizes & Pricing", href: "/dumpster-sizes-pricing" },
-      { label: "10-Yard Dumpster", href: "/10-yard-dumpster-rental" },
-      { label: "30-Yard Dumpster", href: "/30-yard-dumpster-rental" },
-      { label: "40-Yard Dumpster", href: "/40-yard-dumpster-rental" },
-      { label: "Residential Dumpsters", href: "/residential-dumpster-rentals" },
-      { label: "Commercial Dumpsters", href: "/commercial-dumpster-rentals" },
-      { label: "Construction Dumpsters", href: "/construction-dumpster-rental" },
-      { label: "Book a Dumpster →", href: "/book-a-dumpster" },
-    ],
-  },
-  {
-    label: "Demolition",
-    href: "/demolition-cleanup",
-    items: [
-      { label: "Light Demolition", href: "/demolition-cleanup" },
-      { label: "Shed Demolition", href: "/shed-demolition" },
-      { label: "Deck Removal", href: "/deck-removal" },
-      { label: "Fence Removal", href: "/fence-removal" },
-      { label: "Concrete Removal", href: "/concrete-removal" },
-      { label: "Kitchen Demolition", href: "/kitchen-demolition" },
-      { label: "Bathroom Demolition", href: "/bathroom-demolition" },
+      { label: "Sizes & pricing", href: "/dumpster-sizes-pricing" },
+      { label: "10-yard dumpster", href: "/10-yard-dumpster-rental" },
+      { label: "30-yard dumpster", href: "/30-yard-dumpster-rental" },
+      { label: "40-yard dumpster", href: "/40-yard-dumpster-rental" },
+      { label: "Residential", href: "/residential-dumpster-rentals" },
+      { label: "Commercial", href: "/commercial-dumpster-rentals" },
+      { label: "Construction", href: "/construction-dumpster-rental" },
+      { label: "Book a dumpster →", href: "/book-a-dumpster" },
     ],
   },
   {
@@ -76,11 +62,10 @@ const NAV = [
       { label: "Coronado", href: "/junk-removal-coronado" },
       { label: "Encinitas", href: "/junk-removal-encinitas" },
       { label: "Poway", href: "/junk-removal-poway" },
-      { label: "All Locations →", href: "/locations" },
+      { label: "All locations →", href: "/locations" },
     ],
   },
   { label: "Pricing", href: "/pricing", items: [] },
-  { label: "Contact", href: "/contact", items: [] },
 ];
 
 export function Header() {
@@ -88,13 +73,13 @@ export function Header() {
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
 
   return (
-    <header className="sticky top-0 z-40 w-full border-b border-border bg-paper/95 backdrop-blur">
-      <div className="container-x flex h-[72px] items-center justify-between gap-6">
+    <header className="sticky top-0 z-40 w-full border-b border-border bg-bg/90 backdrop-blur-md">
+      <div className="container-x flex h-16 items-center justify-between gap-6">
         <Link href="/" className="shrink-0" aria-label="JunkMD+ home">
           <Wordmark size="lg" />
         </Link>
 
-        {/* Desktop nav */}
+        {/* Desktop nav — center */}
         <nav className="hidden lg:flex items-center gap-1 text-[14px]">
           {NAV.map((item) =>
             item.items.length > 0 ? (
@@ -106,23 +91,24 @@ export function Header() {
               >
                 <Link
                   href={item.href}
-                  className="inline-flex items-center gap-1 px-3 py-2 font-medium text-ink hover:text-brand-dark transition-colors"
+                  className="inline-flex items-center gap-1 px-3 py-2 text-ink-soft hover:text-ink transition-colors"
+                  style={{ fontWeight: 500 }}
                 >
                   {item.label}
-                  <ChevronDown className="h-3.5 w-3.5 opacity-60" />
+                  <ChevronDown className="h-3 w-3 opacity-60" />
                 </Link>
                 <div
                   className={cn(
-                    "absolute left-0 top-full pt-1 transition-opacity duration-150",
+                    "absolute left-0 top-full pt-2 transition-opacity duration-150",
                     activeMenu === item.label ? "opacity-100 visible" : "opacity-0 invisible",
                   )}
                 >
-                  <div className="min-w-[260px] rounded-lg border border-border bg-paper-pure shadow-xl py-2">
+                  <div className="min-w-[260px] rounded-[12px] border border-border bg-bg py-1.5" style={{ boxShadow: "var(--shadow-md)" }}>
                     {item.items.map((sub) => (
                       <Link
                         key={sub.href}
                         href={sub.href}
-                        className="block px-4 py-2 text-[14px] text-ink-soft hover:bg-cream hover:text-ink transition-colors"
+                        className="block px-4 py-2 text-[14px] text-ink-soft hover:bg-bg-soft hover:text-ink transition-colors"
                       >
                         {sub.label}
                       </Link>
@@ -134,7 +120,8 @@ export function Header() {
               <Link
                 key={item.label}
                 href={item.href}
-                className="px-3 py-2 font-medium text-ink hover:text-brand-dark transition-colors"
+                className="px-3 py-2 text-ink-soft hover:text-ink transition-colors"
+                style={{ fontWeight: 500 }}
               >
                 {item.label}
               </Link>
@@ -142,27 +129,26 @@ export function Header() {
           )}
         </nav>
 
-        {/* Right CTAs */}
+        {/* Right side */}
         <div className="hidden md:flex items-center gap-4 shrink-0">
           <a
             href={`tel:${SITE.phoneRaw}`}
-            className="inline-flex items-center gap-2 text-[14px] text-ink hover:text-brand-dark"
-            style={{ fontWeight: 500 }}
+            className="inline-flex items-center gap-2 text-[13px] text-ink hover:text-brand-dark transition-colors"
+            style={{ fontFamily: "var(--font-geist-mono), monospace", fontWeight: 500 }}
           >
-            <Phone className="h-4 w-4" />
+            <Phone className="h-3.5 w-3.5" />
             {SITE.phone}
           </a>
           <a
             href={SITE.bookingUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn btn-primary"
+            className="btn btn-accent"
           >
-            Book online
+            Book now
           </a>
         </div>
 
-        {/* Mobile menu button */}
         <button
           type="button"
           onClick={() => setOpen(!open)}
@@ -176,14 +162,15 @@ export function Header() {
       {/* Mobile drawer */}
       <div
         className={cn(
-          "lg:hidden border-t border-border bg-paper-pure overflow-hidden transition-[max-height] duration-300",
+          "lg:hidden border-t border-border bg-bg overflow-hidden transition-[max-height] duration-300",
           open ? "max-h-[85vh] overflow-y-auto" : "max-h-0",
         )}
       >
         <nav className="container-x py-4">
           <a
             href={`tel:${SITE.phoneRaw}`}
-            className="flex items-center gap-2 py-3 font-medium text-ink"
+            className="flex items-center gap-2 py-3 text-ink"
+            style={{ fontFamily: "var(--font-geist-mono), monospace", fontWeight: 500 }}
           >
             <Phone className="h-4 w-4" />
             {SITE.phone}
@@ -192,24 +179,24 @@ export function Header() {
             href={SITE.bookingUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn btn-primary w-full mb-4"
+            className="btn btn-accent w-full mb-4"
           >
-            Book online
+            Book now
           </a>
           {NAV.map((section) => (
-            <details key={section.label} className="border-t border-border py-2 group">
-              <summary className="font-medium text-[15px] py-2 cursor-pointer list-none flex items-center justify-between text-ink">
+            <details key={section.label} className="border-t border-border py-1 group">
+              <summary className="text-[15px] py-3 cursor-pointer list-none flex items-center justify-between text-ink" style={{ fontWeight: 500 }}>
                 <Link href={section.href} onClick={() => setOpen(false)}>{section.label}</Link>
                 {section.items.length > 0 && <ChevronDown className="h-4 w-4 transition-transform group-open:rotate-180" />}
               </summary>
               {section.items.length > 0 && (
-                <div className="pl-3 py-1">
+                <div className="pl-3 pb-2">
                   {section.items.map((sub) => (
                     <Link
                       key={sub.href}
                       href={sub.href}
                       onClick={() => setOpen(false)}
-                      className="block py-1.5 text-[14px] text-ink-soft"
+                      className="block py-2 text-[14px] text-ink-soft"
                     >
                       {sub.label}
                     </Link>

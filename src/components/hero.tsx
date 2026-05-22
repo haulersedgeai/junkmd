@@ -7,7 +7,7 @@ export function Hero({
   badge,
   title,
   subtitle,
-  ctaPrimary = { label: "Book online", href: SITE.bookingUrl, external: true },
+  ctaPrimary = { label: "Book now", href: SITE.bookingUrl, external: true },
   ctaSecondary = { label: `Call ${SITE.phone}`, href: `tel:${SITE.phoneRaw}` },
   image = "/images/truck-hero.webp",
   imageAlt = "JunkMD+ green junk removal truck in San Diego",
@@ -21,81 +21,59 @@ export function Hero({
   imageAlt?: string;
 }) {
   return (
-    <section className="relative isolate overflow-hidden bg-ink text-paper">
-      {/* Background image with ink overlay */}
-      <div className="absolute inset-0 -z-10">
-        <Image
-          src={image}
-          alt=""
-          aria-hidden="true"
-          fill
-          priority
-          className="object-cover img-soft"
-          sizes="100vw"
-        />
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              "linear-gradient(180deg, rgba(14,26,14,0.45) 0%, rgba(14,26,14,0.35) 40%, rgba(14,26,14,0.75) 100%)",
-          }}
-        />
-      </div>
-
-      <div className="container-x relative min-h-[78vh] md:min-h-[640px] flex flex-col justify-end pt-32 pb-20 md:pt-40 md:pb-28">
-        <div className="max-w-3xl">
-          {badge && (
-            <p className="eyebrow eyebrow-on-dark mb-6">{badge}</p>
-          )}
-          <h1
-            className="text-paper"
-            style={{
-              fontSize: "clamp(2.5rem, 6vw, 4.75rem)",
-              lineHeight: 1.02,
-              letterSpacing: "-0.025em",
-              fontWeight: 600,
-              fontVariationSettings: "'opsz' 144, 'SOFT' 60",
-              maxWidth: "20ch",
-            }}
-          >
-            {title}
-          </h1>
-          {subtitle && (
-            <p
-              className="mt-6 max-w-2xl text-paper/85"
-              style={{ fontSize: "1.125rem", lineHeight: 1.55 }}
-            >
-              {subtitle}
-            </p>
-          )}
-          <div className="mt-8 flex flex-wrap gap-3">
-            {ctaPrimary.external ? (
-              <a
-                href={ctaPrimary.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-on-dark"
-              >
-                {ctaPrimary.label}
-              </a>
-            ) : (
-              <Link href={ctaPrimary.href} className="btn btn-on-dark">
-                {ctaPrimary.label}
-              </Link>
+    <section className="relative overflow-hidden hero-mesh">
+      <div className="container-x section-hero">
+        <div className="grid lg:grid-cols-[1.1fr_1fr] gap-12 lg:gap-16 items-center">
+          <div className="max-w-[640px]">
+            <span className="pill pill-outline mb-6">
+              <span className="text-brand-dark">★</span>
+              <span className="text-ink">5.0</span>
+              <span className="text-muted">·</span>
+              <span className="text-ink-soft">{SITE.reviews.google.count.toLocaleString()} Google reviews</span>
+            </span>
+            <h1 className="display text-ink">{title}</h1>
+            {subtitle && (
+              <p className="mt-5 text-[18px] leading-[1.55] text-ink-soft max-w-[560px]">{subtitle}</p>
             )}
-            <a href={ctaSecondary.href} className="btn btn-ghost-on-dark">
-              <Phone className="h-4 w-4" />
-              {ctaSecondary.label}
-            </a>
+            <div className="mt-8 flex flex-wrap gap-3">
+              {ctaPrimary.external ? (
+                <a
+                  href={ctaPrimary.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-accent btn-lg"
+                >
+                  {ctaPrimary.label}
+                </a>
+              ) : (
+                <Link href={ctaPrimary.href} className="btn btn-accent btn-lg">
+                  {ctaPrimary.label}
+                </Link>
+              )}
+              <a href={ctaSecondary.href} className="btn btn-ghost btn-lg">
+                <Phone className="h-4 w-4" />
+                {ctaSecondary.label}
+              </a>
+            </div>
+            <p
+              className="mt-6 text-[13px] text-muted"
+              style={{ fontFamily: "var(--font-geist-mono), monospace" }}
+            >
+              $99 minimum · Free estimates · Licensed &amp; insured
+              {badge && <> · {badge}</>}
+            </p>
           </div>
-          <p className="mt-6 text-[13px] text-paper/65">
-            <span className="text-brand">★★★★★</span>{" "}
-            {SITE.reviews.google.count.toLocaleString()}+ reviews on Google
-            <span className="mx-2">·</span>
-            {SITE.reviews.yelp.count}+ on Yelp
-            <span className="mx-2">·</span>
-            Family-owned since 2012
-          </p>
+
+          <div className="relative aspect-[5/4] w-full card-hero overflow-hidden">
+            <Image
+              src={image}
+              alt={imageAlt}
+              fill
+              priority
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover"
+            />
+          </div>
         </div>
       </div>
     </section>

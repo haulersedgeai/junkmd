@@ -1,110 +1,101 @@
 /**
- * JunkMD+ Wordmark — v2 inline SVG/text hybrid.
- *
- * "JunkMD" rendered in Fraunces (CSS-controlled for crisp font rendering)
- * with a refined medical-cross "+" glyph as inline SVG positioned at the
- * upper-right of the "D" — reads as a clinical mark, not punctuation.
+ * Wordmark — Geist 700 "JunkMD" + custom medical-cross "+" glyph.
  *
  * Sizes:
- *  - lg: header use
- *  - sm: footer / compact contexts
- *  - mono: just the "+" inside a green-outlined ink circle (favicon, og:image, dense)
+ *  - lg: header (~32px tall)
+ *  - sm: footer (~22px)
+ *  - mark: just the "+" inside a 1px ink-bordered circle
  */
 
 import { cn } from "@/lib/utils";
 
 interface Props {
-  size?: "lg" | "sm" | "mono";
-  variant?: "ink" | "paper"; // paper variant = light text for dark backgrounds
+  size?: "lg" | "sm" | "mark";
+  variant?: "ink" | "paper"; // paper = white text for dark backgrounds
   className?: string;
 }
 
-const STROKE = "currentColor";
-
-function CrossGlyph({ size = 16 }: { size?: number }) {
-  // Vertical and horizontal equal-stroke cross in brand green.
-  // Drawn as two thin rectangles, centered, designed to read as medical.
+function Cross({ size = 16, color = "var(--brand)" }: { size?: number; color?: string }) {
+  // Two equal-weight rounded strokes in green — refined medical cross.
   const s = size;
-  const t = Math.max(2, Math.round(s * 0.18)); // stroke thickness
+  const t = Math.max(2, Math.round(s * 0.22)); // stroke thickness
   return (
     <svg
       viewBox={`0 0 ${s} ${s}`}
       width={s}
       height={s}
       aria-hidden="true"
-      style={{ display: "inline-block" }}
+      style={{ display: "block" }}
     >
-      {/* vertical bar */}
-      <rect
-        x={(s - t) / 2}
-        y={s * 0.08}
-        width={t}
-        height={s * 0.84}
-        rx={t * 0.2}
-        fill="var(--brand)"
+      <line
+        x1={s / 2}
+        y1={s * 0.1}
+        x2={s / 2}
+        y2={s * 0.9}
+        stroke={color}
+        strokeWidth={t}
+        strokeLinecap="round"
       />
-      {/* horizontal bar */}
-      <rect
-        x={s * 0.08}
-        y={(s - t) / 2}
-        width={s * 0.84}
-        height={t}
-        rx={t * 0.2}
-        fill="var(--brand)"
+      <line
+        x1={s * 0.1}
+        y1={s / 2}
+        x2={s * 0.9}
+        y2={s / 2}
+        stroke={color}
+        strokeWidth={t}
+        strokeLinecap="round"
       />
     </svg>
   );
 }
 
 export function Wordmark({ size = "lg", variant = "ink", className }: Props) {
-  const color = variant === "paper" ? "var(--paper)" : "var(--ink)";
+  const color = variant === "paper" ? "#FFFFFF" : "var(--ink)";
 
-  if (size === "mono") {
+  if (size === "mark") {
     return (
       <span
-        aria-label="JunkMD+ mark"
+        aria-label="JunkMD+"
         className={cn("inline-flex items-center justify-center", className)}
       >
-        <svg viewBox="0 0 48 48" width="48" height="48" aria-hidden="true">
-          <circle cx="24" cy="24" r="22" fill={color} />
-          <circle cx="24" cy="24" r="22" fill="none" stroke="var(--brand)" strokeWidth="2" />
-          <rect x="21" y="11" width="6" height="26" rx="1.5" fill="var(--brand)" />
-          <rect x="11" y="21" width="26" height="6" rx="1.5" fill="var(--brand)" />
+        <svg viewBox="0 0 40 40" width="40" height="40" aria-hidden="true">
+          <circle cx="20" cy="20" r="19" fill="none" stroke={color} strokeWidth="1" />
+          <line x1="20" y1="11" x2="20" y2="29" stroke="var(--brand)" strokeWidth="3" strokeLinecap="round" />
+          <line x1="11" y1="20" x2="29" y2="20" stroke="var(--brand)" strokeWidth="3" strokeLinecap="round" />
         </svg>
       </span>
     );
   }
 
-  const fontSize = size === "lg" ? "1.875rem" : "1.25rem";
-  const crossPx = size === "lg" ? 14 : 10;
-  const lineHeight = "1";
+  const isLg = size === "lg";
+  const fontSize = isLg ? "26px" : "18px";
+  const crossPx = isLg ? 13 : 9;
+  const marginLeft = isLg ? "3px" : "2px";
+  const marginTop = isLg ? "1px" : "0";
 
   return (
     <span
       aria-label="JunkMD+"
-      className={cn("inline-flex items-baseline gap-0", className)}
+      className={cn("inline-flex items-start gap-0 leading-none", className)}
       style={{
-        fontFamily: "var(--font-fraunces), Georgia, serif",
+        fontFamily: "var(--font-geist-sans), system-ui, sans-serif",
         fontWeight: 700,
         fontSize,
-        lineHeight,
         color,
-        letterSpacing: "-0.025em",
-        fontVariationSettings: "'opsz' 96, 'SOFT' 50",
+        letterSpacing: "-0.03em",
       }}
     >
       <span>JunkMD</span>
       <span
         style={{
           display: "inline-flex",
-          alignSelf: "flex-start",
-          marginLeft: size === "lg" ? "2px" : "1px",
-          marginTop: size === "lg" ? "1px" : "0px",
+          marginLeft,
+          marginTop,
           lineHeight: 0,
         }}
         aria-hidden="true"
       >
-        <CrossGlyph size={crossPx} />
+        <Cross size={crossPx} />
       </span>
     </span>
   );

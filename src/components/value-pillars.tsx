@@ -1,51 +1,28 @@
 import { VALUE_PILLARS } from "@/lib/constants";
 
-function PlusMark() {
+function PlusGlyph() {
   return (
-    <svg viewBox="0 0 14 14" width="14" height="14" aria-hidden="true" className="shrink-0">
-      <rect x="6" y="0" width="2" height="14" rx="0.5" fill="var(--brand)" />
-      <rect x="0" y="6" width="14" height="2" rx="0.5" fill="var(--brand)" />
+    <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
+      <line x1="8" y1="2" x2="8" y2="14" stroke="var(--brand)" strokeWidth="2.5" strokeLinecap="round" />
+      <line x1="2" y1="8" x2="14" y2="8" stroke="var(--brand)" strokeWidth="2.5" strokeLinecap="round" />
     </svg>
   );
 }
 
 export function ValuePillars() {
   return (
-    <section className="section bg-paper">
+    <section className="section bg-bg">
       <div className="container-x">
-        <div className="max-w-2xl mb-16 md:mb-20">
-          <p className="eyebrow mb-4">Why JunkMD+</p>
-          <h2
-            style={{
-              fontSize: "clamp(2rem, 4vw, 3rem)",
-              lineHeight: 1.05,
-              letterSpacing: "-0.02em",
-              fontWeight: 500,
-            }}
-          >
-            A service standard you'd expect from a doctor's office, not a hauler.
-          </h2>
+        <div className="max-w-2xl mb-14">
+          <p className="label mb-3">Why JunkMD+</p>
+          <h2>A standard you'd expect from a doctor, not a hauler.</h2>
         </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-12 gap-x-8 lg:gap-x-12">
-          {VALUE_PILLARS.map((pillar) => (
-            <div key={pillar.title}>
-              <div className="mb-4">
-                <PlusMark />
-              </div>
-              <h3
-                className="mb-3"
-                style={{
-                  fontFamily: "var(--font-fraunces), serif",
-                  fontSize: "1.375rem",
-                  fontWeight: 500,
-                  letterSpacing: "-0.015em",
-                  lineHeight: 1.2,
-                }}
-              >
-                {pillar.title}
-              </h3>
-              <p className="text-ink-soft text-[15px] leading-relaxed">{pillar.body}</p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-10 gap-y-10">
+          {VALUE_PILLARS.map((p) => (
+            <div key={p.title}>
+              <div className="mb-4"><PlusGlyph /></div>
+              <h3 className="mb-2" style={{ fontSize: 18, fontWeight: 600, lineHeight: 1.3 }}>{p.title}</h3>
+              <p className="text-[14px] text-muted leading-[1.55]">{p.body}</p>
             </div>
           ))}
         </div>

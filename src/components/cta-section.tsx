@@ -7,41 +7,28 @@ export function CtaSection({
 }: {
   title?: string;
   subtitle?: string;
-  variant?: "green" | "ink"; // kept for backward compat with existing callers, unused
+  variant?: "green" | "ink"; // kept for back-compat with existing callers
 }) {
   return (
-    <section className="bg-forest text-paper">
-      <div className="container-x py-24 md:py-32 grid lg:grid-cols-[1.5fr_1fr] gap-10 items-end">
-        <div>
-          <p className="eyebrow eyebrow-on-dark mb-5">Book your house call</p>
-          <h2
-            className="text-paper max-w-xl"
-            style={{
-              fontSize: "clamp(2rem, 4.5vw, 3.5rem)",
-              lineHeight: 1.05,
-              letterSpacing: "-0.025em",
-              fontWeight: 500,
-              fontVariationSettings: "'opsz' 144, 'SOFT' 60",
-            }}
-          >
-            {title}
-          </h2>
-          <p className="mt-5 max-w-xl text-paper/80 text-[16px] leading-relaxed">{subtitle}</p>
-        </div>
-        <div className="flex flex-col sm:flex-row lg:flex-col gap-3 lg:items-end">
-          <a
-            href={SITE.bookingUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-on-dark w-full sm:w-auto"
-          >
-            Book online — Save $20
+    <section className="bg-ink text-white">
+      <div className="container-x section text-center">
+        <h2 className="text-white" style={{ fontSize: 32, fontWeight: 600, letterSpacing: "-0.02em", lineHeight: 1.15 }}>{title}</h2>
+        <p className="mt-4 max-w-xl mx-auto text-[16px] leading-[1.6] text-white/70">{subtitle}</p>
+        <div className="mt-8 flex flex-wrap gap-3 justify-center">
+          <a href={SITE.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn-accent btn-lg">
+            Book now
           </a>
-          <a href={`tel:${SITE.phoneRaw}`} className="btn btn-ghost-on-dark w-full sm:w-auto">
+          <a href={`tel:${SITE.phoneRaw}`} className="btn btn-ghost-white btn-lg">
             <Phone className="h-4 w-4" />
             {SITE.phone}
           </a>
         </div>
+        <p
+          className="mt-6 text-[13px] text-white/50"
+          style={{ fontFamily: "var(--font-geist-mono), monospace" }}
+        >
+          {SITE.phone} · Mon–Sat · 2-hour arrival windows
+        </p>
       </div>
     </section>
   );

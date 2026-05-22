@@ -1,6 +1,9 @@
 export function YoutubeEmbed({ id, title }: { id: string; title?: string }) {
   return (
-    <div className="relative aspect-video w-full rounded-xl overflow-hidden bg-black">
+    <div
+      className="relative aspect-video w-full overflow-hidden bg-ink border border-border"
+      style={{ borderRadius: 14, boxShadow: "var(--shadow-md)" }}
+    >
       <iframe
         src={`https://www.youtube.com/embed/${id}`}
         title={title ?? "JunkMD+ video"}
