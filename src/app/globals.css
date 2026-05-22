@@ -1,26 +1,133 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* JunkMD+ brand palette (scraped from junkmd.com) */
+  --brand-green: #88c24e;        /* rgb(136,194,78) — primary CTA */
+  --brand-green-dark: #6fa83a;   /* darker for hover */
+  --brand-green-light: #86cd91;  /* secondary, chat widget */
+  --brand-green-accent: #9ee200; /* accent */
+  --brand-ink: #1f2a17;          /* deep green-black for headings */
+  --brand-text: #333333;
+  --brand-muted: #6b7280;
+  --brand-bg: #ffffff;
+  --brand-bg-soft: #fafafa;
+  --brand-bg-muted: #f3f5f6;
+  --brand-border: #e5e7eb;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-brand: var(--brand-green);
+  --color-brand-dark: var(--brand-green-dark);
+  --color-brand-light: var(--brand-green-light);
+  --color-brand-accent: var(--brand-green-accent);
+  --color-brand-ink: var(--brand-ink);
+  --color-brand-text: var(--brand-text);
+  --color-brand-muted: var(--brand-muted);
+  --font-sans: var(--font-roboto), system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: var(--font-oswald), Impact, Haettenschweiler, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--brand-bg);
+  color: var(--brand-text);
+  font-family: var(--font-roboto), system-ui, sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-oswald), Impact, sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+  color: var(--brand-ink);
+}
+
+.font-display {
+  font-family: var(--font-oswald), Impact, sans-serif;
+}
+
+/* Reusable button helpers */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: var(--brand-green);
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  padding: 0.85rem 1.5rem;
+  border-radius: 0.375rem;
+  transition: background 150ms ease, transform 150ms ease;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.06);
+}
+.btn-primary:hover { background: var(--brand-green-dark); transform: translateY(-1px); }
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: transparent;
+  color: var(--brand-ink);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  padding: 0.85rem 1.5rem;
+  border-radius: 0.375rem;
+  border: 2px solid var(--brand-ink);
+  transition: all 150ms ease;
+}
+.btn-outline:hover { background: var(--brand-ink); color: #fff; }
+
+.btn-white {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: #ffffff;
+  color: var(--brand-ink);
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.85rem 1.5rem;
+  border-radius: 0.375rem;
+  transition: all 150ms ease;
+}
+.btn-white:hover { background: #f3f5f6; }
+
+.container-x {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 768px) {
+  .container-x { padding-left: 1.5rem; padding-right: 1.5rem; }
+}
+
+.prose-brand p { margin-bottom: 1rem; }
+.prose-brand a { color: var(--brand-green-dark); font-weight: 600; }
+.prose-brand a:hover { text-decoration: underline; }
+.prose-brand ul { list-style: disc; padding-left: 1.25rem; margin-bottom: 1rem; }
+.prose-brand ul li { margin-bottom: 0.35rem; }
+.prose-brand h2 { font-size: 1.875rem; margin-top: 2rem; margin-bottom: 1rem; }
+.prose-brand h3 { font-size: 1.5rem; margin-top: 1.75rem; margin-bottom: 0.75rem; }
+
+/* Sticky offset for mobile bottom CTA */
+@media (max-width: 768px) {
+  body { padding-bottom: 64px; }
 }
