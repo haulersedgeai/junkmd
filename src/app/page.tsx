@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ChevronRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { Hero } from "@/components/hero";
 import { ValuePillars } from "@/components/value-pillars";
 import { TruckComparison } from "@/components/truck-comparison";
@@ -18,38 +18,38 @@ import { SITE } from "@/lib/constants";
 const CATEGORY_HUBS = [
   {
     href: "/residential-junk-removal",
-    title: "Residential Junk Removal",
-    description: "Furniture, appliances, mattresses, garages, attics, basements, yards — anything in or around your home.",
+    title: "Residential junk removal",
+    description: "Furniture, appliances, mattresses, garages, attics, basements, yards. Anything in or around your home.",
     image: "/images/clear-your-space.jpg",
   },
   {
     href: "/commercial-junk-removal",
-    title: "Commercial Junk Removal",
-    description: "Offices, warehouses, restaurants, retail, property management. After-hours work, COI-ready, insured.",
+    title: "Commercial junk removal",
+    description: "Offices, warehouses, restaurants, retail, property management. After-hours work, COI-ready, fully insured.",
     image: "/images/dumpster-truck.jpg",
   },
   {
     href: "/dumpster-rental-services",
-    title: "Dumpster Rental",
-    description: "10-, 30-, 40-yard dumpsters with driveway-safe pads. Flat-rate published pricing.",
-    image: "/images/dumpster-truck.jpg",
+    title: "Dumpster rental",
+    description: "10-, 30-, and 40-yard dumpsters with driveway-safe pads. Flat-rate published pricing.",
+    image: "/images/truck-parked.webp",
   },
   {
     href: "/demolition-cleanup",
-    title: "Light Demolition",
-    description: "Sheds, decks, fences, concrete, kitchen, bath, flooring. Demo + haul in one house call.",
+    title: "Light demolition",
+    description: "Sheds, decks, fences, concrete, kitchens, bathrooms, flooring. Demo and haul in a single house call.",
     image: "/images/renovation-waste.webp",
   },
   {
     href: "/eco-friendly-junk-removal",
-    title: "Eco-Friendly Disposal",
-    description: "Donate first, recycle second, landfill last. Less than 15% of a typical haul hits a landfill.",
+    title: "Eco-friendly disposal",
+    description: "Donate first, recycle second, landfill last. Less than 15% of a typical haul reaches a landfill.",
     image: "/images/backyard.webp",
   },
   {
     href: "/what-we-take",
-    title: "What We Take",
-    description: "Pianos, safes, exercise equipment, hot tubs, cardboard, couches — if you don't want it, we can haul it.",
+    title: "What we take",
+    description: "Pianos, safes, exercise equipment, hot tubs, cardboard, couches. If you don't want it, we can probably haul it.",
     image: "/images/crew-action.jpeg",
   },
 ];
@@ -57,51 +57,50 @@ const CATEGORY_HUBS = [
 export default function HomePage() {
   return (
     <>
-      <span hidden data-page-marker="junkmd-home">page-marker:junkmd-home</span>
+      <span hidden data-page-marker="junkmd-home-v2">{/* page-marker:junkmd-home-v2 */}page-marker:junkmd-home-v2</span>
       <JsonLd id="ld-home-faq" data={faqSchema(GLOBAL_FAQS.slice(0, 6))} />
 
       <Hero
-        badge="Perfect 5-Star Rating · 1,290+ Google Reviews"
+        badge="San Diego · Since 2012"
         title={
           <>
-            <span className="text-[color:var(--brand-green-dark)]">JunkMD<sup className="text-[color:var(--brand-green)]">+</sup></span>: Top-Rated, Fast &amp; Friendly Junk Removal in San Diego.
+            Top-rated, fast, and friendly junk removal in San Diego.
           </>
         }
         subtitle={
           <>
-            With flawless reviews on Yelp &amp; Google, JunkMD+ is the best choice to remove old furniture, mattresses, appliances, e-waste, construction debris, and more.
-            If you don't want it, <strong>we can haul it.</strong>
+            JunkMD+ is the house-call approach to junk removal. Two uniformed pros, a clean green truck, a flat price quoted on site, and everything you don&rsquo;t want — gone the same day.
           </>
         }
-        ctaPrimary={{ label: "Book Now — Save $20", href: SITE.bookingUrl, external: true }}
+        ctaPrimary={{ label: "Book online", href: SITE.bookingUrl, external: true }}
         ctaSecondary={{ label: `Call ${SITE.phone}`, href: `tel:${SITE.phoneRaw}` }}
         image="/images/truck-hero.webp"
-        imageAlt="JunkMD+ green junk removal truck in San Diego"
+        imageAlt="JunkMD+ green junk removal truck on a San Diego street"
       />
 
       <ValuePillars />
 
-      <TruckComparison />
-
-      <PricingTiers />
-
-      <ProcessSteps />
-
-      <section className="py-16 bg-white">
+      {/* Service category grid */}
+      <section className="section bg-cream">
         <div className="container-x">
-          <div className="text-center mb-10 max-w-3xl mx-auto">
-            <span className="inline-block text-xs font-bold uppercase tracking-widest text-[color:var(--brand-green-dark)]">
-              What We Haul
-            </span>
-            <h2 className="font-display text-3xl sm:text-4xl uppercase mt-2 mb-3">
-              Every JunkMD+ House Call, One Page Away
+          <div className="max-w-2xl mb-16">
+            <p className="eyebrow mb-4">What we haul</p>
+            <h2
+              style={{
+                fontSize: "clamp(2rem, 4vw, 3rem)",
+                lineHeight: 1.05,
+                letterSpacing: "-0.02em",
+                fontWeight: 500,
+              }}
+            >
+              Every JunkMD+ house call, one page away.
             </h2>
-            <p className="text-[color:var(--brand-text)]">
-              Residential, commercial, dumpsters, demolition, eco-friendly, and the full "what we take" list — start with the category that fits your job.
+            <p className="mt-5 text-ink-soft text-[16px] leading-relaxed max-w-xl">
+              Residential, commercial, dumpsters, demolition, eco-friendly, and the full &ldquo;what we take&rdquo; list. Start with the category that fits your job.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
             {CATEGORY_HUBS.map((h) => (
               <ServiceCard
                 key={h.href}
@@ -113,32 +112,48 @@ export default function HomePage() {
             ))}
           </div>
 
-          <div className="text-center mt-8">
-            <Link href="/junk-removal-services" className="btn-outline">
-              See All Services
-              <ChevronRight className="h-4 w-4" />
+          <div className="mt-10">
+            <Link
+              href="/junk-removal-services"
+              className="inline-flex items-center gap-1 text-ink"
+              style={{ fontWeight: 500 }}
+            >
+              See every service
+              <ArrowUpRight className="h-4 w-4" />
             </Link>
           </div>
         </div>
       </section>
 
-      <section className="py-16 bg-[color:var(--brand-bg-soft)]">
-        <div className="container-x grid lg:grid-cols-2 gap-10 items-center">
-          <div>
-            <span className="inline-block text-xs font-bold uppercase tracking-widest text-[color:var(--brand-green-dark)] mb-2">
-              Meet JunkMD+
-            </span>
-            <h2 className="font-display text-3xl sm:text-4xl uppercase mb-3">
-              See What a JunkMD+ House Call Looks Like
+      <PricingTiers />
+
+      <TruckComparison />
+
+      <ProcessSteps />
+
+      {/* Video + copy */}
+      <section className="section bg-paper">
+        <div className="container-x grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div className="max-w-xl">
+            <p className="eyebrow mb-4">Meet JunkMD+</p>
+            <h2
+              style={{
+                fontSize: "clamp(1.875rem, 3.5vw, 2.75rem)",
+                lineHeight: 1.08,
+                letterSpacing: "-0.02em",
+                fontWeight: 500,
+              }}
+            >
+              See what a JunkMD+ house call looks like.
             </h2>
-            <p className="text-[color:var(--brand-text)] mb-4">
-              Watch a quick walk-through of exactly what we haul, how we price, and what makes the JunkMD+ house call different from every other junk-removal company in San Diego.
+            <p className="mt-5 text-ink-soft text-[16px] leading-relaxed">
+              A two-minute look at exactly what we haul, how we price, and what makes the JunkMD+ house call different from every other junk-removal company in San Diego.
             </p>
-            <ul className="space-y-2 text-sm">
-              <li>✓ Family-owned since 2012 — 15,000+ San Diego clients served</li>
-              <li>✓ Eco-friendly — we donate &amp; recycle everything we can</li>
-              <li>✓ Two-hour arrival windows, Mon–Sat</li>
-              <li>✓ Flat-rate, up-front pricing — no hidden fees</li>
+            <ul className="mt-7 space-y-2.5 text-[15px] text-ink-soft">
+              <li className="flex gap-3"><span className="text-brand mt-1">—</span> Family-owned since 2012 · 15,000+ clients served</li>
+              <li className="flex gap-3"><span className="text-brand mt-1">—</span> Eco-friendly: we donate and recycle everything we can</li>
+              <li className="flex gap-3"><span className="text-brand mt-1">—</span> Two-hour arrival windows, Mon–Sat</li>
+              <li className="flex gap-3"><span className="text-brand mt-1">—</span> Flat-rate, up-front pricing — no hidden fees</li>
             </ul>
           </div>
           <YoutubeEmbed id={SITE.youtube.homeVideoId} title="What is Junk Removal? — JunkMD+" />
@@ -147,7 +162,7 @@ export default function HomePage() {
 
       <ReviewGrid limit={6} />
 
-      <FaqAccordion title="Frequently Asked Questions" items={GLOBAL_FAQS.slice(0, 6)} />
+      <FaqAccordion title="Frequently asked." items={GLOBAL_FAQS.slice(0, 6)} />
 
       <CtaSection />
     </>

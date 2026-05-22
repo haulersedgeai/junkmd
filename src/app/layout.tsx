@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Roboto, Oswald } from "next/font/google";
+import { Inter, Fraunces } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
@@ -9,17 +9,17 @@ import { JsonLd } from "@/components/json-ld";
 import { localBusinessSchema } from "@/lib/jsonld";
 import { PRODUCTION_URL, SITE } from "@/lib/constants";
 
-const roboto = Roboto({
-  variable: "--font-roboto",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
-  weight: ["300", "400", "700"],
+  weight: ["400", "500", "600", "700"],
   display: "swap",
 });
 
-const oswald = Oswald({
-  variable: "--font-oswald",
+const fraunces = Fraunces({
+  variable: "--font-fraunces",
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
+  axes: ["SOFT", "opsz"],
   display: "swap",
 });
 
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     template: `%s | ${SITE.name}`,
   },
   description:
-    "JunkMD+ is San Diego's top-rated junk removal company. Same-day & next-day service, flat-rate pricing, eco-friendly disposal. Family-owned since 2012. Save $20 on your first appointment.",
+    "JunkMD+ is San Diego's top-rated junk removal company. Same-day and next-day service, flat-rate pricing, eco-friendly disposal. Family-owned since 2012. Save $20 on your first appointment.",
   keywords: [
     "junk removal san diego",
     "dumpster rental san diego",
@@ -48,14 +48,13 @@ export const metadata: Metadata = {
     siteName: SITE.name,
     title: `${SITE.name} — ${SITE.tagline}`,
     description:
-      "Same-day & next-day junk removal in San Diego. Flat-rate pricing. Save $20 on your first appointment.",
+      "Same-day and next-day junk removal in San Diego. Flat-rate pricing. Save $20 on your first appointment.",
     images: [{ url: "/images/truck-hero.webp", width: 1024, height: 534 }],
   },
   twitter: {
     card: "summary_large_image",
     title: `${SITE.name} — ${SITE.tagline}`,
-    description:
-      "Same-day & next-day junk removal in San Diego. Save $20 on your first appointment.",
+    description: "Same-day and next-day junk removal in San Diego. Save $20 on your first appointment.",
     images: ["/images/truck-hero.webp"],
   },
   icons: {
@@ -66,7 +65,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#88c24e",
+  themeColor: "#0E1A0E",
   width: "device-width",
   initialScale: 1,
 };
@@ -77,9 +76,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${roboto.variable} ${oswald.variable} h-full`}
+      className={`${inter.variable} ${fraunces.variable} h-full`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col bg-paper text-ink">
         <JsonLd id="ld-business" data={localBusinessSchema()} />
         <Save20Bar />
         <Header />

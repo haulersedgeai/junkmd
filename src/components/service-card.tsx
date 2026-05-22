@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ChevronRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 
 export function ServiceCard({
   href,
@@ -16,27 +16,38 @@ export function ServiceCard({
   return (
     <Link
       href={href}
-      className="group block bg-white border border-[color:var(--brand-border)] rounded-xl overflow-hidden hover:shadow-md transition-shadow"
+      className="group flex flex-col bg-paper-pure border border-border rounded-lg overflow-hidden hover:border-ink/40 transition-colors"
     >
       {image && (
-        <div className="relative aspect-[4/3]">
+        <div className="relative aspect-[5/3] overflow-hidden">
           <Image
             src={image}
-            alt={title}
+            alt=""
+            aria-hidden="true"
             fill
-            sizes="(max-width: 768px) 100vw, 33vw"
-            className="object-cover group-hover:scale-105 transition-transform duration-300"
+            sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+            className="object-cover img-soft transition-transform duration-500 group-hover:scale-105"
           />
+          <div className="absolute inset-0 bg-gradient-to-t from-ink/30 via-transparent to-transparent" aria-hidden="true" />
         </div>
       )}
-      <div className="p-5">
-        <h3 className="font-display text-lg uppercase mb-2 group-hover:text-[color:var(--brand-green-dark)] transition-colors">
+      <div className="p-6 flex-1 flex flex-col">
+        <h3
+          className="text-ink mb-2"
+          style={{
+            fontFamily: "var(--font-fraunces), serif",
+            fontSize: "1.375rem",
+            fontWeight: 500,
+            letterSpacing: "-0.015em",
+            lineHeight: 1.15,
+          }}
+        >
           {title}
         </h3>
-        <p className="text-sm text-[color:var(--brand-text)] line-clamp-3">{description}</p>
-        <span className="mt-3 inline-flex items-center gap-1 text-sm font-bold text-[color:var(--brand-green-dark)]">
-          Learn More
-          <ChevronRight className="h-3.5 w-3.5 group-hover:translate-x-0.5 transition-transform" />
+        <p className="text-[14px] text-ink-soft leading-relaxed line-clamp-3 flex-1">{description}</p>
+        <span className="mt-4 inline-flex items-center gap-1 text-[13px] text-ink" style={{ fontWeight: 500 }}>
+          Learn more
+          <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
         </span>
       </div>
     </Link>

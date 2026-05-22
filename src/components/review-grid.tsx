@@ -1,41 +1,61 @@
-import { Star } from "lucide-react";
 import { REVIEWS } from "@/content/reviews";
 import { SITE } from "@/lib/constants";
 
 export function ReviewGrid({ limit }: { limit?: number }) {
   const items = limit ? REVIEWS.slice(0, limit) : REVIEWS;
   return (
-    <section className="py-16 bg-[color:var(--brand-bg-soft)]">
+    <section className="section bg-paper">
       <div className="container-x">
-        <div className="text-center mb-10 max-w-3xl mx-auto">
-          <span className="inline-block text-xs font-bold uppercase tracking-widest text-[color:var(--brand-green-dark)]">
-            Real Reviews
-          </span>
-          <h2 className="font-display text-3xl sm:text-4xl uppercase mt-2 mb-2">
-            Hey! JunkMD+ Has a Perfect 5-Star Rating
+        <div className="max-w-2xl mb-16">
+          <p className="eyebrow mb-4">Word of mouth, in writing</p>
+          <h2
+            style={{
+              fontSize: "clamp(2rem, 4vw, 3rem)",
+              lineHeight: 1.05,
+              letterSpacing: "-0.02em",
+              fontWeight: 500,
+            }}
+          >
+            {SITE.reviews.google.count.toLocaleString()}+ five-star reviews. Here are ten of them.
           </h2>
-          <p className="text-[color:var(--brand-text)]">
-            {SITE.reviews.google.count.toLocaleString()} Google reviews · {SITE.reviews.yelp.count}+ Yelp reviews · {SITE.reviews.clientsServed.toLocaleString()}+ San Diego clients served.
+          <p className="mt-5 text-ink-soft text-[16px] leading-relaxed max-w-xl">
+            JunkMD+ is one of the most-reviewed junk removal companies in California. These are real names from the homepage Trustindex widget — paraphrased for length.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
           {items.map((r) => (
             <article
               key={r.name}
-              className="bg-white border border-[color:var(--brand-border)] rounded-xl p-5"
+              className="bg-paper-pure border border-border rounded-lg p-7 flex flex-col"
             >
-              <div className="flex items-center gap-1 mb-2">
-                {Array.from({ length: r.rating }).map((_, i) => (
-                  <Star key={i} className="h-4 w-4 fill-[color:var(--brand-green)] text-[color:var(--brand-green)]" />
-                ))}
-              </div>
-              <p className="text-sm text-[color:var(--brand-text)] leading-relaxed mb-3">
-                "{r.body}"
+              <p
+                aria-hidden="true"
+                className="text-brand mb-2"
+                style={{
+                  fontFamily: "var(--font-fraunces), serif",
+                  fontSize: "3rem",
+                  lineHeight: 0.6,
+                  fontWeight: 700,
+                  letterSpacing: "-0.02em",
+                }}
+              >
+                &ldquo;
               </p>
-              <div className="flex items-center justify-between text-xs">
-                <span className="font-bold uppercase">{r.name}</span>
-                <span className="text-[color:var(--brand-muted)]">{r.source}</span>
+              <p className="text-[15px] text-ink leading-relaxed flex-1">
+                {r.body}
+              </p>
+              <div className="mt-5 pt-4 border-t border-border flex items-center justify-between">
+                <div>
+                  <p
+                    className="text-[12px] uppercase tracking-[0.12em] text-ink"
+                    style={{ fontWeight: 600 }}
+                  >
+                    {r.name}
+                  </p>
+                  <p className="text-[12px] text-muted mt-0.5">{r.source}</p>
+                </div>
+                <span className="text-brand text-[13px] tracking-tight">★ ★ ★ ★ ★</span>
               </div>
             </article>
           ))}

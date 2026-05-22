@@ -2,50 +2,102 @@ import Image from "next/image";
 
 export function TruckComparison() {
   return (
-    <section className="py-16 bg-white">
+    <section className="section bg-paper">
       <div className="container-x">
-        <div className="text-center max-w-3xl mx-auto mb-10">
-          <span className="inline-block text-xs font-bold uppercase tracking-widest text-[color:var(--brand-green-dark)]">
-            Our Unfair Advantage
-          </span>
-          <h2 className="font-display text-3xl sm:text-4xl uppercase mt-2 mb-3">
-            One JunkMD+ Truck Load = <span className="text-[color:var(--brand-green-dark)]">Six Pickup Truck Loads</span>
+        <div className="max-w-2xl mb-16">
+          <p className="eyebrow mb-4">The math on the truck</p>
+          <h2
+            style={{
+              fontSize: "clamp(2rem, 4vw, 3rem)",
+              lineHeight: 1.05,
+              letterSpacing: "-0.02em",
+              fontWeight: 500,
+            }}
+          >
+            One JunkMD+ truck. Six pickup truck loads.
           </h2>
-          <p className="text-[color:var(--brand-text)]">
-            One trip with us. Six trips with a buddy and a borrowed truck. The math's on the truck.
+          <p className="mt-5 text-ink-soft text-[16px] leading-relaxed max-w-xl">
+            One trip with us versus six trips with a buddy and a borrowed bed. The size of our truck is the size of your weekend back.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-[1fr_auto_2fr] items-center gap-6 max-w-5xl mx-auto">
-          <div className="text-center">
-            <div className="relative aspect-square max-w-[180px] mx-auto">
-              <Image src="/images/junkmd-truck.png" alt="JunkMD+ truck" fill className="object-contain" sizes="180px" />
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto_1.6fr] items-center gap-12 lg:gap-16 max-w-5xl mx-auto">
+          {/* Single JunkMD+ truck */}
+          <figure className="text-center">
+            <div className="relative aspect-[5/3] w-full rounded-lg overflow-hidden bg-cream">
+              <Image
+                src="/images/truck-hero.webp"
+                alt="JunkMD+ truck"
+                fill
+                sizes="(max-width: 1024px) 100vw, 380px"
+                className="object-cover img-soft"
+              />
             </div>
-            <p className="font-display text-lg uppercase mt-2">1 JunkMD+ Truck</p>
-            <p className="text-sm text-[color:var(--brand-muted)]">≈ 15 cubic yards</p>
+            <figcaption
+              className="mt-5"
+              style={{
+                fontFamily: "var(--font-fraunces), serif",
+                fontSize: "1.125rem",
+                fontWeight: 500,
+                letterSpacing: "-0.01em",
+              }}
+            >
+              1 JunkMD+ truck
+            </figcaption>
+            <p className="text-[13px] text-muted mt-1">≈ 15 cubic yards</p>
+          </figure>
+
+          {/* Equals */}
+          <div
+            className="text-center text-ink-soft hidden lg:block"
+            style={{
+              fontFamily: "var(--font-fraunces), serif",
+              fontSize: "4rem",
+              fontWeight: 300,
+              lineHeight: 1,
+            }}
+          >
+            =
+          </div>
+          <div
+            className="lg:hidden text-center text-ink-soft"
+            style={{
+              fontFamily: "var(--font-fraunces), serif",
+              fontSize: "2rem",
+              fontWeight: 300,
+            }}
+          >
+            equals
           </div>
 
-          <div className="text-center">
-            <span className="font-display text-5xl text-[color:var(--brand-green)]">=</span>
-          </div>
-
-          <div className="text-center">
-            <div className="grid grid-cols-3 gap-2 max-w-[420px] mx-auto">
-              {[1, 2, 3, 4, 5, 6].map((i) => (
-                <div key={i} className="relative aspect-square">
+          {/* 6 pickup trucks */}
+          <figure className="text-center">
+            <div className="grid grid-cols-3 gap-3 max-w-md mx-auto">
+              {Array.from({ length: 6 }).map((_, i) => (
+                <div key={i} className="relative aspect-square rounded bg-cream border border-border overflow-hidden">
                   <Image
                     src="/images/pickup-truck.png"
-                    alt={`Pickup truck ${i}`}
+                    alt={`Pickup truck ${i + 1}`}
                     fill
-                    className="object-contain"
-                    sizes="140px"
+                    sizes="120px"
+                    className="object-contain p-2"
                   />
                 </div>
               ))}
             </div>
-            <p className="font-display text-lg uppercase mt-2">6 Pickup Truck Loads</p>
-            <p className="text-sm text-[color:var(--brand-muted)]">≈ 2.5 cubic yards each</p>
-          </div>
+            <figcaption
+              className="mt-5"
+              style={{
+                fontFamily: "var(--font-fraunces), serif",
+                fontSize: "1.125rem",
+                fontWeight: 500,
+                letterSpacing: "-0.01em",
+              }}
+            >
+              6 pickup truck loads
+            </figcaption>
+            <p className="text-[13px] text-muted mt-1">≈ 2.5 cubic yards each</p>
+          </figure>
         </div>
       </div>
     </section>
