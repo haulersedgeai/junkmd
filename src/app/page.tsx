@@ -57,7 +57,7 @@ const CATEGORY_HUBS = [
 export default function HomePage() {
   return (
     <>
-      {/* page-marker:junkmd-home */}
+      <span hidden data-page-marker="junkmd-home">page-marker:junkmd-home</span>
       <JsonLd id="ld-home-faq" data={faqSchema(GLOBAL_FAQS.slice(0, 6))} />
 
       <Hero
