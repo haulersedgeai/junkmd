@@ -1,13 +1,12 @@
-import Link from "next/link";
-import { ArrowRight, Check } from "lucide-react";
 import { Hero } from "@/components/hero";
-import { LogoStrip } from "@/components/logo-strip";
+import { LeadFormSection } from "@/components/lead-form-section";
 import { ValuePillars } from "@/components/value-pillars";
 import { ServiceGrid } from "@/components/service-grid";
-import { PricingTiers } from "@/components/pricing-tiers";
-import { TruckComparison } from "@/components/truck-comparison";
-import { ProcessSteps } from "@/components/process-steps";
 import { ReviewGrid } from "@/components/review-grid";
+import { EcoProcess } from "@/components/eco-process";
+import { ServiceAreasStrip } from "@/components/service-areas-strip";
+import { PricingTiers } from "@/components/pricing-tiers";
+import { ProcessSteps } from "@/components/process-steps";
 import { FaqAccordion } from "@/components/faq-accordion";
 import { CtaSection } from "@/components/cta-section";
 import { YoutubeEmbed } from "@/components/youtube-embed";
@@ -15,6 +14,7 @@ import { JsonLd } from "@/components/json-ld";
 import { GLOBAL_FAQS } from "@/content/faq";
 import { faqSchema } from "@/lib/jsonld";
 import { SITE } from "@/lib/constants";
+import { Check } from "lucide-react";
 
 const CATEGORIES = [
   {
@@ -27,13 +27,13 @@ const CATEGORIES = [
     href: "/commercial-junk-removal",
     title: "Commercial junk removal",
     description: "Offices, warehouses, restaurants, retail, property management. After-hours and COI-ready.",
-    image: "/images/dumpster-truck.jpg",
+    image: "/images/crew-action.jpeg",
   },
   {
     href: "/dumpster-rental-services",
     title: "Dumpster rental",
     description: "10-, 30-, 40-yard dumpsters. Driveway-safe pads. Flat-rate published pricing.",
-    image: "/images/truck-parked.webp",
+    image: "/images/dumpster-truck.jpg",
   },
   {
     href: "/demolition-cleanup",
@@ -51,53 +51,43 @@ const CATEGORIES = [
     href: "/what-we-take",
     title: "What we take",
     description: "Pianos, safes, exercise equipment, hot tubs, cardboard, couches. If you don't want it, we can haul it.",
-    image: "/images/crew-action.jpeg",
+    image: "/images/truck-parked.webp",
   },
 ];
 
 export default function HomePage() {
   return (
     <>
-      <span hidden data-page-marker="junkmd-home-v3">{/* page-marker:junkmd-home-v3 */}page-marker:junkmd-home-v3</span>
+      <span hidden data-page-marker="junkmd-home-v4">{/* page-marker:junkmd-home-v4 */}page-marker:junkmd-home-v4</span>
       <JsonLd id="ld-home-faq" data={faqSchema(GLOBAL_FAQS.slice(0, 6))} />
 
-      <Hero
-        title={<>Top-rated junk removal in San Diego.</>}
-        subtitle={
-          <>
-            JunkMD+ is the house-call approach to junk removal. Two uniformed pros, a flat price quoted on site, everything you don&rsquo;t want — gone the same day.
-          </>
-        }
-        ctaPrimary={{ label: "Book now", href: SITE.bookingUrl, external: true }}
-        ctaSecondary={{ label: `Call ${SITE.phone}`, href: `tel:${SITE.phoneRaw}` }}
-        image="/images/truck-hero.webp"
-        imageAlt="JunkMD+ green junk removal truck on a San Diego street"
-      />
+      <Hero />
 
-      <LogoStrip />
+      <LeadFormSection />
 
       <ValuePillars />
 
-      {/* Service category grid */}
+      {/* Service categories — photo-led cards */}
       <section className="section bg-bg-soft">
         <div className="container-x">
-          <div className="max-w-2xl mb-12 flex items-end justify-between gap-6 flex-wrap">
-            <div>
-              <p className="label mb-3">What we haul</p>
-              <h2>Every JunkMD+ house call, one page away.</h2>
-            </div>
-            <Link href="/junk-removal-services" className="inline-flex items-center gap-1 text-[14px] text-ink" style={{ fontWeight: 500 }}>
-              See every service
-              <ArrowRight className="h-4 w-4" />
-            </Link>
+          <div className="max-w-2xl mb-12">
+            <p className="label" style={{ color: "var(--brand-dark)" }}>What we haul</p>
+            <h2 className="mt-3">Whatever needs to go, we&rsquo;ll take it.</h2>
+            <p className="mt-4 text-[18px] leading-[1.55] text-ink-soft">
+              Residential, commercial, dumpsters, demolition, eco-friendly disposal. Six places to start.
+            </p>
           </div>
           <ServiceGrid items={CATEGORIES} />
         </div>
       </section>
 
-      <PricingTiers />
+      <ReviewGrid limit={6} />
 
-      <TruckComparison />
+      <EcoProcess />
+
+      <ServiceAreasStrip />
+
+      <PricingTiers />
 
       <ProcessSteps />
 
@@ -105,10 +95,10 @@ export default function HomePage() {
       <section className="section bg-bg">
         <div className="container-x grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="max-w-xl">
-            <p className="label mb-3">Meet JunkMD+</p>
-            <h2>See the JunkMD+ house call.</h2>
+            <p className="label" style={{ color: "var(--brand-dark)" }}>See it in action</p>
+            <h2 className="mt-3">Two minutes inside a JunkMD+ house call.</h2>
             <p className="mt-4 text-[18px] leading-[1.55] text-ink-soft">
-              A two-minute look at what we haul, how we price, and what makes the JunkMD+ house call different.
+              Watch what we haul, how we price, and what makes the JunkMD+ house call different from every other junk-removal company in San Diego.
             </p>
             <ul className="mt-7 space-y-3">
               {[
@@ -128,9 +118,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <ReviewGrid limit={6} />
-
-      <FaqAccordion title="Frequently asked." items={GLOBAL_FAQS.slice(0, 6)} />
+      <FaqAccordion title="Common questions." items={GLOBAL_FAQS.slice(0, 6)} />
 
       <CtaSection />
     </>

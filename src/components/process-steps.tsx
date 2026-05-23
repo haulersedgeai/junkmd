@@ -5,8 +5,8 @@ export function ProcessSteps() {
     <section className="section bg-bg-soft border-y border-border">
       <div className="container-x">
         <div className="max-w-2xl mb-14">
-          <p className="label mb-3">The house call</p>
-          <h2>Six steps from booking to done.</h2>
+          <p className="label" style={{ color: "var(--brand-dark)" }}>How it works</p>
+          <h2 className="mt-3">Your JunkMD+ house call, step by step.</h2>
         </div>
 
         <div className="relative">
