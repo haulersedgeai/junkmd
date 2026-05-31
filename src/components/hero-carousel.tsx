@@ -7,11 +7,9 @@ import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 const SLIDES = [
-  { src: "/images/trucks.webp", alt: "JunkMD+ fleet of green trucks in San Diego" },
-  { src: "/images/crew-action.jpeg", alt: "JunkMD+ crew loading a truck" },
-  { src: "/images/DSC03672.jpg", alt: "JunkMD+ crew on a San Diego job" },
-  { src: "/images/DSC03523.jpg", alt: "JunkMD+ truck at a San Diego property" },
-  { src: "/images/truck-hero.webp", alt: "JunkMD+ green junk removal truck" },
+  { src: "/images/crew-action.jpeg", alt: "JunkMD+ crew loading a truck at a San Diego job" },
+  { src: "/images/crew-hero.jpg", alt: "JunkMD+ crew on a junk removal job in San Diego" },
+  { src: "/images/trucks.webp", alt: "JunkMD+ green junk removal fleet serving San Diego County" },
 ];
 
 export function HeroCarousel() {
