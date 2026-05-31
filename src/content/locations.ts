@@ -6,6 +6,8 @@ export interface Location {
   landmarks?: string[];
   highways?: string[];
   intro: string;
+  localSections?: { heading: string; body: string }[];
+  faqOverrides?: { q: string; a: string }[];
 }
 
 const SD_LANDMARKS = ["Balboa Park", "San Diego Zoo", "USS Midway", "Petco Park", "Mission Bay"];
@@ -14,7 +16,31 @@ const COASTAL_LANDMARKS = ["Sunset Cliffs", "La Jolla Cove", "Pacific Beach Pier
 export const LOCATIONS: Location[] = [
   // ───── Existing 42 (rebuilt) ─────
   { slug: "junk-removal-san-diego", name: "San Diego", zips: ["92101", "92103", "92104", "92106"], neighborhoods: ["Downtown", "Gaslamp", "East Village", "Hillcrest", "Bankers Hill"], landmarks: SD_LANDMARKS, highways: ["I-5", "I-805", "CA-163"], intro: "San Diego — JunkMD+'s home base. From downtown high-rises to Hillcrest condos to single-family homes in Bankers Hill, we've cleared just about every kind of property in the city." },
-  { slug: "junk-removal-la-jolla", name: "La Jolla", zips: ["92037"], neighborhoods: ["La Jolla Village", "La Jolla Shores", "Bird Rock", "Mount Soledad", "Windansea"], landmarks: ["La Jolla Cove", "Scripps Pier", "Torrey Pines"], highways: ["I-5", "La Jolla Village Dr"], intro: "La Jolla cleanouts run the gamut — from oceanfront estates above Windansea to condos in The Village. We bring extra care for tight coastal driveways and gated communities." },
+  {
+    slug: "junk-removal-la-jolla",
+    name: "La Jolla",
+    zips: ["92037"],
+    neighborhoods: ["La Jolla Village", "La Jolla Shores", "Bird Rock", "Mount Soledad", "Windansea"],
+    landmarks: ["La Jolla Cove", "Scripps Pier", "Torrey Pines"],
+    highways: ["I-5", "La Jolla Village Dr"],
+    intro: "La Jolla jobs run an unusual range — oceanfront estates above Windansea, mid-century homes on Mount Soledad, condos packed into The Village. We've hauled here long enough to know the quirks: narrow streets, short steep driveways, and a lot of work sitting behind HOA gates or in buildings with freight-elevator rules. We plan for that before the truck shows up.",
+    localSections: [
+      {
+        heading: "Getting a truck into La Jolla",
+        body: "Coastal La Jolla isn't built for big trucks. Around The Village and the Shores, parking is tight and time-limited, so we scout the approach and bring the right-size vehicle rather than block a lane for an hour. On the hillside lots near Mount Soledad and Bird Rock, the challenge is driveway grade and carry distance — we'd rather send a third crew member than risk a scrape on a tight turn. In a gated community or a condo tower, tell us the gate code and elevator situation when you book and we'll handle the building's COI or reservation paperwork ahead of time.",
+      },
+      {
+        heading: "The work we do most here",
+        body: "A lot of our La Jolla jobs come through realtors and property managers prepping a home for sale, and from families clearing an estate. Both deserve a careful hand: we set keepsakes aside, document before-and-after, and donate what still has life through Goodwill and the Salvation Army rather than defaulting to the landfill. Whether it's one oceanview condo's worth of old furniture or a full multi-level estate, you get a flat quote up front and a crew that leaves the place swept.",
+      },
+    ],
+    faqOverrides: [
+      { q: "Can you handle pickups in gated La Jolla communities and condo buildings?", a: "Yes, regularly. Share the gate code, building access rules, and any elevator or COI requirements when you book, and we'll have the paperwork sorted before we arrive." },
+      { q: "Do you charge extra for the tight streets and steep driveways?", a: "No surprise surcharges. Pricing is volume-based — what you pay depends on how much we haul, not how tricky the access is. You approve the flat quote before we start." },
+      { q: "I'm a realtor on a tight listing timeline — how fast can you come?", a: "Often same or next day. A big share of our La Jolla work is listing prep and estate clear-outs on deadline. Text photos for a quick quote and we'll usually get you a 2-hour arrival window fast." },
+      { q: "What happens to items removed from a La Jolla home?", a: "We donate anything reusable to local charities, recycle what we can, and dispose of the rest responsibly. Most jobs here are furniture and household goods that are easy to rehome." },
+    ],
+  },
   { slug: "junk-removal-pacific-beach", name: "Pacific Beach", zips: ["92109"], neighborhoods: ["North PB", "Crown Point", "Mission Beach", "Sail Bay"], landmarks: ["PB Pier", "Crystal Pier", "Mission Bay"], highways: ["I-5", "Mission Bay Dr"], intro: "PB cleanouts mean tight alleys, beach-cottage stairwells, and lots of rental turnover. We know the parking rules and the alley angles." },
   { slug: "junk-removal-ocean-beach", name: "Ocean Beach", zips: ["92107"], neighborhoods: ["OB Village", "Sunset Cliffs"], landmarks: ["OB Pier", "Sunset Cliffs Natural Park"], highways: ["I-8", "Sunset Cliffs Blvd"], intro: "OB's narrow streets and beach cottages need a hauler who knows how to maneuver. JunkMD+ trucks fit where bigger trucks won't." },
   { slug: "junk-removal-point-loma", name: "Point Loma", zips: ["92106"], neighborhoods: ["La Playa", "Roseville", "Wooded Area"], landmarks: ["Cabrillo National Monument", "Liberty Station"], highways: ["I-5", "Catalina Blvd"], intro: "Point Loma homes are bigger, older, and built into the hill. Stair work is the norm — JunkMD+ trains for it." },

@@ -368,10 +368,11 @@ function LocationPage({ slug }: { slug: string }) {
       a: `Yes — every first-time JunkMD+ booking in ${l.name} earns $20 off any Small Load or larger. Mention it when booking or it applies automatically during the on-site quote.`,
     },
   ];
+  const faqs = l.faqOverrides ?? locationFaqs;
 
   return (
     <>
-      <JsonLd id="ld-faq" data={faqSchema(locationFaqs)} />
+      <JsonLd id="ld-faq" data={faqSchema(faqs)} />
       <Breadcrumbs items={[
         { label: "Home", href: "/" },
         { label: "Locations", href: "/locations" },
@@ -446,6 +447,13 @@ function LocationPage({ slug }: { slug: string }) {
 
             <h2>Save $20 on Your First {l.name} House Call</h2>
             <p>First-time JunkMD+ customers in {l.name} save $20 on any Small Load or larger. Mention it when booking or it'll apply automatically.</p>
+
+            {l.localSections?.map((section) => (
+              <div key={section.heading}>
+                <h2>{section.heading}</h2>
+                <p>{section.body}</p>
+              </div>
+            ))}
           </div>
 
           <aside className="lg:sticky lg:top-24 self-start space-y-4">
@@ -502,7 +510,7 @@ function LocationPage({ slug }: { slug: string }) {
         </div>
       </section>
 
-      <FaqAccordion title={`FAQ — Junk Removal in ${l.name}`} items={locationFaqs} />
+      <FaqAccordion title={`FAQ — Junk Removal in ${l.name}`} items={faqs} />
 
       <ReviewGrid limit={3} />
 
