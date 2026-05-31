@@ -3,6 +3,24 @@ import Image from "next/image";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { Wordmark } from "@/components/wordmark";
 import { SITE } from "@/lib/constants";
+import { LOCATION_BY_SLUG } from "@/content/locations";
+
+const FOOTER_AREA_SLUGS = [
+  "junk-removal-san-diego",
+  "junk-removal-la-jolla",
+  "junk-removal-pacific-beach",
+  "junk-removal-coronado",
+  "junk-removal-del-mar",
+  "junk-removal-carlsbad",
+  "junk-removal-encinitas",
+  "junk-removal-poway",
+  "junk-removal-el-cajon",
+  "junk-removal-chula-vista",
+  "junk-removal-oceanside",
+  "junk-removal-escondido",
+] as const;
+
+const FOOTER_AREAS = FOOTER_AREA_SLUGS.map((slug) => LOCATION_BY_SLUG[slug]);
 
 export function Footer() {
   return (
@@ -77,6 +95,23 @@ export function Footer() {
           >
             Book online
           </a>
+        </div>
+      </div>
+
+      {/* Service areas row */}
+      <div className="border-t border-white/10">
+        <div className="container-x py-8">
+          <p className="label text-white/60 mb-4" style={{ color: "rgba(255,255,255,0.55)" }}>Service areas</p>
+          <ul className="flex flex-wrap gap-x-5 gap-y-2 text-[14px]">
+            {FOOTER_AREAS.map((l) => (
+              <li key={l.slug}>
+                <Link href={`/${l.slug}`} className="text-white/75 hover:text-white">{l.name}</Link>
+              </li>
+            ))}
+            <li>
+              <Link href="/locations" className="text-white hover:text-white/80">View all areas →</Link>
+            </li>
+          </ul>
         </div>
       </div>
 
