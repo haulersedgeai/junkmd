@@ -47,7 +47,7 @@ export function Hero({
           <span className="text-brand">★</span>
           <span className="text-white">5.0</span>
           <span className="text-white/50">·</span>
-          <span className="text-white/90">{SITE.reviews.google.count.toLocaleString()}+ Google reviews</span>
+          <span className="text-white/90">{SITE.reviews.totalDisplay} {SITE.reviews.totalLabel}</span>
           <span className="text-white/50">·</span>
           <span className="text-white/90">Family-owned since 2012</span>
         </span>

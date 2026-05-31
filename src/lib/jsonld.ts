@@ -51,7 +51,7 @@ export function localBusinessSchema() {
     ],
     aggregateRating: {
       "@type": "AggregateRating",
-      ratingValue: "5.0",
+      ratingValue: SITE.reviews.google.rating,
       reviewCount: SITE.reviews.google.count,
       bestRating: "5",
       worstRating: "1",
@@ -82,7 +82,7 @@ export function serviceSchema(name: string, description: string, slug: string) {
     "@type": "Service",
     serviceType: name,
     provider: { "@id": `${PRODUCTION_URL}/#business` },
-    areaServed: { "@type": "AdministrativeArea", name: "San Diego County" },
+    areaServed: { "@type": "AdministrativeArea", name: "San Diego County, California" },
     name,
     description,
     url: `${PRODUCTION_URL}/${slug}`,

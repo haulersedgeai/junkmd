@@ -1,3 +1,5 @@
+import { SITE } from "@/lib/constants";
+
 export function AnnouncementBar() {
   return (
     <div className="bg-bg-soft border-b border-border">
@@ -6,7 +8,7 @@ export function AnnouncementBar() {
         style={{ height: 36, fontWeight: 500 }}
       >
         <span className="text-brand-dark tracking-tight">★★★★★</span>
-        <span className="text-ink">1,290+ reviews</span>
+        <span className="text-ink">{SITE.reviews.totalDisplay} reviews</span>
         <span className="text-muted">·</span>
         <span className="text-ink-soft">Save $20 on your first appointment</span>
         <span className="text-muted hidden sm:inline">·</span>

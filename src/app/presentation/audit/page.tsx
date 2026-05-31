@@ -21,7 +21,7 @@ const STAYS = [
   "Your $20 first-appointment offer",
   "Your green color as an accent",
   "Your 4-tier load pricing",
-  "Your 1,290+ Google + 150+ Yelp reviews",
+  "Your 1,396+ Google + 221+ Yelp reviews",
   "NetVendor, NARPM, Local Junkers partnerships",
   "Your Morena Blvd address",
 ];

@@ -187,7 +187,7 @@ export const SERVICES: Service[] = [
     pricing:
       "Most full-estate jobs are Large Load ($659+) or multi-truck. We quote on-site and you approve before we touch a thing.",
     whyJunkMd:
-      "Family-owned, fully insured, and known for treating every estate like our own grandmother's. We've earned 1,290+ five-star Google reviews doing exactly this work.",
+      "Family-owned, fully insured, and known for treating every estate like our own grandmother's. We've earned 1,396+ five-star Google reviews doing exactly this work.",
     faqs: [
       { q: "Can family members pull keepsakes first?", a: "Absolutely — and we'll happily set anything aside on the day of so you don't have to do it alone." },
       { q: "Do you donate or just dump?", a: "We donate everything that has life left. Goodwill, Salvation Army, and other local charities. Less than 15% of a typical estate truly hits the landfill." },

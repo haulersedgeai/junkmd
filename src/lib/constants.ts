@@ -28,8 +28,11 @@ export const SITE = {
       "https://www.google.com/maps/place/?q=place_id:JunkMD+San+Diego",
   },
   reviews: {
-    google: { count: 1290, rating: 5 },
-    yelp: { count: 150, rating: 5 },
+    google: { count: 1396, rating: "5.0" },
+    yelp: { count: 221 },
+    facebook: { count: 67 },
+    totalDisplay: "1,680+",
+    totalLabel: "reviews across Google, Yelp & Facebook",
     yearsServing: 13,
     clientsServed: 15000,
   },

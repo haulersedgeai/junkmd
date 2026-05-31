@@ -21,7 +21,7 @@ export function ReviewGrid({ limit }: { limit?: number }) {
       <div className="container-x">
         <div className="max-w-2xl mb-12">
           <p className="label" style={{ color: "var(--brand-dark)" }}>Reviews</p>
-          <h2 className="mt-3">5.0 stars from 1,290+ Google reviews.</h2>
+          <h2 className="mt-3">5.0 stars from 1,396+ Google reviews.</h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">

@@ -9,7 +9,7 @@ import { SITE } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "About JunkMD+ — San Diego's Top-Rated Junk Removal Company",
   description:
-    "JunkMD+ is San Diego's family-owned junk removal company. Founded 2012. 15,000+ clients served. 1,290+ five-star Google reviews. Make Space for What Matters.",
+    "JunkMD+ is San Diego's family-owned junk removal company. Founded 2012. 15,000+ clients served. 1,396+ five-star Google reviews. Make Space for What Matters.",
 };
 
 export default function AboutPage() {
@@ -53,7 +53,7 @@ export default function AboutPage() {
               <p className="text-sm uppercase font-bold tracking-wide mt-1">Clients Served</p>
             </div>
             <div>
-              <p className="font-display text-5xl text-[color:var(--brand-green-dark)]">1,290+</p>
+              <p className="font-display text-5xl text-[color:var(--brand-green-dark)]">1,396+</p>
               <p className="text-sm uppercase font-bold tracking-wide mt-1">5-Star Google Reviews</p>
             </div>
           </div>

@@ -94,10 +94,9 @@ export default function ClemenciaPage() {
 
             <h2>Achievements and Recognition</h2>
             <p>
-              Since Clemencia became co-owner, JunkMD+ has achieved remarkable success. The company has
-              earned awards like Best Service 2021 and the San Diego Best Awards. With 1,290+ five-star
-              Google reviews and 150+ five-star Yelp reviews, JunkMD+ has become a household name in
-              San Diego.
+              Since Clemencia became co-owner, JunkMD+ has achieved remarkable success. With 1,396+
+              five-star Google reviews and 221+ five-star Yelp reviews, JunkMD+ has become a household
+              name in San Diego.
             </p>
           </div>
         </div>

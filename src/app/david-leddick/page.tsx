@@ -43,7 +43,6 @@ export default function DavidPage() {
                 <li>· Bought JunkMD in 2012</li>
                 <li>· Background: moving-company owner</li>
                 <li>· Team of 8, fleet of 3 trucks today</li>
-                <li>· Awards: Best Service 2021, San Diego Best Awards</li>
               </ul>
             </div>
           </div>
@@ -77,7 +76,7 @@ export default function DavidPage() {
 
             <h2>Personal Touch</h2>
             <p>
-              JunkMD+ thrives because of David's leadership and his partnership with his fiancée,
+              JunkMD+ thrives because of David's leadership and his partnership with co-owner
               Clemencia Sandoval, who joined the business in 2018. Together, they've built a company that
               values people — both their team and their clients. David's hands-on approach ensures that
               every client gets personal attention and that every project is handled with care and
@@ -87,9 +86,8 @@ export default function DavidPage() {
             <h2>Community Engagement</h2>
             <p>
               San Diego isn't just where David works — it's his home. JunkMD+ gives back by donating
-              reusable items to local charities like Goodwill and the Salvation Army. With over 1,290
-              five-star Google reviews and numerous awards, including Best Service 2021 and the San
-              Diego Best Awards, JunkMD+ has become a company that San Diegans trust.
+              reusable items to local charities like Goodwill and the Salvation Army. With over 1,396
+              five-star Google reviews, JunkMD+ has become a company that San Diegans trust.
             </p>
 
             <h2>Expertise and Specialization</h2>

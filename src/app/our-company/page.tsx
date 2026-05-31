@@ -39,9 +39,9 @@ export default function OurCompanyPage() {
             better than you found it.
           </p>
           <p>
-            In 2018, David's fiancée Clemencia Sandoval joined as co-owner. She brought a customer-care
+            In 2018, Clemencia Sandoval joined as co-owner. She brought a customer-care
             and operations background that's turned JunkMD+ into one of the best-reviewed junk removal
-            companies in California — 1,290+ five-star Google reviews and counting.
+            companies in California — 1,396+ five-star Google reviews and counting.
           </p>
 
           <h2>What We Believe</h2>
@@ -57,7 +57,7 @@ export default function OurCompanyPage() {
             <li>NARPM San Diego Chapter — property management partner</li>
             <li>NetVendor — verified contractor partner</li>
             <li>Local Junkers — eco-friendly hauler affiliate</li>
-            <li>Google My Business Verified — 5.0 average across 1,290+ reviews</li>
+            <li>Google My Business Verified — 5.0 average across 1,396+ reviews</li>
           </ul>
         </div>
       </section>

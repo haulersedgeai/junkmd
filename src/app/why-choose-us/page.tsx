@@ -5,11 +5,11 @@ import { Hero } from "@/components/hero";
 import { ValuePillars } from "@/components/value-pillars";
 import { TruckComparison } from "@/components/truck-comparison";
 import { ReviewGrid } from "@/components/review-grid";
+import { SITE } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Why Choose JunkMD+ — Top-Rated San Diego Junk Removal",
-  description:
-    "Why JunkMD+? Family-owned since 2012, 1,290+ 5-star reviews, flat-rate pricing, eco-friendly disposal, and a full-service house-call model. Save $20 first appointment.",
+  description: `Why JunkMD+? Family-owned since 2012, ${SITE.reviews.totalDisplay} 5-star reviews, flat-rate pricing, eco-friendly disposal, and a full-service house-call model. Save $20 first appointment.`,
 };
 
 export default function WhyChooseUsPage() {
