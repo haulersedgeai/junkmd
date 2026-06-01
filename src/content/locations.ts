@@ -15,7 +15,25 @@ const COASTAL_LANDMARKS = ["Sunset Cliffs", "La Jolla Cove", "Pacific Beach Pier
 
 export const LOCATIONS: Location[] = [
   // ───── Existing 42 (rebuilt) ─────
-  { slug: "junk-removal-san-diego", name: "San Diego", zips: ["92101", "92103", "92104", "92106"], neighborhoods: ["Downtown", "Gaslamp", "East Village", "Hillcrest", "Bankers Hill"], landmarks: SD_LANDMARKS, highways: ["I-5", "I-805", "CA-163"], intro: "San Diego — JunkMD+'s home base. From downtown high-rises to Hillcrest condos to single-family homes in Bankers Hill, we've cleared just about every kind of property in the city." },
+  {
+    slug: "junk-removal-san-diego",
+    name: "San Diego",
+    zips: ["92101", "92103", "92104", "92106"],
+    neighborhoods: ["Downtown", "Gaslamp", "East Village", "Hillcrest", "Bankers Hill"],
+    landmarks: SD_LANDMARKS,
+    highways: ["I-5", "I-805", "CA-163"],
+    intro: "This is home base. JunkMD+ covers the whole city — downtown high-rises and Gaslamp condos, the canyon neighborhoods, the older homes east of the 805, and everything out to the coast. Because we're local and central, we move fast across all of it, and most of our same-day work happens right here in the city. Whatever corner of San Diego you're in, there's a good chance we're already working nearby.",
+    localSections: [
+      { heading: "Every kind of property, one city", body: "San Diego runs the full range — downtown towers with loading docks and elevator rules, Gaslamp and East Village condos, hillside homes in the canyon neighborhoods, and established single-family houses across the older parts of town. We've cleared all of it, and we bring the right truck and crew for whichever one you're in. For downtown buildings, tell us about dock access or elevator reservations when you book and we'll handle the logistics ahead of time." },
+      { heading: "Fast, central, and neighborhood-deep", body: "Being based in the city means we're usually minutes from your job, not crossing the county to get there — which is why so much of our same-day work is right here. We also run dedicated pages for individual San Diego neighborhoods, so if you're in a specific area like Hillcrest, North Park, or Point Loma, you'll find local detail there too. Whatever you've got, you get a flat quote up front and a swept space when we leave." },
+    ],
+    faqOverrides: [
+      { q: "Do you cover all of San Diego?", a: "Yes — the whole city is our home base, from downtown and the urban core to the canyon neighborhoods and out to the coast. Most of our same-day work happens right here." },
+      { q: "Can you handle a downtown high-rise or condo with a loading dock?", a: "Yes, regularly. Tell us about dock access, elevator reservations, or any building COI requirements when you book and we'll have the logistics sorted before we arrive." },
+      { q: "How fast can you come out in San Diego?", a: "Often same day, since we're central and usually working nearby. Text photos of what needs to go for a quick quote and we'll get you a 2-hour arrival window." },
+      { q: "Do you donate or just dump?", a: "We donate everything that still has life through Goodwill, the Salvation Army, and other local charities, and recycle what we can. Only what's genuinely unusable hits the landfill." },
+    ],
+  },
   {
     slug: "junk-removal-la-jolla",
     name: "La Jolla",
@@ -183,7 +201,25 @@ export const LOCATIONS: Location[] = [
   { slug: "junk-removal-linda-vista", name: "Linda Vista", zips: ["92111"], neighborhoods: ["Birdland", "Tecolote Canyon"], landmarks: ["USD"], highways: ["I-805", "Linda Vista Rd"], intro: "Linda Vista — USD-adjacent rental turnover, family homes, and post-storm yard work. We're here for it." },
   { slug: "junk-removal-bay-park", name: "Bay Park", zips: ["92110"], neighborhoods: ["Bay Park Heights"], landmarks: ["Mission Bay"], highways: ["I-5", "I-8"], intro: "Bay Park — the neighborhood directly north of Mission Bay where we're based on Morena Blvd. We're literally minutes from your front door." },
   { slug: "junk-removal-clairemont", name: "Clairemont", zips: ["92117"], neighborhoods: ["Clairemont Mesa East", "North Clairemont", "Bay Ho", "Bay Park"], landmarks: ["Clairemont Square"], highways: ["I-5", "I-805", "CA-52"], intro: "Clairemont is JunkMD+'s home neighborhood — we're located here on Morena Blvd. Same-day pickup is always on the table." },
-  { slug: "junk-removal-north-park", name: "North Park", zips: ["92104"], neighborhoods: ["Burlingame", "Altadena"], landmarks: ["North Park Theatre", "Morley Field"], highways: ["I-805", "University Ave"], intro: "North Park bungalows, craftsman homes, and apartment buildings. Tight alleys, on-street parking — we know the playbook." },
+  {
+    slug: "junk-removal-north-park",
+    name: "North Park",
+    zips: ["92104"],
+    neighborhoods: ["Burlingame", "Altadena"],
+    landmarks: ["North Park Theatre", "Morley Field"],
+    highways: ["I-805", "University Ave"],
+    intro: "North Park is classic San Diego craftsman and bungalow territory — older homes on tight lots, alley loading off the back, and street-parking-only out front. It's one of the city's busiest neighborhoods, with a mix of longtime homeowners, renters, and homes being renovated. The work here usually means working an alley or carrying through an older, narrower house. We come set up for it.",
+    localSections: [
+      { heading: "Craftsman homes and alley loading", body: "Most North Park homes are older craftsman and bungalow builds on small lots, and a lot of them load from the alley rather than the street. Narrow doorways, tight hallways, and detached garages off the back are the norm. We bring trucks that fit the alleys and crews used to maneuvering through older homes without dinging a doorframe. If your place is alley-access or street-parking-only, tell us when you book and we'll plan the approach." },
+      { heading: "Renovations, move-outs, and garage clear-outs", body: "North Park sees a lot of renovation and turnover — a bungalow being updated, a rental changing hands, a garage or basement that's collected years of stuff. We handle remodel debris, full move-out cleanouts, and everyday garage clear-outs, donate what's reusable through Goodwill and the Salvation Army, and recycle what we can. Flat quote up front, and you only pay for the volume we actually haul." },
+    ],
+    faqOverrides: [
+      { q: "My North Park home loads from the alley — is that a problem?", a: "Not at all — alley loading is the norm here and we run trucks that fit. Tell us the cross streets and whether it's alley or street access when you book and we'll plan the approach." },
+      { q: "Can you get furniture out of an older bungalow with narrow doorways?", a: "Yes, that's routine in North Park. Our crews are used to maneuvering through older homes carefully. Pricing is volume-based, so a tricky carry doesn't change your quote." },
+      { q: "Do you take renovation and remodel debris?", a: "Yes — remodel debris is common here. We haul construction and renovation waste along with furniture and household junk. Text photos for a quick quote." },
+      { q: "Do you donate or just dump?", a: "We donate everything that still has life through Goodwill, the Salvation Army, and other local charities, and recycle what we can. Only what's genuinely unusable hits the landfill." },
+    ],
+  },
   { slug: "junk-removal-south-park", name: "South Park", zips: ["92102"], neighborhoods: ["South Park Village"], landmarks: ["Balboa Park (south)"], highways: ["I-5", "CA-94"], intro: "South Park's historic craftsman homes and walkable streets need a hauler that respects the neighborhood character. JunkMD+ does." },
   { slug: "junk-removal-san-carlos", name: "San Carlos", zips: ["92119"], neighborhoods: ["Cowles Mountain area"], landmarks: ["Cowles Mountain", "Lake Murray"], highways: ["I-8", "Navajo Rd"], intro: "San Carlos — east of Mission Trails — has lots of original-owner homes ready for major cleanouts. We handle decades of accumulated stuff routinely." },
   { slug: "junk-removal-carmel-valley", name: "Carmel Valley", zips: ["92130"], neighborhoods: ["Pacific Highlands Ranch", "Del Mar Heights"], landmarks: ["One Paseo"], highways: ["I-5", "CA-56"], intro: "Carmel Valley families call us during home sales, garage cleanouts, and home gym swaps. We respect HOA rules and gated entry." },
@@ -220,7 +256,24 @@ export const LOCATIONS: Location[] = [
   { slug: "junk-removal-imperial-beach", name: "Imperial Beach", zips: ["91932"], landmarks: ["IB Pier"], highways: ["I-5", "Palm Ave"], intro: "Imperial Beach cottages and rentals — we're here for the turnover work." },
   { slug: "junk-removal-rolando", name: "Rolando", zips: ["92115"], landmarks: ["SDSU"], highways: ["I-8", "El Cajon Blvd"], intro: "Rolando — SDSU-adjacent, family homes, rentals. We handle the turnover season." },
   { slug: "junk-removal-old-town", name: "Old Town", zips: ["92110"], landmarks: ["Old Town State Park"], highways: ["I-5", "I-8"], intro: "Old Town historic district — small commercial properties, restaurants, residences. We're nearby." },
-  { slug: "junk-removal-hillcrest", name: "Hillcrest", zips: ["92103"], landmarks: ["Balboa Park", "UC San Diego Medical Center"], highways: ["I-5", "CA-163"], intro: "Hillcrest condos, lofts, and apartments — we handle the tight street parking and high-rise loading docks." },
+  {
+    slug: "junk-removal-hillcrest",
+    name: "Hillcrest",
+    zips: ["92103"],
+    landmarks: ["Balboa Park", "UC San Diego Medical Center"],
+    highways: ["I-5", "CA-163"],
+    intro: "Hillcrest is dense and vertical — condos, lofts, and apartment buildings packed along the canyon edges near Balboa Park, with street parking that's hard to come by and a lot of buildings that load through a dock or a single elevator. Most of our Hillcrest work is condos and rentals, and the challenge is rarely the volume — it's the access. We plan the building logistics before we show up.",
+    localSections: [
+      { heading: "Condos, lofts, and building access", body: "Most Hillcrest jobs are inside a building — a condo on the fourth floor, a loft off a shared elevator, an apartment that loads through a back dock. The work itself is usually straightforward; getting it out cleanly is the part that takes planning. We coordinate elevator timing, handle any building COI or reservation requirements, and bring trucks that fit Hillcrest's tight street parking. Tell us your building setup when you book and we'll sort the logistics ahead of time." },
+      { heading: "Rentals and quick turnovers", body: "A lot of our Hillcrest work is rental turnover — a tenant moved out and left furniture, a unit needs clearing before the next lease, a landlord needs it done fast. We handle move-out cleanouts on short notice, donate what's reusable through Goodwill and the Salvation Army, and can send before-and-after photos if you're managing the property. Flat quote up front, and you only pay for the volume we haul." },
+    ],
+    faqOverrides: [
+      { q: "My Hillcrest condo is on an upper floor with one elevator — can you handle it?", a: "Yes, that's routine here. We coordinate elevator timing and handle any building reservation or COI requirements. Pricing is volume-based, so the floor and elevator don't change your quote." },
+      { q: "Where do your trucks park on these tight Hillcrest streets?", a: "We run trucks sized for the neighborhood and plan the approach around the parking situation. Tell us your building and cross streets when you book and we'll confirm before we arrive." },
+      { q: "Do you do rental turnovers for landlords and property managers?", a: "Yes, regularly — quick move-out cleanouts are a big share of our Hillcrest work, and we can send before-and-after photos for your records." },
+      { q: "What happens to the items you remove?", a: "We donate anything reusable to local charities, recycle what we can, and dispose of the rest responsibly. Most jobs here are furniture and household goods that are easy to rehome." },
+    ],
+  },
   {
     slug: "junk-removal-mission-beach",
     name: "Mission Beach",
@@ -260,7 +313,24 @@ export const LOCATIONS: Location[] = [
   { slug: "junk-removal-bonita", name: "Bonita", zips: ["91902"], landmarks: ["Bonita Golf Club"], highways: ["I-805", "CA-54"], intro: "Bonita — semi-rural homes with horses, sheds, and big yards. We come prepared for the larger lots." },
   { slug: "junk-removal-lemon-grove", name: "Lemon Grove", zips: ["91945"], highways: ["CA-94", "Federal Blvd"], intro: "Lemon Grove cleanouts — affordable single-family homes ready for major yard and garage work." },
   // ───── Expansion ─────
-  { slug: "junk-removal-mira-mesa", name: "Mira Mesa", zips: ["92126"], landmarks: ["Miramar Marine Corps Air Station"], highways: ["I-15", "I-805", "CA-805"], intro: "Mira Mesa — family neighborhoods near MCAS Miramar. We handle PCS moves, garage cleanouts, and rental turnovers." },
+  {
+    slug: "junk-removal-mira-mesa",
+    name: "Mira Mesa",
+    zips: ["92126"],
+    landmarks: ["Miramar Marine Corps Air Station"],
+    highways: ["I-15", "I-805", "CA-805"],
+    intro: "Mira Mesa is a big, established family neighborhood in the middle of the city — single-family homes, townhomes, and a steady stream of moves, partly because it sits right next to MCAS Miramar. Most of the work here is everyday residential: garages, move-outs, and full-house cleanouts. Access is generally easy, and we bring the truck space and crew to clear a big load in one trip where we can.",
+    localSections: [
+      { heading: "Family homes, garages, and move-outs", body: "Most Mira Mesa properties are family homes and townhomes with garages, yards, and the usual accumulation of years — which is exactly the kind of everyday cleanout we do most. Access is generally straightforward, so the job is usually about capacity: bringing enough truck space and crew to clear a packed garage or a full house efficiently. Flat quote up front, and you only pay for the volume we haul." },
+      { heading: "Moves in and out", body: "Sitting right next to MCAS Miramar, Mira Mesa sees a lot of families relocating, and we handle a steady stream of move-in and move-out cleanouts — furniture left behind, a garage to empty, a whole house to clear on a deadline. We move fast, donate what's reusable through Goodwill and the Salvation Army, and give you a flat quote up front so there are no surprises on moving day." },
+    ],
+    faqOverrides: [
+      { q: "Can you clear a full garage or whole house in Mira Mesa?", a: "Yes — that's a big share of our work here. We bring the truck space and crew to handle large cleanouts in as few trips as possible. Pricing is volume-based, so you only pay for what we haul." },
+      { q: "Can you handle a move-out on a tight timeline?", a: "Yes, regularly. Move-outs are common in Mira Mesa and we move fast. Text photos for a quick quote and we'll get you a tight arrival window, often same or next day." },
+      { q: "How fast can you get to Mira Mesa?", a: "Often same or next day, since it's central. Send photos of what needs to go and we'll usually get you a 2-hour arrival window." },
+      { q: "What happens to the items you remove?", a: "We donate anything reusable to local charities, recycle what we can, and dispose of the rest responsibly. Most jobs here are furniture and household goods that are easy to rehome." },
+    ],
+  },
   { slug: "junk-removal-scripps-ranch", name: "Scripps Ranch", zips: ["92131"], landmarks: ["Lake Miramar"], highways: ["I-15"], intro: "Scripps Ranch — established neighborhood with big lots, full garages, and longtime owners ready for major cleanouts." },
   { slug: "junk-removal-allied-gardens", name: "Allied Gardens", zips: ["92120"], landmarks: ["Mission Trails Regional Park"], highways: ["I-8", "I-15"], intro: "Allied Gardens — original-owner family homes east of Mission Valley. Decades of accumulated stuff is our specialty." },
   { slug: "junk-removal-del-cerro", name: "Del Cerro", zips: ["92120"], landmarks: ["Lake Murray", "SDSU"], highways: ["I-8"], intro: "Del Cerro hillside homes — we handle the long stair runs and tight driveways." },
