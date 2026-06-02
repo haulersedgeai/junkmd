@@ -37,20 +37,6 @@ const NAV = [
     ],
   },
   {
-    label: "Dumpsters",
-    href: "/dumpster-rental-services",
-    items: [
-      { label: "Sizes & pricing", href: "/dumpster-sizes-pricing" },
-      { label: "10-yard dumpster", href: "/10-yard-dumpster-rental" },
-      { label: "30-yard dumpster", href: "/30-yard-dumpster-rental" },
-      { label: "40-yard dumpster", href: "/40-yard-dumpster-rental" },
-      { label: "Residential", href: "/residential-dumpster-rentals" },
-      { label: "Commercial", href: "/commercial-dumpster-rentals" },
-      { label: "Construction", href: "/construction-dumpster-rental" },
-      { label: "Book a dumpster →", href: "/book-a-dumpster" },
-    ],
-  },
-  {
     label: "Locations",
     href: "/locations",
     items: [

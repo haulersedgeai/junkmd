@@ -12,7 +12,6 @@ import { ProcessSteps } from "@/components/process-steps";
 import { ReviewGrid } from "@/components/review-grid";
 import { faqSchema, serviceSchema, breadcrumbSchema } from "@/lib/jsonld";
 import { SERVICES, SERVICE_BY_SLUG } from "@/content/services";
-import { DUMPSTERS, DUMPSTER_BY_SLUG } from "@/content/dumpsters";
 import { LOCATIONS, LOCATION_BY_SLUG } from "@/content/locations";
 import { PRODUCTION_URL, SITE } from "@/lib/constants";
 
@@ -21,7 +20,6 @@ type Params = { slug: string };
 export function generateStaticParams() {
   const slugs = new Set<string>();
   SERVICES.forEach((s) => slugs.add(s.slug));
-  DUMPSTERS.forEach((d) => slugs.add(d.slug));
   LOCATIONS.forEach((l) => slugs.add(l.slug));
   return Array.from(slugs).map((slug) => ({ slug }));
 }
@@ -33,13 +31,6 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
     return {
       title: s.metaTitle,
       description: s.metaDescription,
-      alternates: { canonical: `/${slug}` },
-    };
-  const d = DUMPSTER_BY_SLUG[slug];
-  if (d)
-    return {
-      title: d.metaTitle,
-      description: d.metaDescription,
       alternates: { canonical: `/${slug}` },
     };
   const l = LOCATION_BY_SLUG[slug];
@@ -55,11 +46,9 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
 export default async function DynamicSlugPage({ params }: { params: Promise<Params> }) {
   const { slug } = await params;
   const service = SERVICE_BY_SLUG[slug];
-  const dumpster = DUMPSTER_BY_SLUG[slug];
   const location = LOCATION_BY_SLUG[slug];
 
   if (service) return <ServicePage slug={slug} />;
-  if (dumpster) return <DumpsterPage slug={slug} />;
   if (location) return <LocationPage slug={slug} />;
   notFound();
 }
@@ -68,14 +57,13 @@ export default async function DynamicSlugPage({ params }: { params: Promise<Para
 function ServicePage({ slug }: { slug: string }) {
   const s = SERVICE_BY_SLUG[slug]!;
   const relatedServices = s.related
-    .map((r) => SERVICE_BY_SLUG[r] || DUMPSTER_BY_SLUG[r])
+    .map((r) => SERVICE_BY_SLUG[r])
     .filter(Boolean)
     .slice(0, 4);
 
   const categoryHubMap: Record<string, { label: string; href: string }> = {
     residential: { label: "Residential", href: "/residential-junk-removal" },
     commercial: { label: "Commercial", href: "/commercial-junk-removal" },
-    dumpster: { label: "Dumpster Rental", href: "/dumpster-rental-services" },
     demolition: { label: "Demolition", href: "/demolition-cleanup" },
     eco: { label: "Eco-Friendly", href: "/eco-friendly-junk-removal" },
     "what-we-take": { label: "What We Take", href: "/what-we-take" },
@@ -215,116 +203,6 @@ function ServicePage({ slug }: { slug: string }) {
   );
 }
 
-// ─────────── DUMPSTER PAGE ───────────
-function DumpsterPage({ slug }: { slug: string }) {
-  const d = DUMPSTER_BY_SLUG[slug]!;
-  const related = d.related
-    .map((r) => DUMPSTER_BY_SLUG[r] || SERVICE_BY_SLUG[r])
-    .filter(Boolean)
-    .slice(0, 4);
-
-  return (
-    <>
-      <JsonLd id="ld-svc" data={serviceSchema(d.title, d.metaDescription, slug)} />
-      <JsonLd id="ld-faq" data={faqSchema(d.faqs)} />
-      <Breadcrumbs items={[
-        { label: "Home", href: "/" },
-        { label: "Dumpster Rental", href: "/dumpster-rental-services" },
-        { label: d.title },
-      ]} />
-
-      <section className="bg-gradient-to-b from-[color:var(--brand-bg-soft)] to-white">
-        <div className="container-x py-10 md:py-14 grid lg:grid-cols-2 gap-8 items-center">
-          <div>
-            <span className="inline-block text-xs font-bold uppercase tracking-widest text-[color:var(--brand-green-dark)] mb-2">
-              Dumpster Rental · San Diego
-            </span>
-            <h1 className="font-display text-4xl md:text-5xl uppercase mb-3 leading-[1.05]">
-              {d.title} <span className="text-[color:var(--brand-green-dark)]">San Diego</span>
-            </h1>
-            <p className="text-lg text-[color:var(--brand-text)] mb-5">{d.hero}</p>
-            <div className="flex flex-wrap gap-3">
-              <a href={SITE.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn-primary">
-                <Calendar className="h-4 w-4" /> Book a Dumpster
-              </a>
-              <a href={`tel:${SITE.phoneRaw}`} className="btn-outline">
-                <Phone className="h-4 w-4" /> {SITE.phone}
-              </a>
-            </div>
-          </div>
-          <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-xl">
-            <Image src="/images/dumpster-truck.jpg" alt={d.title} fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" priority />
-          </div>
-        </div>
-      </section>
-
-      <section className="py-12 bg-white">
-        <div className="container-x grid lg:grid-cols-[2fr_1fr] gap-10">
-          <div className="prose-brand max-w-none">
-            <p className="text-lg">{d.intro}</p>
-            <h2>Best For</h2>
-            <ul>
-              {d.bestFor.map((b) => (<li key={b}>{b}</li>))}
-            </ul>
-            {d.notIncluded && (
-              <>
-                <h2>What Can't Go In</h2>
-                <ul>{d.notIncluded.map((n) => <li key={n}>{n}</li>)}</ul>
-              </>
-            )}
-            {d.pricing && (
-              <>
-                <h2>Pricing</h2>
-                <p>{d.pricing}</p>
-              </>
-            )}
-          </div>
-          <aside className="lg:sticky lg:top-24 self-start">
-            <div className="bg-[color:var(--brand-bg-soft)] border border-[color:var(--brand-border)] rounded-xl p-5">
-              <h3 className="font-display text-xl uppercase mb-3">Quick Quote</h3>
-              <a href={SITE.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn-primary w-full mb-2">
-                <Calendar className="h-4 w-4" /> Book Online
-              </a>
-              <a href={`tel:${SITE.phoneRaw}`} className="btn-outline w-full">
-                <Phone className="h-4 w-4" /> Call {SITE.phone}
-              </a>
-              <ul className="text-sm mt-4 space-y-1.5">
-                <li className="flex gap-2"><Check className="h-4 w-4 text-[color:var(--brand-green)] shrink-0 mt-0.5" /> Driveway-safe pads included</li>
-                <li className="flex gap-2"><Check className="h-4 w-4 text-[color:var(--brand-green)] shrink-0 mt-0.5" /> Flat-rate published pricing</li>
-                <li className="flex gap-2"><Check className="h-4 w-4 text-[color:var(--brand-green)] shrink-0 mt-0.5" /> Same-week delivery</li>
-                <li className="flex gap-2"><Check className="h-4 w-4 text-[color:var(--brand-green)] shrink-0 mt-0.5" /> 7-day standard rental</li>
-              </ul>
-            </div>
-          </aside>
-        </div>
-      </section>
-
-      <FaqAccordion title="Dumpster Rental FAQ" items={d.faqs} />
-
-      {related.length > 0 && (
-        <section className="py-12 bg-[color:var(--brand-bg-soft)]">
-          <div className="container-x">
-            <h2 className="font-display text-3xl uppercase mb-6">Related</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-              {related.map((r) => (
-                <ServiceCard
-                  key={r!.slug}
-                  href={`/${r!.slug}`}
-                  title={r!.title}
-                  description={r!.hero}
-                  image={("image" in r! ? (r as { image?: string }).image : undefined) as string | undefined}
-                />
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
-
-      <CtaSection title="Ready to Book a Dumpster?" subtitle="Driveway-safe delivery. Flat-rate pricing. Save $20 on your first appointment." />
-    </>
-  );
-}
-
 // ─────────── LOCATION PAGE ───────────
 function LocationPage({ slug }: { slug: string }) {
   const l = LOCATION_BY_SLUG[slug]!;
@@ -340,7 +218,6 @@ function LocationPage({ slug }: { slug: string }) {
     { slug: "hot-tub-removal", title: "Hot Tub Removal" },
     { slug: "office-cleanouts", title: "Office Cleanouts" },
     { slug: "demolition-cleanup", title: "Light Demolition" },
-    { slug: "dumpster-rental-services", title: "Dumpster Rental" },
     { slug: "same-day-junk-removal", title: "Same-Day Service" },
   ];
 
@@ -357,7 +234,7 @@ function LocationPage({ slug }: { slug: string }) {
     },
     {
       q: `What's the most popular service in ${l.name}?`,
-      a: `Furniture removal, garage cleanouts, and mattress disposal are our most-requested services in ${l.name}. We also handle estate cleanouts, hoarder cleanouts, light demolition, and dumpster rentals.`,
+      a: `Furniture removal, garage cleanouts, and mattress disposal are our most-requested services in ${l.name}. We also handle estate cleanouts, hoarder cleanouts, and light demolition.`,
     },
     {
       q: `Are you insured for work in ${l.name}?`,
@@ -386,7 +263,7 @@ function LocationPage({ slug }: { slug: string }) {
               Junk Removal in {l.name}
             </span>
             <h1 className="font-display text-4xl md:text-5xl uppercase mb-3 leading-[1.05]">
-              Junk Removal &amp; Dumpster Rental in <span className="text-[color:var(--brand-green-dark)]">{l.name}</span>
+              Junk Removal in <span className="text-[color:var(--brand-green-dark)]">{l.name}</span>
             </h1>
             <p className="text-lg text-[color:var(--brand-text)] mb-5">{l.intro}</p>
             <div className="flex flex-wrap gap-3">
@@ -437,7 +314,7 @@ function LocationPage({ slug }: { slug: string }) {
             )}
 
             <h2>What We Haul in {l.name}</h2>
-            <p>Anything in or around your home or business that you no longer want. Furniture, mattresses, appliances, hot tubs, exercise equipment, estate contents, garage clutter, yard waste, construction debris, demolition material — if you don't want it, we can probably haul it. We also offer dumpster rentals in {l.name} for self-service projects.</p>
+            <p>Anything in or around your home or business that you no longer want. Furniture, mattresses, appliances, hot tubs, exercise equipment, estate contents, garage clutter, yard waste, construction debris, demolition material — if you don't want it, we can probably haul it.</p>
 
             <h2>Same-Day &amp; Next-Day Service in {l.name}</h2>
             <p>Most weekdays we have a {l.name} route running. Call us before noon for the best shot at same-day; next-day is almost always available. Two-hour arrival windows Mon–Sat.</p>

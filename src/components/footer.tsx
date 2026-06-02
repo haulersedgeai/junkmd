@@ -46,7 +46,6 @@ export function Footer() {
             <li><Link href="/junk-removal-services" className="text-white/75 hover:text-white">Junk removal</Link></li>
             <li><Link href="/residential-junk-removal" className="text-white/75 hover:text-white">Residential</Link></li>
             <li><Link href="/commercial-junk-removal" className="text-white/75 hover:text-white">Commercial</Link></li>
-            <li><Link href="/dumpster-rental-services" className="text-white/75 hover:text-white">Dumpsters</Link></li>
             <li><Link href="/demolition-cleanup" className="text-white/75 hover:text-white">Demolition</Link></li>
             <li><Link href="/eco-friendly-junk-removal" className="text-white/75 hover:text-white">Eco-friendly</Link></li>
             <li><Link href="/what-we-take" className="text-white/75 hover:text-white">What we take</Link></li>

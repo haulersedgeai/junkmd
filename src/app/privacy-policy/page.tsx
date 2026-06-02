@@ -26,7 +26,7 @@ export default function PrivacyPage() {
           </ul>
           <h2>How We Use It</h2>
           <ul>
-            <li>To schedule and complete your junk removal or dumpster rental.</li>
+            <li>To schedule and complete your junk removal appointment.</li>
             <li>To contact you about your appointment, follow-ups, and reviews.</li>
             <li>To improve our website and service.</li>
           </ul>

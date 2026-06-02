@@ -5,7 +5,7 @@ import { Phone, Mail, MapPin, Clock, MessageCircle } from "lucide-react";
 import { SITE } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Contact JunkMD+ — San Diego Junk Removal & Dumpster Rental",
+  title: "Contact JunkMD+ — San Diego Junk Removal",
   description:
     "Get in touch with JunkMD+. Call (858) 869-9448, text us pictures of your junk, or book online. Same-day & next-day appointments across San Diego County.",
 };

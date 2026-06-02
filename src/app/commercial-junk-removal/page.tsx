@@ -19,7 +19,7 @@ export default function CommercialHub() {
       <Hero
         title="Commercial Junk Removal"
         subtitle="Offices, warehouses, retail, restaurants, property management. After-hours scheduling, COI-ready, insured."
-        image="/images/dumpster-truck.jpg"
+        image="/images/truck-hero.webp"
       />
       <section className="py-12 bg-white">
         <div className="container-x grid md:grid-cols-2 lg:grid-cols-3 gap-5">

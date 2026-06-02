@@ -1,7 +1,6 @@
 export type ServiceCategory =
   | "residential"
   | "commercial"
-  | "dumpster"
   | "demolition"
   | "eco"
   | "what-we-take";
@@ -100,7 +99,7 @@ export const SERVICES: Service[] = [
       { q: "Will the city or hauler take it?", a: "Curbside city bulky pickup has limits and long waits. We're typically same-day or next-day with no scheduling games." },
     ],
     related: ["refrigerator-freezer-disposal", "commercial-appliance-removal", "furniture-removal", "garage-cleanout"],
-    image: "/images/dumpster-truck.jpg",
+    image: "/images/truck-hero.webp",
   },
   {
     slug: "mattress-disposal",
@@ -459,7 +458,7 @@ export const SERVICES: Service[] = [
       { q: "What about data on hard drives?", a: "We can wipe or destroy drives on request. Tell us during booking." },
     ],
     related: ["e-waste-disposal", "office-cleanouts", "appliance-removal", "scrap-metal-removal"],
-    image: "/images/dumpster-truck.jpg",
+    image: "/images/truck-hero.webp",
   },
   {
     slug: "refrigerator-freezer-disposal",
@@ -487,7 +486,7 @@ export const SERVICES: Service[] = [
       { q: "Will you take from upstairs?", a: "Yes — stairs, side yards, anywhere. That's the JunkMD+ house call." },
     ],
     related: ["appliance-removal", "commercial-appliance-removal", "e-waste-disposal", "scrap-metal-removal"],
-    image: "/images/dumpster-truck.jpg",
+    image: "/images/truck-hero.webp",
   },
 
   // ───────── COMMERCIAL ─────────
@@ -575,7 +574,7 @@ export const SERVICES: Service[] = [
       { q: "Can you remove racking?", a: "Yes — heavy-duty pallet racking disassembly is part of warehouse work." },
     ],
     related: ["office-cleanouts", "commercial-junk-removal", "construction-debris-removal", "scrap-metal-removal"],
-    image: "/images/dumpster-truck.jpg",
+    image: "/images/truck-hero.webp",
   },
   {
     slug: "restaurant-junk-removal",
@@ -658,9 +657,9 @@ export const SERVICES: Service[] = [
       "We work on insured, COI-ready, and willing to fit your contractor schedule. Same-day calls are normal for us.",
     faqs: [
       { q: "Do you take concrete?", a: "Yes — see concrete removal. Note: concrete is dense and may run a higher fee per load." },
-      { q: "Can you bring a dumpster?", a: "Yes. See our dumpster rental service." },
+      { q: "Can you bring a dumpster?", a: "No — JunkMD+ doesn't rent dumpsters. We're a full-service crew: we bring the truck and haul the debris ourselves." },
     ],
-    related: ["demolition-cleanup", "renovation-waste", "construction-dumpster-rental", "concrete-removal"],
+    related: ["demolition-cleanup", "renovation-waste", "concrete-removal"],
     image: "/images/renovation-waste.webp",
   },
   {
@@ -747,7 +746,7 @@ export const SERVICES: Service[] = [
       { q: "What about hard-plumbed gas lines?", a: "We disconnect what we can; gas line capping should be handled by a licensed plumber." },
     ],
     related: ["restaurant-junk-removal", "office-cleanouts", "appliance-removal", "warehouse-cleanouts"],
-    image: "/images/dumpster-truck.jpg",
+    image: "/images/truck-hero.webp",
   },
 
   // ───────── DEMOLITION ─────────
@@ -1020,7 +1019,7 @@ export const SERVICES: Service[] = [
       { q: "What gets recycled vs trashed?", a: "We separate at our yard. Metal, electronics, wood, mattresses, and cardboard go to recyclers. Mixed contaminated waste goes to landfill." },
     ],
     related: ["eco-friendly-junk-removal", "scrap-metal-removal", "e-waste-disposal", "donation-pickup"],
-    image: "/images/dumpster-truck.jpg",
+    image: "/images/truck-hero.webp",
   },
   {
     slug: "donation-pickup",
@@ -1077,7 +1076,7 @@ export const SERVICES: Service[] = [
       { q: "Are CRT TVs free?", a: "California recyclers accept CRTs at no extra fee. Our pickup fee covers labor and transport." },
     ],
     related: ["tv-electronics-disposal", "recycling-services", "scrap-metal-removal", "office-cleanouts"],
-    image: "/images/dumpster-truck.jpg",
+    image: "/images/truck-hero.webp",
   },
   {
     slug: "scrap-metal-removal",
@@ -1105,7 +1104,7 @@ export const SERVICES: Service[] = [
       { q: "Do you take car parts?", a: "Yes for most car parts, no for fluid-containing systems (those need a body shop)." },
     ],
     related: ["recycling-services", "e-waste-disposal", "appliance-removal", "construction-debris-removal"],
-    image: "/images/dumpster-truck.jpg",
+    image: "/images/truck-hero.webp",
   },
 
   // ───────── WHAT WE TAKE ─────────
@@ -1244,7 +1243,7 @@ export const SERVICES: Service[] = [
       { q: "Will you bring back empties?", a: "Generally no — we recycle, we don't operate a pallet exchange." },
     ],
     related: ["warehouse-cleanouts", "construction-debris-removal", "recycling-services", "cardboard-removal"],
-    image: "/images/dumpster-truck.jpg",
+    image: "/images/truck-hero.webp",
   },
   {
     slug: "property-cleanout",

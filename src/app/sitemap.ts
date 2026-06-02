@@ -1,7 +1,6 @@
 import type { MetadataRoute } from "next";
 import { PRODUCTION_URL } from "@/lib/constants";
 import { SERVICES } from "@/content/services";
-import { DUMPSTERS } from "@/content/dumpsters";
 import { LOCATIONS } from "@/content/locations";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -23,7 +22,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "junk-removal-services",
     "residential-junk-removal",
     "commercial-junk-removal",
-    "dumpster-rental-services",
     "demolition-cleanup",
     "eco-friendly-junk-removal",
     "what-we-take",
@@ -47,14 +45,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   for (const s of SERVICES) {
     entries.push({
       url: `${PRODUCTION_URL}/${s.slug}`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.7,
-    });
-  }
-  for (const d of DUMPSTERS) {
-    entries.push({
-      url: `${PRODUCTION_URL}/${d.slug}`,
       lastModified: now,
       changeFrequency: "monthly",
       priority: 0.7,

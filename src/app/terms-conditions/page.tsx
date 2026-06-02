@@ -14,7 +14,7 @@ export default function TermsPage() {
         <div className="container-x prose-brand max-w-3xl mx-auto">
           <h1 className="font-display text-4xl uppercase">Terms &amp; Conditions</h1>
           <p>Last updated: 2026-01-01</p>
-          <p>By booking a JunkMD+ house call or dumpster rental, you agree to the following terms.</p>
+          <p>By booking a JunkMD+ house call, you agree to the following terms.</p>
           <h2>Service Scope</h2>
           <p>We haul most household and commercial items. We do not haul hazardous waste, asbestos-containing materials, medical waste, or certain regulated items. We reserve the right to decline any load that poses a safety or legal risk.</p>
           <h2>Pricing</h2>

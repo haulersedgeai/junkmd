@@ -16,7 +16,6 @@ const SERVICE_OPTIONS = [
   "Hot tub removal",
   "Light demolition",
   "Yard waste removal",
-  "Dumpster rental",
   "Commercial / office cleanout",
   "Other / not sure",
 ];

@@ -30,12 +30,6 @@ const CATEGORIES = [
     image: "/images/crew-action.jpeg",
   },
   {
-    href: "/dumpster-rental-services",
-    title: "Dumpster rental",
-    description: "10-, 30-, 40-yard dumpsters. Driveway-safe pads. Flat-rate published pricing.",
-    image: "/images/dumpster-truck.jpg",
-  },
-  {
     href: "/demolition-cleanup",
     title: "Light demolition",
     description: "Sheds, decks, fences, concrete, kitchen, bath. Demo and haul in a single house call.",
@@ -74,7 +68,7 @@ export default function HomePage() {
             <p className="label" style={{ color: "var(--brand-dark)" }}>What we haul</p>
             <h2 className="mt-3">Whatever needs to go, we&rsquo;ll take it.</h2>
             <p className="mt-4 text-[18px] leading-[1.55] text-ink-soft">
-              Residential, commercial, dumpsters, demolition, eco-friendly disposal. Six places to start.
+              Residential, commercial, demolition, eco-friendly disposal. Five places to start.
             </p>
           </div>
           <ServiceGrid items={CATEGORIES} />

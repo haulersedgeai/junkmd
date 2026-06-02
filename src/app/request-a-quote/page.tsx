@@ -6,7 +6,7 @@ import { SITE } from "@/lib/constants";
 import { Camera, MessageCircle, Phone } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Request a Quote — JunkMD+ Junk Removal & Dumpster Rental",
+  title: "Request a Quote — JunkMD+ Junk Removal",
   description:
     "Get a free, no-obligation quote from JunkMD+. Text us pictures of your junk for an instant estimate. Same-day & next-day appointments across San Diego.",
 };

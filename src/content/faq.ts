@@ -35,8 +35,4 @@ export const GLOBAL_FAQS = [
     q: "Can I get a quote by text?",
     a: "Yes — text photos of your job to (858) 869-9448 and we'll send you a flat-rate quote.",
   },
-  {
-    q: "What's the difference between junk removal and dumpster rental?",
-    a: "Junk removal is full-service — we lift, load, haul, and dispose. Dumpster rental is self-service — we drop a dumpster, you fill it, we pick it up. We do both.",
-  },
 ];

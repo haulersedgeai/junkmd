@@ -8,7 +8,7 @@ import { servicesByCategory } from "@/content/services";
 export const metadata: Metadata = {
   title: "Junk Removal Services — JunkMD+ San Diego",
   description:
-    "Full-service junk removal in San Diego. Furniture, appliances, mattresses, estate cleanouts, hoarder cleanouts, demolition, dumpsters — JunkMD+ does it all.",
+    "Full-service junk removal in San Diego. Furniture, appliances, mattresses, estate cleanouts, hoarder cleanouts, demolition — JunkMD+ does it all.",
 };
 
 export default function JunkRemovalHub() {

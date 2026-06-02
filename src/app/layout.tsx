@@ -33,7 +33,6 @@ export const metadata: Metadata = {
     "JunkMD+ is San Diego's top-rated junk removal company. Same-day and next-day service, flat-rate pricing, eco-friendly disposal. Family-owned since 2012. Save $20 on your first appointment.",
   keywords: [
     "junk removal san diego",
-    "dumpster rental san diego",
     "furniture removal",
     "appliance removal",
     "estate cleanout",

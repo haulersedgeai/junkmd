@@ -8,7 +8,7 @@ export function localBusinessSchema() {
     name: SITE.legalName,
     alternateName: SITE.name,
     description:
-      "Top-rated, fast & friendly junk removal, dumpster rental, and light demolition in San Diego County. Family-owned since 2012.",
+      "Top-rated, fast & friendly junk removal and light demolition in San Diego County. Family-owned since 2012.",
     url: PRODUCTION_URL,
     telephone: SITE.phoneRaw,
     email: SITE.email,
