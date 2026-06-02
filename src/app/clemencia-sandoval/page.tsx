@@ -18,16 +18,17 @@ export default function ClemenciaPage() {
       <section className="py-12 bg-white">
         <div className="container-x grid lg:grid-cols-[1fr_2fr] gap-10">
           <div>
+            <div className="mb-4 rounded-xl overflow-hidden shadow-lg bg-white">
+              <Image
+                src="/images/team/clemencia.webp"
+                alt="Clemencia Sandoval, co-owner of JunkMD+"
+                width={1440}
+                height={1440}
+                className="w-full h-auto object-cover"
+                priority
+              />
+            </div>
             <div className="rounded-xl overflow-hidden shadow-lg bg-gradient-to-br from-[color:var(--brand-green)] to-[color:var(--brand-green-dark)] p-8 text-center text-white">
-              <div className="bg-white/95 rounded-lg p-4 mb-4 inline-block">
-                <Image
-                  src="/images/logo.jpeg"
-                  alt="JunkMD+ logo"
-                  width={180}
-                  height={60}
-                  className="h-16 w-auto object-contain mx-auto"
-                />
-              </div>
               <p className="font-display text-3xl uppercase text-white leading-tight">Clemencia Sandoval</p>
               <p className="text-sm uppercase tracking-wider mt-1 opacity-95">Co-Owner · Since 2018</p>
               <div className="flex items-center justify-center gap-1 mt-3">

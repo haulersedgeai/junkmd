@@ -91,7 +91,7 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <Link href="/david-leddick" className="group block bg-white border border-[color:var(--brand-border)] rounded-xl overflow-hidden hover:shadow-md transition-shadow">
               <div className="relative aspect-square bg-[color:var(--brand-bg-muted)]">
-                <Image src="/images/crew-hero.jpg" alt="David Leddick — JunkMD+ Owner" fill className="object-cover" sizes="(max-width: 768px) 100vw, 400px" />
+                <Image src="/images/team/david.webp" alt="David Leddick, owner of JunkMD+" fill className="object-cover" sizes="(max-width: 768px) 100vw, 400px" />
               </div>
               <div className="p-6">
                 <h3 className="font-display text-2xl uppercase mb-1">David Leddick</h3>
@@ -104,7 +104,7 @@ export default function AboutPage() {
             </Link>
             <Link href="/clemencia-sandoval" className="group block bg-white border border-[color:var(--brand-border)] rounded-xl overflow-hidden hover:shadow-md transition-shadow">
               <div className="relative aspect-square bg-[color:var(--brand-bg-muted)]">
-                <Image src="/images/crew-action.jpeg" alt="Clemencia Sandoval — JunkMD+ Co-Owner" fill className="object-cover" sizes="(max-width: 768px) 100vw, 400px" />
+                <Image src="/images/team/clemencia.webp" alt="Clemencia Sandoval, co-owner of JunkMD+" fill className="object-cover" sizes="(max-width: 768px) 100vw, 400px" />
               </div>
               <div className="p-6">
                 <h3 className="font-display text-2xl uppercase mb-1">Clemencia Sandoval</h3>
