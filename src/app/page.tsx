@@ -21,7 +21,7 @@ const CATEGORIES = [
     href: "/residential-junk-removal",
     title: "Residential junk removal",
     description: "Furniture, appliances, mattresses, garages, attics, yards — anything in or around your home.",
-    image: "/images/clear-your-space.jpg",
+    image: "/images/team/crew-customer-truck.jpg",
   },
   {
     href: "/commercial-junk-removal",
@@ -39,19 +39,19 @@ const CATEGORIES = [
     href: "/demolition-cleanup",
     title: "Light demolition",
     description: "Sheds, decks, fences, concrete, kitchen, bath. Demo and haul in a single house call.",
-    image: "/images/renovation-waste.webp",
+    image: "/images/team/crew-lifting.jpg",
   },
   {
     href: "/eco-friendly-junk-removal",
     title: "Eco-friendly disposal",
     description: "Donate first, recycle second, landfill last. Less than 15% of a typical haul hits a landfill.",
-    image: "/images/backyard.webp",
+    image: "/images/team/crew-highfive.jpg",
   },
   {
     href: "/what-we-take",
     title: "What we take",
     description: "Pianos, safes, exercise equipment, hot tubs, cardboard, couches. If you don't want it, we can haul it.",
-    image: "/images/truck-parked.webp",
+    image: "/images/team/team-on-truck.jpg",
   },
 ];
 
