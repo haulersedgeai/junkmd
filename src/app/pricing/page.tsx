@@ -9,7 +9,7 @@ import { FaqAccordion } from "@/components/faq-accordion";
 export const metadata: Metadata = {
   title: "Pricing — JunkMD+ San Diego Junk Removal",
   description:
-    "Flat-rate junk removal pricing in San Diego. 4 tiers: Single Curbside ($99), Small Load ($199+), Medium Load ($379+), Large Load ($659+). Save $20 first appointment.",
+    "Flat-rate junk removal pricing in San Diego. 4 tiers: Single Curbside ($79), Small Load ($197–329), Medium Load ($329–526), Large Load ($526–799). Save $20 first appointment.",
 };
 
 const FAQS = [
@@ -27,7 +27,7 @@ export default function PricingPage() {
       <Hero
         badge="Flat-Rate, Up-Front Pricing"
         title="JunkMD+ Pricing — Four Tiers, No Surprises"
-        subtitle="We size the job in person and quote a flat price before we touch a thing. Single items start at $99. Full truckloads (≈ 6 pickup trucks worth) at $659."
+        subtitle="We size the job in person and quote a flat price before we touch a thing. Single items start at $79. Full truckloads (≈ 6 pickup trucks worth) up to $799."
         image="/images/junkmd-truck.png"
       />
       <PricingTiers />

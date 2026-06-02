@@ -5,7 +5,7 @@ export const GLOBAL_FAQS = [
   },
   {
     q: "How much does junk removal cost?",
-    a: "Single curbside items start at $99. Most loads fall in our four tiers: Single Curbside ($99+), Small Load ($199+, ~1/6 truck), Medium Load ($379+, ~1/2 truck), Large Load ($659+, full truck ≈ 6 pickup loads). We give you a flat price before we touch a thing.",
+    a: "Single curbside items start at $79. Most loads fall in our four tiers: Single Curbside ($79), Small Load ($197–329, ~1/6 truck), Medium Load ($329–526, ~1/2 truck), Large Load ($526–799, full truck ≈ 6 pickup loads). We give you a flat price before we touch a thing.",
   },
   {
     q: "What's the $20 first-appointment discount?",

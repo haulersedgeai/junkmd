@@ -55,14 +55,14 @@ export const SERVICES: Service[] = [
       "Cribs, changing tables, kids' bedroom sets",
     ],
     pricing:
-      "Single-item curbside pickups start at $99. Most full living-room hauls fall in the Small ($199+) or Medium ($379+) load tier.",
+      "Single-item curbside pickups start at $79. Most full living-room hauls fall in the Small ($197–329) or Medium ($329–526) load tier.",
     whyJunkMd:
       "We're not a dumpster — we're a full-service crew. You don't lift, drag, dismantle, or sweep. We arrive on time, we name the price before we touch a thing, and we leave the space cleaner than we found it.",
     faqs: [
       { q: "Do I have to move the furniture outside?", a: "No. We do all the heavy lifting — upstairs, downstairs, basement, attic, second story, anywhere on your property." },
       { q: "Will you donate items that are still in good shape?", a: "Yes. We work with Goodwill, the Salvation Army, and other local charities. If it has life left, we'll find it a home." },
       { q: "How fast can you come?", a: "Most weekdays we have same-day or next-day windows. Book online or text us pictures at (858) 869-9448." },
-      { q: "What does it cost?", a: "We give you a flat, up-front price the moment we see the load. No hidden fees. Single curbside items start at $99." },
+      { q: "What does it cost?", a: "We give you a flat, up-front price the moment we see the load. No hidden fees. Single curbside items start at $79." },
     ],
     related: ["mattress-disposal", "couch-removal", "estate-cleanout", "appliance-removal"],
     image: "/images/clear-your-space.jpg",
@@ -90,7 +90,7 @@ export const SERVICES: Service[] = [
       "Commercial-grade appliances (call for sizing)",
     ],
     pricing:
-      "Single appliance curbside pickup starts at $99. Multi-appliance hauls (e.g., full kitchen swap) typically fall in the Small or Medium load tier.",
+      "Single appliance curbside pickup starts at $79. Multi-appliance hauls (e.g., full kitchen swap) typically fall in the Small or Medium load tier.",
     whyJunkMd:
       "We handle EPA-regulated refrigerants properly, we don't damage your floors or doorframes, and we know how to disconnect a stuck washer or a corroded water heater without flooding your laundry room.",
     faqs: [
@@ -108,7 +108,7 @@ export const SERVICES: Service[] = [
     title: "Mattress Disposal",
     metaTitle: "Mattress Disposal San Diego — Old Mattresses & Box Springs Hauled",
     metaDescription:
-      "Mattresses, box springs, bed frames — JunkMD+ hauls them away the same day and recycles foam and steel where possible. Single curbside pickup starts at $99.",
+      "Mattresses, box springs, bed frames — JunkMD+ hauls them away the same day and recycles foam and steel where possible. Single curbside pickup starts at $79.",
     hero: "Mattresses, box springs, and bed frames — out of the bedroom and gone today. Foam and steel recycled where possible.",
     intro:
       "Mattresses are bulky, awkward, and California won't let you put one in the regular trash. JunkMD+ takes them off your hands, properly. We strip them down at certified recyclers so the foam, fabric, springs, and wood frames can each go to the right place. " +
@@ -122,7 +122,7 @@ export const SERVICES: Service[] = [
       "Adjustable bed bases (we can disconnect)",
       "Old pillows and bedding included free",
     ],
-    pricing: "Single curbside mattress pickup starts at $99. Mattress + box spring + frame combos usually fit in the Small Load tier ($199+).",
+    pricing: "Single curbside mattress pickup starts at $79. Mattress + box spring + frame combos usually fit in the Small Load tier ($197–329).",
     whyJunkMd:
       "Mattress hauling is one of our most-requested services. We're fast, we don't tear up your stairwells, and we send mattresses to recycling centers — not the canyon.",
     faqs: [
@@ -185,7 +185,7 @@ export const SERVICES: Service[] = [
       "Final-clean staging for sale (optional)",
     ],
     pricing:
-      "Most full-estate jobs are Large Load ($659+) or multi-truck. We quote on-site and you approve before we touch a thing.",
+      "Most full-estate jobs are Large Load ($526–799) or multi-truck. We quote on-site and you approve before we touch a thing.",
     whyJunkMd:
       "Family-owned, fully insured, and known for treating every estate like our own grandmother's. We've earned 1,396+ five-star Google reviews doing exactly this work.",
     faqs: [
@@ -279,7 +279,7 @@ export const SERVICES: Service[] = [
       "Lawn equipment, hoses, pots",
     ],
     pricing:
-      "Most garage cleanouts fall in Small ($199+) or Medium ($379+) load tier. Large overflowing garages reach Large Load.",
+      "Most garage cleanouts fall in Small ($197–329) or Medium ($329–526) load tier. Large overflowing garages reach Large Load.",
     whyJunkMd:
       "We've cleared thousands of garages. We bring brooms — every job ends with the floor swept clean.",
     faqs: [
@@ -451,7 +451,7 @@ export const SERVICES: Service[] = [
       "Old phones and tablets",
       "Server gear and small office equipment",
     ],
-    pricing: "Single-item TV/electronics pickups start at $99. Office-clearing e-waste batches fall in Small or Medium load.",
+    pricing: "Single-item TV/electronics pickups start at $79. Office-clearing e-waste batches fall in Small or Medium load.",
     whyJunkMd:
       "We follow California e-waste regulations end-to-end. Your old TV doesn't end up in a canyon.",
     faqs: [
@@ -467,7 +467,7 @@ export const SERVICES: Service[] = [
     title: "Refrigerator & Freezer Disposal",
     metaTitle: "Refrigerator & Freezer Disposal San Diego — EPA-Compliant Freon Recovery",
     metaDescription:
-      "Old fridges, freezers, mini-fridges, wine coolers — JunkMD+ hauls them out and routes freon to EPA-compliant recovery. Single curbside pickup starts at $99.",
+      "Old fridges, freezers, mini-fridges, wine coolers — JunkMD+ hauls them out and routes freon to EPA-compliant recovery. Single curbside pickup starts at $79.",
     hero: "Old fridges, freezers, mini-fridges — hauled out today with EPA-compliant freon recovery.",
     intro:
       "Refrigerators and freezers contain refrigerant gases that have to be recovered by certified technicians before disposal. JunkMD+ ensures every fridge we haul gets routed to a certified recycler — never dumped, never illegally vented. " +
@@ -479,7 +479,7 @@ export const SERVICES: Service[] = [
       "Wine coolers and beverage centers",
       "Commercial refrigeration (call for sizing)",
     ],
-    pricing: "Single curbside fridge pickup starts at $99. Multi-appliance hauls bundle into Small or Medium load.",
+    pricing: "Single curbside fridge pickup starts at $79. Multi-appliance hauls bundle into Small or Medium load.",
     whyJunkMd:
       "We don't cut corners on refrigerant. Every fridge goes to a certified recycler — never the canyon, never the curb.",
     faqs: [
@@ -1070,7 +1070,7 @@ export const SERVICES: Service[] = [
       "Server gear and network equipment",
       "Data destruction on request",
     ],
-    pricing: "Single-item TV/electronics pickup starts at $99. Office e-waste batches fit in Small or Medium load.",
+    pricing: "Single-item TV/electronics pickup starts at $79. Office e-waste batches fit in Small or Medium load.",
     whyJunkMd: "California-compliant from pickup through recycler delivery.",
     faqs: [
       { q: "Do you wipe data?", a: "Yes — drive wipe or physical destruction available." },
@@ -1183,7 +1183,7 @@ export const SERVICES: Service[] = [
       "Weight racks, dumbbells, plates, kettlebells",
       "Rowing machines",
     ],
-    pricing: "Single-item curbside pickup starts at $99. Multi-piece home gyms typically Small or Medium load.",
+    pricing: "Single-item curbside pickup starts at $79. Multi-piece home gyms typically Small or Medium load.",
     whyJunkMd: "We disassemble on-site. Stairs are not a problem.",
     faqs: [
       { q: "Will you donate working equipment?", a: "Yes — Goodwill and local fitness charities take a lot of it." },
@@ -1210,7 +1210,7 @@ export const SERVICES: Service[] = [
       "Office cardboard",
       "Bubble wrap and packing foam (recycled where possible)",
     ],
-    pricing: "Small Load tier ($199+) typically covers a household worth of moving boxes.",
+    pricing: "Small Load tier ($197–329) typically covers a household worth of moving boxes.",
     whyJunkMd: "We flatten on-site if you didn't, and everything goes to a recycler.",
     faqs: [
       { q: "Will you take it if it's not flattened?", a: "Yes — we'll flatten on-site." },

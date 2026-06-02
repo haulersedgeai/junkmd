@@ -16,7 +16,7 @@ export const SITE = {
   geo: { lat: 32.8274, lng: -117.2297 },
   hours: "Mon–Sat, 2-hour arrival windows",
   hoursMachine: ["Mo-Sa 08:00-18:00"],
-  priceRange: "$99–$659",
+  priceRange: "$79–$799",
   bookingUrl:
     "https://book.housecallpro.com/book/JunkMD/cbbc4ed5b59a42f8803b491591c78555",
   socials: {
@@ -67,8 +67,8 @@ export const PRICING_TIERS = [
     slug: "single-curbside",
     name: "Single Curbside Pickup",
     short: "1 Item",
-    priceFrom: 99,
-    priceDisplay: "$99",
+    priceFrom: 79,
+    priceDisplay: "$79",
     fraction: "Single item",
     image: "/images/pricing/tier-1-curbside.webp",
     description:
@@ -84,8 +84,8 @@ export const PRICING_TIERS = [
     slug: "small-load",
     name: "Small Load",
     short: "1/6 Truck",
-    priceFrom: 199,
-    priceDisplay: "$199+",
+    priceFrom: 197,
+    priceDisplay: "$197–329",
     fraction: "Up to 1/6 of our truck",
     image: "/images/pricing/tier-2-small.webp",
     description:
@@ -101,8 +101,8 @@ export const PRICING_TIERS = [
     slug: "medium-load",
     name: "Medium Load",
     short: "1/2 Truck",
-    priceFrom: 379,
-    priceDisplay: "$379+",
+    priceFrom: 329,
+    priceDisplay: "$329–526",
     fraction: "Up to 1/2 of our truck",
     image: "/images/pricing/tier-3-medium.webp",
     description:
@@ -118,8 +118,8 @@ export const PRICING_TIERS = [
     slug: "large-load",
     name: "Large Load",
     short: "Full Truck",
-    priceFrom: 659,
-    priceDisplay: "$659+",
+    priceFrom: 526,
+    priceDisplay: "$526–799",
     fraction: "Full truckload (≈ 6 pickup trucks)",
     image: "/images/pricing/tier-4-large.webp",
     description:
