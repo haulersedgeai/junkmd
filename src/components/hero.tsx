@@ -58,14 +58,18 @@ export function Hero({
             fontSize: "clamp(2.5rem, 5.5vw, 3.5rem)",
             lineHeight: 1.05,
             letterSpacing: "-0.02em",
-            fontWeight: 600,
+            fontWeight: 700,
             maxWidth: "720px",
+            textShadow: "0 2px 16px rgba(0,0,0,0.55), 0 1px 3px rgba(0,0,0,0.6)",
           }}
         >
           {heading}
         </h1>
 
-        <p className="mt-5 max-w-[560px] text-white/85 text-[18px] leading-[1.55]">
+        <p
+          className="mt-5 max-w-[560px] text-white/90 text-[18px] leading-[1.55]"
+          style={{ textShadow: "0 1px 8px rgba(0,0,0,0.55)" }}
+        >
           {sub}
         </p>
 

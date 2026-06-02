@@ -9,7 +9,6 @@ import { cn } from "@/lib/utils";
 const SLIDES = [
   { src: "/images/crew-action.jpeg", alt: "JunkMD+ crew loading a truck at a San Diego job" },
   { src: "/images/crew-hero.jpg", alt: "JunkMD+ crew on a junk removal job in San Diego" },
-  { src: "/images/trucks.webp", alt: "JunkMD+ green junk removal fleet serving San Diego County" },
 ];
 
 export function HeroCarousel() {
@@ -69,10 +68,13 @@ export function HeroCarousel() {
         </div>
       </div>
 
-      {/* Ink overlay for text contrast */}
+      {/* Ink overlay for text contrast — gradient is darker where the headline sits */}
       <div
         className="absolute inset-0 pointer-events-none"
-        style={{ backgroundColor: "rgba(10,10,10,0.55)" }}
+        style={{
+          background:
+            "linear-gradient(180deg, rgba(10,10,10,0.35) 0%, rgba(10,10,10,0.55) 45%, rgba(10,10,10,0.85) 100%)",
+        }}
         aria-hidden="true"
       />
 
