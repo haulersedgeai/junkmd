@@ -642,7 +642,7 @@ export const SERVICES: Service[] = [
       "Drywall, framing scrap, flooring, fixtures, packaging — JunkMD+ hauls construction debris from job sites across San Diego. On-call same-week pickups available.",
     hero: "Drywall, framing scrap, flooring, fixtures, packaging — hauled fast so your job site stays moving.",
     intro:
-      "Construction generates debris faster than most dumpsters can handle. JunkMD+ supplements your dumpster strategy with on-call truck pickups, including jobs where a dumpster won't fit. " +
+      "Construction generates debris faster than crews can move it — drywall scrap, framing offcuts, torn-out flooring, packaging from new fixtures. JunkMD+ rolls a truck and a two-person crew straight to your site, loads it all out by hand, and hauls it the same day. No dumpster to permit, place, or wait on. " +
       trustParagraph,
     includes: [
       "Drywall scrap and dust-bagged debris",
@@ -1145,7 +1145,7 @@ export const SERVICES: Service[] = [
       "Drywall, flooring, cabinets, fixtures, packaging — JunkMD+ hauls renovation debris from active job sites. On-call same-week pickup.",
     hero: "Active renovation? We're on-call for same-week debris pickup so your contractor keeps moving.",
     intro:
-      "Big renovations create big piles. JunkMD+ supplements your dumpster strategy with on-call pickups — perfect for jobs where the dumpster filled up faster than expected. " +
+      "Big renovations create big piles — torn-out cabinets, ripped flooring, old fixtures, drywall scrap. JunkMD+ rolls a truck and a two-person crew to the job, loads it all out by hand, and hauls it the same day. Full-service from pile to landfill diversion — no dumpster to rent, place, or fill yourself. " +
       trustParagraph,
     includes: [
       "Drywall, framing scrap, insulation",

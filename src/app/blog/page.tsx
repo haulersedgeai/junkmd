@@ -10,11 +10,9 @@ export const metadata: Metadata = {
 
 const POSTS = [
   { title: "How Much Does Junk Removal Cost in San Diego?", date: "2025-11-13", excerpt: "Real pricing for real San Diego jobs. The four-tier breakdown and what drives the price." },
-  { title: "What Can and Can't Go in a Dumpster?", date: "2025-11-13", excerpt: "Hazardous materials, refrigerants, e-waste — what you can drop in and what stays out." },
   { title: "Estate Cleanout Checklist for San Diego Families", date: "2025-11-13", excerpt: "Step-by-step planning so the cleanout doesn't become a second loss." },
   { title: "5 Signs It's Time to Clear Your Garage", date: "2025-09-22", excerpt: "If you haven't parked in it in over a year, the signs are everywhere." },
   { title: "Eco-Friendly Junk Removal: Where It All Goes", date: "2025-09-08", excerpt: "Goodwill, scrap yards, e-waste centers — the trail your junk takes after we drive away." },
-  { title: "The Difference Between Junk Removal & Dumpster Rental", date: "2025-08-14", excerpt: "Full-service vs self-service. Which one fits your project?" },
 ];
 
 export default function BlogPage() {
