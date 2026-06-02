@@ -87,14 +87,6 @@ export function Footer() {
               <span>{SITE.hours}</span>
             </li>
           </ul>
-          <a
-            href={SITE.bookingUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-accent mt-5 w-full"
-          >
-            Book online
-          </a>
         </div>
       </div>
 
