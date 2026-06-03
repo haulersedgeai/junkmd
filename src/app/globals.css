@@ -64,17 +64,19 @@ body {
   color: var(--ink);
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
-  color: var(--ink);
-  font-weight: 600;
-  line-height: 1.15;
-  letter-spacing: -0.02em;
-}
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+    color: var(--ink);
+    font-weight: 600;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+  }
 
-h1 { font-size: 44px; line-height: 1.1; letter-spacing: -0.02em; }
-h2 { font-size: 32px; }
-h3 { font-size: 22px; line-height: 1.3; letter-spacing: -0.01em; }
+  h1 { font-size: 44px; line-height: 1.1; letter-spacing: -0.02em; }
+  h2 { font-size: 32px; }
+  h3 { font-size: 22px; line-height: 1.3; letter-spacing: -0.01em; }
+}
 
 .display {
   font-size: 56px;
