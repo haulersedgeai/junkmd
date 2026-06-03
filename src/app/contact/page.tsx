@@ -100,7 +100,7 @@ export default function ContactPage() {
                 <textarea name="message" rows={5} required className="mt-1 w-full px-3 py-2 rounded-md border border-[color:var(--brand-border)] focus:outline-none focus:border-[color:var(--brand-green)]" placeholder="A few sentences. Include rough size or item list if you can." />
               </label>
               <input type="hidden" name="_subject" value="New JunkMD+ contact form submission" />
-              <button type="submit" className="btn-primary w-full">Send Message</button>
+              <button type="submit" className="btn btn-primary w-full">Send Message</button>
               <p className="text-xs text-[color:var(--brand-muted)]">
                 For fastest response, text photos to <a href={`tel:${SITE.phoneRaw}`} className="underline">{SITE.phone}</a> or
                 <a href={SITE.bookingUrl} target="_blank" rel="noopener noreferrer" className="underline ml-1">book online</a>.

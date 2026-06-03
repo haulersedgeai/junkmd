@@ -98,11 +98,11 @@ function ServicePage({ slug }: { slug: string }) {
             </h1>
             <p className="text-lg text-[color:var(--brand-text)] mb-5 max-w-xl">{s.hero}</p>
             <div className="flex flex-wrap gap-3">
-              <a href={SITE.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn-primary">
+              <a href={SITE.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn-accent">
                 <Calendar className="h-4 w-4" />
                 Book Now — Save $20
               </a>
-              <a href={`tel:${SITE.phoneRaw}`} className="btn-outline">
+              <a href={`tel:${SITE.phoneRaw}`} className="btn btn-outline">
                 <Phone className="h-4 w-4" />
                 {SITE.phone}
               </a>
@@ -146,10 +146,10 @@ function ServicePage({ slug }: { slug: string }) {
           <aside className="lg:sticky lg:top-24 self-start space-y-4">
             <div className="bg-[color:var(--brand-bg-soft)] border border-[color:var(--brand-border)] rounded-xl p-5">
               <h3 className="font-display text-xl uppercase mb-3">Ready to Book?</h3>
-              <a href={SITE.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn-primary w-full mb-2">
+              <a href={SITE.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn-accent w-full mb-2">
                 <Calendar className="h-4 w-4" /> Book Online
               </a>
-              <a href={`tel:${SITE.phoneRaw}`} className="btn-outline w-full">
+              <a href={`tel:${SITE.phoneRaw}`} className="btn btn-outline w-full">
                 <Phone className="h-4 w-4" /> Call {SITE.phone}
               </a>
               <p className="text-xs text-[color:var(--brand-muted)] mt-3 text-center">
@@ -267,10 +267,10 @@ function LocationPage({ slug }: { slug: string }) {
             </h1>
             <p className="text-lg text-[color:var(--brand-text)] mb-5">{l.intro}</p>
             <div className="flex flex-wrap gap-3">
-              <a href={SITE.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn-primary">
+              <a href={SITE.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn-accent">
                 <Calendar className="h-4 w-4" /> Book Now — Save $20
               </a>
-              <a href={`tel:${SITE.phoneRaw}`} className="btn-outline">
+              <a href={`tel:${SITE.phoneRaw}`} className="btn btn-outline">
                 <Phone className="h-4 w-4" /> {SITE.phone}
               </a>
             </div>
@@ -336,10 +336,10 @@ function LocationPage({ slug }: { slug: string }) {
           <aside className="lg:sticky lg:top-24 self-start space-y-4">
             <div className="bg-[color:var(--brand-bg-soft)] border border-[color:var(--brand-border)] rounded-xl p-5">
               <h3 className="font-display text-xl uppercase mb-2">Book in {l.name}</h3>
-              <a href={SITE.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn-primary w-full mb-2">
+              <a href={SITE.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn-accent w-full mb-2">
                 <Calendar className="h-4 w-4" /> Book Online
               </a>
-              <a href={`tel:${SITE.phoneRaw}`} className="btn-outline w-full">
+              <a href={`tel:${SITE.phoneRaw}`} className="btn btn-outline w-full">
                 <Phone className="h-4 w-4" /> {SITE.phone}
               </a>
               <p className="text-xs text-[color:var(--brand-muted)] mt-3 text-center">

@@ -142,6 +142,13 @@ body {
 }
 .btn-ghost:hover { background: var(--ink); color: #ffffff; }
 
+.btn-outline {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--border);
+}
+.btn-outline:hover { border-color: var(--ink); }
+
 .btn-ghost-soft {
   background: transparent;
   color: var(--ink);
