@@ -20,6 +20,18 @@
   --brand-dark: #5F9131;
   --brand-faint: #F0F7E6;
 
+  /* Aliases for legacy --brand-* refs scattered across pages.
+     Map to the canonical tokens above so authored color/background/border
+     references resolve instead of silently dropping. */
+  --brand-green: var(--brand);
+  --brand-green-dark: var(--brand-dark);
+  --brand-bg-soft: var(--bg-soft);
+  --brand-bg-muted: var(--bg-muted);
+  --brand-border: var(--border);
+  --brand-ink: var(--ink);
+  --brand-text: var(--ink-soft);
+  --brand-muted: var(--muted);
+
   --shadow-sm: 0 1px 2px rgba(10,10,10,0.05), 0 1px 3px rgba(10,10,10,0.04);
   --shadow-md: 0 4px 8px rgba(10,10,10,0.06), 0 2px 4px rgba(10,10,10,0.04);
   --shadow-lg: 0 12px 24px rgba(10,10,10,0.08), 0 4px 8px rgba(10,10,10,0.05);
