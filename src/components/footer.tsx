@@ -125,7 +125,21 @@ export function Footer() {
       {/* © */}
       <div className="border-t border-white/10">
         <div className="container-x py-5 flex flex-wrap items-center justify-between gap-2 text-[12px] text-white/50">
-          <p>© {new Date().getFullYear()} {SITE.legalName}. All rights reserved.</p>
+          <div className="flex flex-col gap-1">
+            <p>© {new Date().getFullYear()} {SITE.legalName}. All rights reserved.</p>
+            <p className="text-white/35">
+              Site by{" "}
+              <a
+                href="https://adimize.com"
+                target="_blank"
+                rel="noopener"
+                className="hover:text-white/70 underline-offset-2 hover:underline"
+              >
+                Adimize
+              </a>
+              {" "}— Local Service Digital Marketing
+            </p>
+          </div>
           <div className="flex gap-5">
             <Link href="/privacy-policy" className="hover:text-white">Privacy</Link>
             <Link href="/terms-conditions" className="hover:text-white">Terms</Link>

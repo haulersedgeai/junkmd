@@ -27,25 +27,25 @@ const CATEGORIES = [
     href: "/commercial-junk-removal",
     title: "Commercial junk removal",
     description: "Offices, warehouses, restaurants, retail, property management. After-hours and COI-ready.",
-    image: "/images/crew-action.jpeg",
+    image: "/images/photos/construction-debris/construction-debris-removal-san-diego-02.jpg",
   },
   {
     href: "/demolition-cleanup",
     title: "Light demolition",
     description: "Sheds, decks, fences, concrete, kitchen, bath. Demo and haul in a single house call.",
-    image: "/images/team/crew-lifting.jpg",
+    image: "/images/photos/deck-playset-demo/deck-playset-demo-san-diego-02.jpg",
   },
   {
     href: "/eco-friendly-junk-removal",
     title: "Eco-friendly disposal",
     description: "Donate first, recycle second, landfill last. Less than 15% of a typical haul hits a landfill.",
-    image: "/images/team/crew-highfive.jpg",
+    image: "/images/photos/team/team-junkmd-san-diego-05.jpg",
   },
   {
     href: "/what-we-take",
     title: "What we take",
     description: "Pianos, safes, exercise equipment, hot tubs, cardboard, couches. If you don't want it, we can haul it.",
-    image: "/images/team/team-on-truck.jpg",
+    image: "/images/photos/in-home-removal/in-home-removal-san-diego-02.jpg",
   },
 ];
 

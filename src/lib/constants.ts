@@ -70,7 +70,7 @@ export const PRICING_TIERS = [
     priceFrom: 79,
     priceDisplay: "$79",
     fraction: "Single item",
-    image: "/images/pricing/tier-1-curbside.webp",
+    image: "/images/photos/furniture-cleanout/furniture-cleanout-san-diego-01.jpg",
     description:
       "Perfect for one bulky item set out at the curb — a mattress, a couch, a refrigerator. We pull up, lift it, and it's gone in minutes.",
     includes: [
@@ -87,7 +87,7 @@ export const PRICING_TIERS = [
     priceFrom: 197,
     priceDisplay: "$197–329",
     fraction: "Up to 1/6 of our truck",
-    image: "/images/pricing/tier-2-small.webp",
+    image: "/images/photos/yard-waste/yard-waste-removal-san-diego-01.jpg",
     description:
       "A few large items or a packed closet's worth of junk. Equal to a full pickup truck bed.",
     includes: [
@@ -104,7 +104,7 @@ export const PRICING_TIERS = [
     priceFrom: 329,
     priceDisplay: "$329–526",
     fraction: "Up to 1/2 of our truck",
-    image: "/images/pricing/tier-3-medium.webp",
+    image: "/images/photos/garage-cleanout/garage-cleanout-san-diego-01.jpg",
     description:
       "Half a truckload — a garage cleanout, a packed shed, a large room's furniture. Equal to about three pickup truck loads.",
     includes: [
@@ -121,7 +121,7 @@ export const PRICING_TIERS = [
     priceFrom: 526,
     priceDisplay: "$526–799",
     fraction: "Full truckload (≈ 6 pickup trucks)",
-    image: "/images/pricing/tier-4-large.webp",
+    image: "/images/photos/truck/junkmd-truck-san-diego-02.jpg",
     description:
       "Full truckload — equal to six pickup truck loads. Estate cleanout, hoarder cleanout, whole-house clear-out.",
     includes: [
