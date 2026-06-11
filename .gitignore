@@ -39,3 +39,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# migration scratch (not referenced by site code)
+/public/images/scraped/
+/REDIRECT_AUDIT.md
+/new_urls.txt
+/old_urls.txt
+/redirects_draft.csv

@@ -108,7 +108,7 @@ export default function HomePage() {
               ))}
             </ul>
           </div>
-          <YoutubeEmbed id={SITE.youtube.homeVideoId} title="What is Junk Removal? — JunkMD+" />
+          <YoutubeEmbed videoId={SITE.youtube.homeVideoId} title="What is Junk Removal? — JunkMD+" />
         </div>
       </section>
 

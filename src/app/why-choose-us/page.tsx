@@ -5,6 +5,9 @@ import { Breadcrumbs } from "@/components/breadcrumbs";
 import { CtaSection } from "@/components/cta-section";
 import { TruckComparison } from "@/components/truck-comparison";
 import { ReviewGrid } from "@/components/review-grid";
+import { JsonLd } from "@/components/json-ld";
+import { YoutubeEmbed } from "@/components/youtube-embed";
+import { videoSchema } from "@/lib/jsonld";
 import { SITE } from "@/lib/constants";
 
 export const metadata: Metadata = {
@@ -87,6 +90,16 @@ const COMPARISON = [
 export default function WhyChooseUsPage() {
   return (
     <>
+      <JsonLd
+        id="ld-video-benefits"
+        data={videoSchema({
+          videoId: "jFJkU_vllWw",
+          name: "Benefits of Choosing JunkMD",
+          description:
+            "Why San Diego picks JunkMD+ — flat-rate house-call pricing, eco-first disposal, and a uniformed crew that shows up on time.",
+          uploadDate: "2026-06-08",
+        })}
+      />
       <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Why Choose Us" }]} />
 
       {/* Photo banner */}
@@ -137,6 +150,21 @@ export default function WhyChooseUsPage() {
             Six concrete reasons families, property managers, and contractors keep calling the
             green truck.
           </p>
+        </div>
+      </section>
+
+      {/* Benefits video */}
+      <section className="section bg-bg-soft border-b border-border">
+        <div className="container-x grid lg:grid-cols-[1.25fr_1fr] gap-10 items-center">
+          <YoutubeEmbed videoId="jFJkU_vllWw" title="Benefits of Choosing JunkMD" />
+          <div>
+            <p className="label" style={{ color: "var(--brand-dark)" }}>The 90-second version</p>
+            <h2 className="mt-3">See why San Diego picks the green truck.</h2>
+            <p className="mt-4 text-[18px] leading-[1.55] text-ink-soft">
+              A quick look at the JunkMD+ house call — flat-rate pricing, donation-first
+              disposal, and a uniformed crew that does the lifting for you.
+            </p>
+          </div>
         </div>
       </section>
 

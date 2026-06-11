@@ -89,6 +89,24 @@ export function serviceSchema(name: string, description: string, slug: string) {
   };
 }
 
+export function videoSchema(input: {
+  videoId: string;
+  name: string;
+  description: string;
+  uploadDate?: string;
+}) {
+  const { videoId, name, description, uploadDate = "2026-06-10" } = input;
+  return {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    name,
+    description,
+    thumbnailUrl: `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`,
+    embedUrl: `https://www.youtube-nocookie.com/embed/${videoId}`,
+    uploadDate,
+  };
+}
+
 export function faqSchema(items: { q: string; a: string }[]) {
   return {
     "@context": "https://schema.org",

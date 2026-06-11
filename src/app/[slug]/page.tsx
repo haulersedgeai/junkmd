@@ -10,12 +10,23 @@ import { JsonLd } from "@/components/json-ld";
 import { ServiceCard } from "@/components/service-card";
 import { ProcessSteps } from "@/components/process-steps";
 import { ReviewGrid } from "@/components/review-grid";
-import { faqSchema, serviceSchema, breadcrumbSchema } from "@/lib/jsonld";
+import { YoutubeEmbed } from "@/components/youtube-embed";
+import { faqSchema, serviceSchema, breadcrumbSchema, videoSchema } from "@/lib/jsonld";
 import { SERVICES, SERVICE_BY_SLUG } from "@/content/services";
 import { LOCATIONS, LOCATION_BY_SLUG } from "@/content/locations";
 import { PRODUCTION_URL, SITE } from "@/lib/constants";
 
 type Params = { slug: string };
+
+const SERVICE_VIDEOS: Record<string, { videoId: string; title: string; description: string; uploadDate: string }> = {
+  "estate-cleanout": {
+    videoId: "aczlyPwxLpA",
+    title: "Stress-Free Property Cleanups Made Simple",
+    description:
+      "How JunkMD+ runs compassionate, full-service estate and property cleanouts in San Diego — sorting, donating, and hauling so families can focus on what matters.",
+    uploadDate: "2026-02-05",
+  },
+};
 
 export function generateStaticParams() {
   const slugs = new Set<string>();
@@ -70,6 +81,8 @@ function ServicePage({ slug }: { slug: string }) {
   };
   const hub = categoryHubMap[s.category];
 
+  const serviceVideo = SERVICE_VIDEOS[slug];
+
   return (
     <>
       <JsonLd id="ld-service" data={serviceSchema(s.title, s.metaDescription, slug)} />
@@ -79,6 +92,17 @@ function ServicePage({ slug }: { slug: string }) {
         { name: hub.label, url: `${PRODUCTION_URL}${hub.href}` },
         { name: s.title, url: `${PRODUCTION_URL}/${slug}` },
       ])} />
+      {serviceVideo && (
+        <JsonLd
+          id="ld-service-video"
+          data={videoSchema({
+            videoId: serviceVideo.videoId,
+            name: serviceVideo.title,
+            description: serviceVideo.description,
+            uploadDate: serviceVideo.uploadDate,
+          })}
+        />
+      )}
 
       <Breadcrumbs items={[
         { label: "Home", href: "/" },
@@ -171,6 +195,26 @@ function ServicePage({ slug }: { slug: string }) {
           </aside>
         </div>
       </section>
+
+      {serviceVideo && (
+        <section className="py-14 bg-[color:var(--brand-bg-soft)] border-y border-[color:var(--brand-border)]">
+          <div className="container-x grid lg:grid-cols-[1.1fr_1fr] gap-10 items-center">
+            <YoutubeEmbed videoId={serviceVideo.videoId} title={serviceVideo.title} />
+            <div>
+              <span className="inline-block text-xs font-bold uppercase tracking-widest text-[color:var(--brand-green-dark)] mb-2">
+                See it in action
+              </span>
+              <h2 className="font-display text-3xl md:text-4xl uppercase mb-3 leading-[1.1]">
+                {serviceVideo.title}
+              </h2>
+              <p className="text-[17px] text-[color:var(--brand-text)] leading-[1.55]">
+                Watch how the JunkMD+ crew handles a full property cleanout — discreetly,
+                respectfully, and on a timeline that works for your family.
+              </p>
+            </div>
+          </div>
+        </section>
+      )}
 
       <ProcessSteps />
 

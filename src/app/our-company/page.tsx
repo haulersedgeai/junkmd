@@ -3,6 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { CtaSection } from "@/components/cta-section";
+import { JsonLd } from "@/components/json-ld";
+import { YoutubeEmbed } from "@/components/youtube-embed";
+import { videoSchema } from "@/lib/jsonld";
 
 export const metadata: Metadata = {
   title: "Our Company — JunkMD+ San Diego",
@@ -20,6 +23,16 @@ const STATS = [
 export default function OurCompanyPage() {
   return (
     <>
+      <JsonLd
+        id="ld-video-about"
+        data={videoSchema({
+          videoId: "v-8Vq2Vexfg",
+          name: "About JunkMD",
+          description:
+            "Meet JunkMD+ — a family-owned San Diego junk removal company that treats every house call like the only one we're doing today.",
+          uploadDate: "2024-12-06",
+        })}
+      />
       <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Our Company" }]} />
 
       {/* Photo banner — real team shot */}
@@ -87,8 +100,23 @@ export default function OurCompanyPage() {
         </div>
       </section>
 
-      {/* Founding story */}
+      {/* Meet JunkMD — intro video */}
       <section className="py-16 bg-white">
+        <div className="container-x grid lg:grid-cols-[1fr_1.25fr] gap-10 items-center">
+          <div>
+            <p className="label" style={{ color: "var(--brand-green-dark)" }}>Meet JunkMD</p>
+            <h2 className="mt-3">A house call, not a hassle.</h2>
+            <p className="mt-4 text-[18px] leading-[1.55] text-ink-soft">
+              Two minutes with the crew — how the green-truck house call works,
+              who&apos;s behind it, and why San Diego families keep calling us back.
+            </p>
+          </div>
+          <YoutubeEmbed videoId="v-8Vq2Vexfg" title="About JunkMD" />
+        </div>
+      </section>
+
+      {/* Founding story */}
+      <section className="py-16 bg-white border-t border-[color:var(--brand-border)]">
         <div className="container-x grid lg:grid-cols-[2fr_1fr] gap-12 items-start">
           <div className="prose-brand max-w-none">
             <h2>The short version</h2>
