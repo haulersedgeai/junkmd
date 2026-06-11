@@ -21,7 +21,7 @@ const CATEGORIES = [
     href: "/residential-junk-removal",
     title: "Residential junk removal",
     description: "Furniture, appliances, mattresses, garages, attics, yards — anything in or around your home.",
-    image: "/images/team/crew-customer-truck.jpg",
+    image: "/images/photos/team/team-junkmd-san-diego-01.jpg",
   },
   {
     href: "/commercial-junk-removal",

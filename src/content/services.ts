@@ -99,7 +99,7 @@ export const SERVICES: Service[] = [
       { q: "Will the city or hauler take it?", a: "Curbside city bulky pickup has limits and long waits. We're typically same-day or next-day with no scheduling games." },
     ],
     related: ["refrigerator-freezer-disposal", "commercial-appliance-removal", "furniture-removal", "garage-cleanout"],
-    image: "/images/truck-hero.webp",
+    image: "/images/photos/truck/junkmd-truck-san-diego-banner-01.jpg",
   },
   {
     slug: "mattress-disposal",
@@ -458,7 +458,7 @@ export const SERVICES: Service[] = [
       { q: "What about data on hard drives?", a: "We can wipe or destroy drives on request. Tell us during booking." },
     ],
     related: ["e-waste-disposal", "office-cleanouts", "appliance-removal", "scrap-metal-removal"],
-    image: "/images/truck-hero.webp",
+    image: "/images/photos/truck/junkmd-truck-san-diego-banner-01.jpg",
   },
   {
     slug: "refrigerator-freezer-disposal",
@@ -486,7 +486,7 @@ export const SERVICES: Service[] = [
       { q: "Will you take from upstairs?", a: "Yes — stairs, side yards, anywhere. That's the JunkMD+ house call." },
     ],
     related: ["appliance-removal", "commercial-appliance-removal", "e-waste-disposal", "scrap-metal-removal"],
-    image: "/images/truck-hero.webp",
+    image: "/images/photos/truck/junkmd-truck-san-diego-banner-01.jpg",
   },
 
   // ───────── COMMERCIAL ─────────
@@ -574,7 +574,7 @@ export const SERVICES: Service[] = [
       { q: "Can you remove racking?", a: "Yes — heavy-duty pallet racking disassembly is part of warehouse work." },
     ],
     related: ["office-cleanouts", "commercial-junk-removal", "construction-debris-removal", "scrap-metal-removal"],
-    image: "/images/truck-hero.webp",
+    image: "/images/photos/truck/junkmd-truck-san-diego-banner-01.jpg",
   },
   {
     slug: "restaurant-junk-removal",
@@ -746,7 +746,7 @@ export const SERVICES: Service[] = [
       { q: "What about hard-plumbed gas lines?", a: "We disconnect what we can; gas line capping should be handled by a licensed plumber." },
     ],
     related: ["restaurant-junk-removal", "office-cleanouts", "appliance-removal", "warehouse-cleanouts"],
-    image: "/images/truck-hero.webp",
+    image: "/images/photos/truck/junkmd-truck-san-diego-banner-01.jpg",
   },
 
   // ───────── DEMOLITION ─────────
@@ -1019,7 +1019,7 @@ export const SERVICES: Service[] = [
       { q: "What gets recycled vs trashed?", a: "We separate at our yard. Metal, electronics, wood, mattresses, and cardboard go to recyclers. Mixed contaminated waste goes to landfill." },
     ],
     related: ["eco-friendly-junk-removal", "scrap-metal-removal", "e-waste-disposal", "donation-pickup"],
-    image: "/images/truck-hero.webp",
+    image: "/images/photos/truck/junkmd-truck-san-diego-banner-01.jpg",
   },
   {
     slug: "donation-pickup",
@@ -1076,7 +1076,7 @@ export const SERVICES: Service[] = [
       { q: "Are CRT TVs free?", a: "California recyclers accept CRTs at no extra fee. Our pickup fee covers labor and transport." },
     ],
     related: ["tv-electronics-disposal", "recycling-services", "scrap-metal-removal", "office-cleanouts"],
-    image: "/images/truck-hero.webp",
+    image: "/images/photos/truck/junkmd-truck-san-diego-banner-01.jpg",
   },
   {
     slug: "scrap-metal-removal",
@@ -1104,7 +1104,7 @@ export const SERVICES: Service[] = [
       { q: "Do you take car parts?", a: "Yes for most car parts, no for fluid-containing systems (those need a body shop)." },
     ],
     related: ["recycling-services", "e-waste-disposal", "appliance-removal", "construction-debris-removal"],
-    image: "/images/truck-hero.webp",
+    image: "/images/photos/truck/junkmd-truck-san-diego-banner-01.jpg",
   },
 
   // ───────── WHAT WE TAKE ─────────
@@ -1243,7 +1243,7 @@ export const SERVICES: Service[] = [
       { q: "Will you bring back empties?", a: "Generally no — we recycle, we don't operate a pallet exchange." },
     ],
     related: ["warehouse-cleanouts", "construction-debris-removal", "recycling-services", "cardboard-removal"],
-    image: "/images/truck-hero.webp",
+    image: "/images/photos/truck/junkmd-truck-san-diego-banner-01.jpg",
   },
   {
     slug: "property-cleanout",
@@ -1298,7 +1298,7 @@ export const SERVICES: Service[] = [
       { q: "Saturdays?", a: "Yes — Mon-Sat, same-day available." },
     ],
     related: ["furniture-removal", "appliance-removal", "yard-waste-removal", "garage-cleanout"],
-    image: "/images/truck-hero.webp",
+    image: "/images/photos/truck/junkmd-truck-san-diego-banner-01.jpg",
   },
   {
     slug: "couch-removal",

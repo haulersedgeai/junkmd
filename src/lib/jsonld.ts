@@ -12,7 +12,7 @@ export function localBusinessSchema() {
     url: PRODUCTION_URL,
     telephone: SITE.phoneRaw,
     email: SITE.email,
-    image: `${PRODUCTION_URL}/images/truck-hero.webp`,
+    image: `${PRODUCTION_URL}/images/photos/truck/junkmd-truck-san-diego-banner-01.jpg`,
     logo: `${PRODUCTION_URL}/images/logo.jpeg`,
     priceRange: SITE.priceRange,
     address: {

@@ -14,6 +14,7 @@ import { YoutubeEmbed } from "@/components/youtube-embed";
 import { faqSchema, serviceSchema, breadcrumbSchema, videoSchema } from "@/lib/jsonld";
 import { SERVICES, SERVICE_BY_SLUG } from "@/content/services";
 import { LOCATIONS, LOCATION_BY_SLUG } from "@/content/locations";
+import { SERVICE_PHOTOS, BRAND_PHOTOS } from "@/content/photos";
 import { PRODUCTION_URL, SITE } from "@/lib/constants";
 
 type Params = { slug: string };
@@ -82,6 +83,9 @@ function ServicePage({ slug }: { slug: string }) {
   const hub = categoryHubMap[s.category];
 
   const serviceVideo = SERVICE_VIDEOS[slug];
+  const photos = SERVICE_PHOTOS[slug];
+  const heroImage = photos?.hero ?? s.image;
+  const heroAlt = photos?.heroAlt ?? s.title;
 
   return (
     <>
@@ -132,9 +136,9 @@ function ServicePage({ slug }: { slug: string }) {
               </a>
             </div>
           </div>
-          {s.image && (
+          {heroImage && (
             <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-xl">
-              <Image src={s.image} alt={s.title} fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" priority />
+              <Image src={heroImage} alt={heroAlt} fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" priority />
             </div>
           )}
         </div>
@@ -195,6 +199,46 @@ function ServicePage({ slug }: { slug: string }) {
           </aside>
         </div>
       </section>
+
+      {photos && photos.cards.length > 0 && (
+        <section className="py-12 bg-white border-t border-[color:var(--brand-border)]">
+          <div className="container-x">
+            <div className="max-w-2xl mb-8">
+              <span className="inline-block text-xs font-bold uppercase tracking-widest text-[color:var(--brand-green-dark)] mb-2">
+                On the job
+              </span>
+              <h2 className="font-display text-3xl uppercase leading-[1.1]">Real {s.title.toLowerCase()} jobs in San Diego</h2>
+            </div>
+            <div
+              className={
+                photos.cards.length === 1
+                  ? "grid grid-cols-1 max-w-lg gap-4"
+                  : photos.cards.length === 2
+                    ? "grid grid-cols-1 sm:grid-cols-2 gap-4"
+                    : photos.cards.length === 3
+                      ? "grid grid-cols-1 sm:grid-cols-3 gap-4"
+                      : "grid grid-cols-2 lg:grid-cols-4 gap-4"
+              }
+            >
+              {photos.cards.map((c) => (
+                <div
+                  key={c.src}
+                  className="relative aspect-[4/3] rounded-xl overflow-hidden bg-[color:var(--brand-bg-muted)] border border-[color:var(--brand-border)]"
+                >
+                  <Image
+                    src={c.src}
+                    alt={c.alt}
+                    fill
+                    loading="lazy"
+                    className="object-cover"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {serviceVideo && (
         <section className="py-14 bg-[color:var(--brand-bg-soft)] border-y border-[color:var(--brand-border)]">
@@ -320,7 +364,7 @@ function LocationPage({ slug }: { slug: string }) {
             </div>
           </div>
           <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-xl">
-            <Image src="/images/truck-hero.webp" alt={`JunkMD+ truck in ${l.name}`} fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" priority />
+            <Image src={BRAND_PHOTOS.truckBanner} alt={`JunkMD+ green junk-removal truck on a ${l.name}, San Diego route`} fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" priority />
           </div>
         </div>
       </section>

@@ -22,7 +22,7 @@ export default function BlogPage() {
       <Hero
         title="JunkMD+ Blog"
         subtitle="Tips, guides, and stories from San Diego's top-rated junk removal team."
-        image="/images/truck-hero.webp"
+        image="/images/photos/truck/junkmd-truck-san-diego-banner-01.jpg"
       />
       <section className="py-12 bg-white">
         <div className="container-x grid md:grid-cols-2 lg:grid-cols-3 gap-5">

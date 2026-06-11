@@ -20,7 +20,7 @@ export default function JunkRemovalHub() {
       <Hero
         title="JunkMD+ Junk Removal Services"
         subtitle="Residential and commercial junk removal across San Diego County. Same-day & next-day appointments. Save $20 on your first house call."
-        image="/images/truck-hero.webp"
+        image="/images/photos/truck/junkmd-truck-san-diego-banner-01.jpg"
       />
 
       <section className="py-12 bg-white">

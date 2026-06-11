@@ -6,6 +6,7 @@ import { CtaSection } from "@/components/cta-section";
 import { JsonLd } from "@/components/json-ld";
 import { YoutubeEmbed } from "@/components/youtube-embed";
 import { videoSchema } from "@/lib/jsonld";
+import { BRAND_PHOTOS } from "@/content/photos";
 
 export const metadata: Metadata = {
   title: "Our Company — JunkMD+ San Diego",
@@ -38,8 +39,8 @@ export default function OurCompanyPage() {
       {/* Photo banner — real team shot */}
       <section className="relative isolate overflow-hidden bg-ink text-white" style={{ minHeight: 480 }}>
         <Image
-          src="/images/team/team-on-truck.jpg"
-          alt="The JunkMD+ team with their green junk-removal truck in San Diego"
+          src={BRAND_PHOTOS.teamLineup}
+          alt={BRAND_PHOTOS.teamLineupAlt}
           fill
           priority
           sizes="100vw"
@@ -168,6 +169,58 @@ export default function OurCompanyPage() {
               </p>
             </div>
           </aside>
+        </div>
+      </section>
+
+      {/* Crew gallery — weave the rest of the team selects */}
+      <section className="py-14 bg-white border-t border-[color:var(--brand-border)]">
+        <div className="container-x">
+          <div className="max-w-2xl mb-8">
+            <p className="label" style={{ color: "var(--brand-green-dark)" }}>The crew</p>
+            <h2 className="mt-3">More of the people behind the green truck.</h2>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="relative aspect-[4/5] rounded-xl overflow-hidden bg-[color:var(--brand-bg-muted)] border border-[color:var(--brand-border)]">
+              <Image
+                src={BRAND_PHOTOS.teamLeadership}
+                alt={BRAND_PHOTOS.teamLeadershipAlt}
+                fill
+                loading="lazy"
+                className="object-cover"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+              />
+            </div>
+            <div className="relative aspect-[4/5] rounded-xl overflow-hidden bg-[color:var(--brand-bg-muted)] border border-[color:var(--brand-border)]">
+              <Image
+                src={BRAND_PHOTOS.teamThumbsUp}
+                alt={BRAND_PHOTOS.teamThumbsUpAlt}
+                fill
+                loading="lazy"
+                className="object-cover"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+              />
+            </div>
+            <div className="relative aspect-[4/5] rounded-xl overflow-hidden bg-[color:var(--brand-bg-muted)] border border-[color:var(--brand-border)]">
+              <Image
+                src={BRAND_PHOTOS.teamOnTruck}
+                alt={BRAND_PHOTOS.teamOnTruckAlt}
+                fill
+                loading="lazy"
+                className="object-cover"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+              />
+            </div>
+            <div className="relative aspect-[4/5] rounded-xl overflow-hidden bg-[color:var(--brand-bg-muted)] border border-[color:var(--brand-border)]">
+              <Image
+                src={BRAND_PHOTOS.teamHandsIn}
+                alt={BRAND_PHOTOS.teamHandsInAlt}
+                fill
+                loading="lazy"
+                className="object-cover"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+              />
+            </div>
+          </div>
         </div>
       </section>
 

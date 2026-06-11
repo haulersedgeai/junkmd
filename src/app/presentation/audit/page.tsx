@@ -100,7 +100,7 @@ export default function AuditPage() {
             <figure>
               <div className="relative aspect-[4/3] card-hero overflow-hidden bg-ink">
                 <Image
-                  src="/images/truck-hero.webp"
+                  src="/images/photos/truck/junkmd-truck-san-diego-banner-01.jpg"
                   alt="JunkMD+ rebuild preview"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"

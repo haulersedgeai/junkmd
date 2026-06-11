@@ -48,7 +48,7 @@ export default function PricingPage() {
         badge="Flat-Rate, Up-Front Pricing"
         title="JunkMD+ Pricing — Four Tiers, No Surprises"
         subtitle="We size the job in person and quote a flat price before we touch a thing. Single items start at $79. Full truckloads (≈ 6 pickup trucks worth) up to $799."
-        image="/images/junkmd-truck.png"
+        image="/images/photos/truck/junkmd-truck-san-diego-banner-01.jpg"
       />
 
       {/* $20-off callout band */}

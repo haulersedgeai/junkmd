@@ -147,7 +147,7 @@ export default function LocationsHub() {
       {/* Photo banner */}
       <section className="relative isolate overflow-hidden bg-ink text-white" style={{ minHeight: 440 }}>
         <Image
-          src="/images/truck-hero.webp"
+          src="/images/photos/truck/junkmd-truck-san-diego-banner-01.jpg"
           alt="JunkMD+ green junk-removal truck on a San Diego street"
           fill
           priority

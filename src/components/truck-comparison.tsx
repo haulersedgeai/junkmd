@@ -26,7 +26,7 @@ export function TruckComparison() {
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr] items-center gap-10 lg:gap-16 max-w-5xl mx-auto">
           <figure className="text-center">
             <div className="relative aspect-[5/3] w-full rounded-[10px] overflow-hidden border border-border bg-bg-muted">
-              <Image src="/images/truck-hero.webp" alt="JunkMD+ truck" fill sizes="(max-width: 1024px) 100vw, 380px" className="object-cover" />
+              <Image src="/images/photos/truck/junkmd-truck-san-diego-banner-01.jpg" alt="JunkMD+ truck" fill sizes="(max-width: 1024px) 100vw, 380px" className="object-cover" />
             </div>
             <figcaption
               className="mt-4 text-ink"
