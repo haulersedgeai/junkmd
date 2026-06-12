@@ -79,6 +79,61 @@ const ONE_OFF_RENAMES: Array<[string, string]> = [
   ["clementia-sandoval", "clemencia-sandoval"],
 ];
 
+// Tier 1.5 — service-keyword redirects from the 2026-06-11 sitemap audit.
+// Source: migration-archive/coverage_report.md. Each source slug appeared in the
+// live WP sitemap with no redirect and no 1:1 live route. Every target is a
+// confirmed slug or app route on the new site.
+const SERVICE_KEYWORD_REDIRECTS: Array<[string, string]> = [
+  // direct service alias / slug-rename
+  ["carpet-removal-company-near-me", "carpet-removal"],
+  ["donation-pickup-drop-off", "donation-pickup"],
+  ["concrete-removal-2", "concrete-removal"],
+  ["light-demolition-services", "demolition-cleanup"],
+  ["yard-debris-removal", "yard-waste-removal"],
+  ["swing-set-removal", "playset-swing-set-removal"],
+  ["storage-unit-cleanout", "storage-unit-cleanouts"],
+  ["piano-removal", "large-item-removal"],
+  ["playground-removal", "playset-swing-set-removal"],
+  ["electronics-removal", "e-waste-disposal"],
+  ["television-electronics-disposal", "e-waste-disposal"],
+  ["electronic-waste-disposal", "e-waste-disposal"],
+  ["renovation-waste-removal", "renovation-waste"],
+  ["office-furniture-removal", "office-cleanouts"],
+  ["office-furniture-removal-hauling", "office-cleanouts"],
+  ["exercise-equipment-san-diego", "exercise-equipment-removal"],
+  ["large-item-removal-hauling", "large-item-removal"],
+  ["same-day-junk-removal-san-diego", "same-day-junk-removal"],
+  ["appliance-removal-san-diego", "appliance-removal"],
+  ["mattress-disposal-san-diego", "mattress-disposal"],
+  ["garage-clean-out-san-diego-ca", "garage-cleanout"],
+  ["coach-removal-san-diego", "couch-removal"], // WP typo: "coach" → "couch"
+
+  // cleanout-flavored URLs → closest live cleanout slug
+  ["eviction-cleanout", "foreclosure-cleanouts"],
+  ["house-cleanout", "estate-cleanout"],
+  ["dorm-cleanout", "estate-cleanout"],
+  ["apartment-cleanout", "estate-cleanout"],
+  ["assisted-living-cleanout", "estate-cleanout"],
+
+  // generic catch-alls with a clear hub target
+  ["debris-removal", "junk-removal-services"],
+
+  // app-route renames
+  ["schedule-a-pickup", "book"],
+  ["locations-we-serve", "locations"],
+  ["about-junk-md", "our-company"],
+  ["contact-us", "contact"],
+];
+
+// WP category index pages.
+const CATEGORY_REDIRECTS: Array<[string, string]> = [
+  ["category/furniture-removal", "furniture-removal"],
+  ["category/mattress-removal", "mattress-disposal"],
+  ["category/junk-removal", "blog"],
+  ["category/junk-removal-service", "blog"],
+  ["category/junk-removal-san-diego", "blog"],
+];
+
 // ──────────────────────────────────────────────────────────────────────
 // TIER 2 — PENDING GSC TRAFFIC DATA. Do NOT wire until we see which of
 // these old URLs still earn impressions/clicks. Leaving here so they are
@@ -138,6 +193,16 @@ const nextConfig: NextConfig = {
         permanent: true,
       })),
       ...ONE_OFF_RENAMES.map(([from, to]) => ({
+        source: `/${from}`,
+        destination: `/${to}`,
+        permanent: true,
+      })),
+      ...SERVICE_KEYWORD_REDIRECTS.map(([from, to]) => ({
+        source: `/${from}`,
+        destination: `/${to}`,
+        permanent: true,
+      })),
+      ...CATEGORY_REDIRECTS.map(([from, to]) => ({
         source: `/${from}`,
         destination: `/${to}`,
         permanent: true,
