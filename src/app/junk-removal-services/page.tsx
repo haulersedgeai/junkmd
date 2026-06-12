@@ -29,7 +29,7 @@ export default function JunkRemovalHub() {
           <p className="text-[color:var(--brand-text)] mb-6">Anything in or around your home — furniture, appliances, mattresses, garage cleanouts, estate cleanouts, yard waste, and more.</p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
             {residential.map((s) => (
-              <ServiceCard key={s.slug} href={`/${s.slug}`} title={s.title} description={s.hero} image={s.image} />
+              <ServiceCard key={s.slug} href={`/${s.slug}`} title={s.title} description={s.hero} image={s.image} icon={s.icon} />
             ))}
           </div>
         </div>
@@ -41,7 +41,7 @@ export default function JunkRemovalHub() {
           <p className="text-[color:var(--brand-text)] mb-6">Offices, warehouses, restaurants, retail, and property management partners. After-hours service, COI-ready.</p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
             {commercial.map((s) => (
-              <ServiceCard key={s.slug} href={`/${s.slug}`} title={s.title} description={s.hero} image={s.image} />
+              <ServiceCard key={s.slug} href={`/${s.slug}`} title={s.title} description={s.hero} image={s.image} icon={s.icon} />
             ))}
           </div>
         </div>

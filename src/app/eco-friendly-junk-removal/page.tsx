@@ -42,7 +42,7 @@ export default function EcoHub() {
       <section className="py-12 bg-[color:var(--brand-bg-soft)]">
         <div className="container-x grid md:grid-cols-2 lg:grid-cols-4 gap-5">
           {items.map((s) => (
-            <ServiceCard key={s.slug} href={`/${s.slug}`} title={s.title} description={s.hero} image={s.image} />
+            <ServiceCard key={s.slug} href={`/${s.slug}`} title={s.title} description={s.hero} image={s.image} icon={s.icon} />
           ))}
         </div>
       </section>

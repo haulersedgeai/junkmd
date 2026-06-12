@@ -276,7 +276,8 @@ function ServicePage({ slug }: { slug: string }) {
                   href={`/${r!.slug}`}
                   title={r!.title}
                   description={r!.hero}
-                  image={("image" in r! ? (r as { image?: string }).image : undefined) as string | undefined}
+                  image={r!.image}
+                  icon={r!.icon}
                 />
               ))}
             </div>

@@ -21,6 +21,12 @@ export interface Service {
   faqs: { q: string; a: string }[];
   related: string[];     // slugs of related services
   image?: string;
+  /**
+   * lucide-react icon name. When set (and `image` is empty), the service
+   * card renders a branded icon panel instead of a real photo. Used for
+   * services where no honest in-category photo exists.
+   */
+  icon?: string;
 }
 
 const houseCallParagraph =
@@ -64,7 +70,7 @@ export const SERVICES: Service[] = [
       { q: "What does it cost?", a: "We give you a flat, up-front price the moment we see the load. No hidden fees. Single curbside items start at $79." },
     ],
     related: ["mattress-disposal", "couch-removal", "estate-cleanout", "appliance-removal"],
-    image: "/images/photos/in-home-removal/in-home-removal-san-diego-01.jpg",
+    image: "/images/photos/furniture-cleanout/furniture-cleanout-san-diego-03.jpg",
   },
   {
     slug: "appliance-removal",
@@ -130,7 +136,7 @@ export const SERVICES: Service[] = [
       { q: "Can I keep my bed frame?", a: "Of course. Tell the crew what's staying." },
     ],
     related: ["furniture-removal", "estate-cleanout", "couch-removal", "hoarder-cleanouts"],
-    image: "/images/photos/in-home-removal/in-home-removal-san-diego-04.jpg",
+    icon: "BedDouble",
   },
   {
     slug: "hot-tub-removal",
@@ -161,7 +167,7 @@ export const SERVICES: Service[] = [
       { q: "Will I need to repair my deck after?", a: "We're careful, but a hot tub leaves a footprint — sealed planks, stained concrete, or settled pavers. We'll point that out before we start." },
     ],
     related: ["shed-removal", "deck-removal", "playset-swing-set-removal", "concrete-removal"],
-    image: "/images/photos/yard-waste/yard-waste-removal-san-diego-04.jpg",
+    icon: "Bath",
   },
   {
     slug: "estate-cleanout",
@@ -193,7 +199,7 @@ export const SERVICES: Service[] = [
       { q: "Can you work with the realtor?", a: "Yes. We've worked with dozens of San Diego realtors and probate attorneys." },
     ],
     related: ["hoarder-cleanouts", "foreclosure-cleanouts", "house-cleanout", "donation-pickup"],
-    image: "/images/photos/team/team-junkmd-san-diego-03.jpg",
+    image: "/images/photos/in-home-removal/in-home-removal-san-diego-01.jpg",
   },
   {
     slug: "hoarder-cleanouts",
@@ -428,7 +434,7 @@ export const SERVICES: Service[] = [
       { q: "What about pet stains?", a: "We've seen everything. PPE and disposal both included." },
     ],
     related: ["flooring-removal", "basement-cleanouts", "house-cleanout", "renovation-waste"],
-    image: "/images/photos/furniture-cleanout/furniture-cleanout-san-diego-03.jpg",
+    icon: "Layers",
   },
   {
     slug: "tv-electronics-disposal",
@@ -458,7 +464,7 @@ export const SERVICES: Service[] = [
       { q: "What about data on hard drives?", a: "We can wipe or destroy drives on request. Tell us during booking." },
     ],
     related: ["e-waste-disposal", "office-cleanouts", "appliance-removal", "scrap-metal-removal"],
-    image: "/images/photos/furniture-cleanout/furniture-cleanout-san-diego-02.jpg",
+    icon: "Tv",
   },
   {
     slug: "refrigerator-freezer-disposal",
@@ -486,7 +492,7 @@ export const SERVICES: Service[] = [
       { q: "Will you take from upstairs?", a: "Yes — stairs, side yards, anywhere. That's the JunkMD+ house call." },
     ],
     related: ["appliance-removal", "commercial-appliance-removal", "e-waste-disposal", "scrap-metal-removal"],
-    image: "/images/photos/truck/junkmd-truck-san-diego-03.jpg",
+    icon: "Refrigerator",
   },
 
   // ───────── COMMERCIAL ─────────
@@ -546,7 +552,7 @@ export const SERVICES: Service[] = [
       { q: "Do I have to sort first?", a: "No. We can sort on-site with you or just haul it all." },
     ],
     related: ["estate-cleanout", "house-cleanout", "office-cleanouts", "warehouse-cleanouts"],
-    image: "/images/photos/yard-waste/yard-waste-removal-san-diego-03.jpg",
+    icon: "Boxes",
   },
   {
     slug: "warehouse-cleanouts",
@@ -574,7 +580,7 @@ export const SERVICES: Service[] = [
       { q: "Can you remove racking?", a: "Yes — heavy-duty pallet racking disassembly is part of warehouse work." },
     ],
     related: ["office-cleanouts", "commercial-junk-removal", "construction-debris-removal", "scrap-metal-removal"],
-    image: "/images/photos/construction-debris/construction-debris-removal-san-diego-01.jpg",
+    icon: "Warehouse",
   },
   {
     slug: "restaurant-junk-removal",
@@ -603,7 +609,7 @@ export const SERVICES: Service[] = [
       { q: "What about grease and fryer oil?", a: "We coordinate grease pickup with a certified hauler. We don't transport grease ourselves." },
     ],
     related: ["commercial-junk-removal", "commercial-appliance-removal", "office-cleanouts", "demolition-cleanup"],
-    image: "/images/photos/team/team-junkmd-san-diego-02.jpg",
+    icon: "UtensilsCrossed",
   },
   {
     slug: "retail-store-junk-removal",
@@ -631,7 +637,7 @@ export const SERVICES: Service[] = [
       { q: "Can you work overnight?", a: "Yes — common for retail." },
     ],
     related: ["commercial-junk-removal", "office-cleanouts", "warehouse-cleanouts", "demolition-cleanup"],
-    image: "/images/photos/team/team-junkmd-san-diego-04.jpg",
+    icon: "Store",
   },
   {
     slug: "construction-debris-removal",
@@ -717,7 +723,7 @@ export const SERVICES: Service[] = [
       { q: "Do you document for the board?", a: "Yes — pre/post photos delivered digitally with each invoice." },
     ],
     related: ["property-management-cleanouts", "commercial-junk-removal", "yard-waste-removal", "construction-debris-removal"],
-    image: "/images/photos/construction-debris/construction-debris-removal-san-diego-03.jpg",
+    icon: "Trash2",
   },
   {
     slug: "commercial-appliance-removal",
@@ -746,7 +752,7 @@ export const SERVICES: Service[] = [
       { q: "What about hard-plumbed gas lines?", a: "We disconnect what we can; gas line capping should be handled by a licensed plumber." },
     ],
     related: ["restaurant-junk-removal", "office-cleanouts", "appliance-removal", "warehouse-cleanouts"],
-    image: "/images/photos/truck/junkmd-truck-san-diego-banner-01.jpg",
+    icon: "Microwave",
   },
 
   // ───────── DEMOLITION ─────────
@@ -827,7 +833,7 @@ export const SERVICES: Service[] = [
       { q: "Do you install new fence?", a: "We don't install — we tear out and haul, so your fence contractor walks into a clean prep." },
     ],
     related: ["deck-removal", "shed-removal", "concrete-removal", "yard-waste-removal"],
-    image: "/images/photos/construction-debris/construction-debris-removal-san-diego-04.jpg",
+    icon: "Fence",
   },
   {
     slug: "playset-swing-set-removal",
@@ -908,7 +914,7 @@ export const SERVICES: Service[] = [
       { q: "Will you take the appliances?", a: "Yes — see our appliance removal service." },
     ],
     related: ["bathroom-demolition", "flooring-removal", "drywall-removal", "renovation-waste"],
-    image: "/images/photos/construction-debris/construction-debris-removal-san-diego-01.jpg",
+    icon: "ChefHat",
   },
   {
     slug: "bathroom-demolition",
@@ -935,7 +941,7 @@ export const SERVICES: Service[] = [
       { q: "What about an old cast-iron tub?", a: "Yes — we've removed plenty. They're heavy and require two crew, but we handle them." },
     ],
     related: ["kitchen-demolition", "flooring-removal", "drywall-removal", "renovation-waste"],
-    image: "/images/photos/team/team-junkmd-san-diego-04.jpg",
+    icon: "ShowerHead",
   },
   {
     slug: "flooring-removal",
@@ -988,7 +994,7 @@ export const SERVICES: Service[] = [
       { q: "Can you frame the new wall?", a: "We're demo + haul. Framing is your contractor." },
     ],
     related: ["kitchen-demolition", "bathroom-demolition", "renovation-waste", "construction-debris-removal"],
-    image: "/images/photos/team/team-junkmd-san-diego-03.jpg",
+    icon: "Hammer",
   },
 
   // ───────── ECO ─────────
@@ -1019,7 +1025,7 @@ export const SERVICES: Service[] = [
       { q: "What gets recycled vs trashed?", a: "We separate at our yard. Metal, electronics, wood, mattresses, and cardboard go to recyclers. Mixed contaminated waste goes to landfill." },
     ],
     related: ["eco-friendly-junk-removal", "scrap-metal-removal", "e-waste-disposal", "donation-pickup"],
-    image: "/images/photos/team/team-junkmd-san-diego-05.jpg",
+    icon: "Recycle",
   },
   {
     slug: "donation-pickup",
@@ -1047,7 +1053,7 @@ export const SERVICES: Service[] = [
       { q: "What if no charity wants it?", a: "Then it gets recycled or, last resort, landfilled. We try every option." },
     ],
     related: ["recycling-services", "eco-friendly-junk-removal", "estate-cleanout", "furniture-removal"],
-    image: "/images/photos/furniture-cleanout/furniture-cleanout-san-diego-01.jpg",
+    icon: "HandHeart",
   },
   {
     slug: "e-waste-disposal",
@@ -1076,7 +1082,7 @@ export const SERVICES: Service[] = [
       { q: "Are CRT TVs free?", a: "California recyclers accept CRTs at no extra fee. Our pickup fee covers labor and transport." },
     ],
     related: ["tv-electronics-disposal", "recycling-services", "scrap-metal-removal", "office-cleanouts"],
-    image: "/images/photos/furniture-cleanout/furniture-cleanout-san-diego-02.jpg",
+    icon: "Cpu",
   },
   {
     slug: "scrap-metal-removal",
@@ -1104,7 +1110,7 @@ export const SERVICES: Service[] = [
       { q: "Do you take car parts?", a: "Yes for most car parts, no for fluid-containing systems (those need a body shop)." },
     ],
     related: ["recycling-services", "e-waste-disposal", "appliance-removal", "construction-debris-removal"],
-    image: "/images/photos/furniture-cleanout/furniture-cleanout-san-diego-03.jpg",
+    icon: "Wrench",
   },
 
   // ───────── WHAT WE TAKE ─────────
@@ -1134,7 +1140,7 @@ export const SERVICES: Service[] = [
       { q: "Do you donate pianos?", a: "When possible — many pianos no longer have a donation home, sadly. We'll discuss during the quote." },
     ],
     related: ["furniture-removal", "exercise-equipment-removal", "hot-tub-removal", "appliance-removal"],
-    image: "/images/photos/team/team-junkmd-san-diego-04.jpg",
+    icon: "Boxes",
   },
   {
     slug: "renovation-waste",
@@ -1189,7 +1195,7 @@ export const SERVICES: Service[] = [
       { q: "Pelotons specifically?", a: "Yes. We've hauled hundreds." },
     ],
     related: ["furniture-removal", "garage-cleanout", "large-item-removal", "appliance-removal"],
-    image: "/images/photos/truck/junkmd-truck-san-diego-banner-01.jpg",
+    icon: "Dumbbell",
   },
   {
     slug: "cardboard-removal",
@@ -1216,7 +1222,7 @@ export const SERVICES: Service[] = [
       { q: "What about packing peanuts?", a: "Yes — we bag and dispose. Some can be recycled, some can't." },
     ],
     related: ["recycling-services", "office-cleanouts", "house-cleanout", "yard-waste-removal"],
-    image: "/images/photos/in-home-removal/in-home-removal-san-diego-02.jpg",
+    icon: "Package",
   },
   {
     slug: "pallet-removal",
@@ -1243,7 +1249,7 @@ export const SERVICES: Service[] = [
       { q: "Will you bring back empties?", a: "Generally no — we recycle, we don't operate a pallet exchange." },
     ],
     related: ["warehouse-cleanouts", "construction-debris-removal", "recycling-services", "cardboard-removal"],
-    image: "/images/photos/construction-debris/construction-debris-removal-san-diego-05.jpg",
+    icon: "Layers",
   },
   {
     slug: "property-cleanout",

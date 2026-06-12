@@ -49,3 +49,4 @@ next-env.d.ts
 
 # raw client photo archive (working set; selects are copied into public/images/photos/)
 /JunkMD website photos/
+/migration-archive/
