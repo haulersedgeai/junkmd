@@ -1,6 +1,7 @@
 export interface Location {
   slug: string;            // URL slug (matches existing junkmd.com where possible)
-  name: string;            // display name
+  name: string;            // display name used in all headings, body, and FAQ
+  seoLabel?: string;       // search phrase (e.g. "near me") used ONLY in <title>, H1, and intro
   zips?: string[];
   neighborhoods?: string[];
   landmarks?: string[];
@@ -822,8 +823,8 @@ export const LOCATIONS: Location[] = [
   },
   {
     slug: "junk-removal-near-me",
-    name: "San Diego County (Near Me)",
-    neighborhoods: ["All San Diego County zip codes"],
+    name: "San Diego County",
+    seoLabel: "near me",
     landmarks: SD_LANDMARKS.concat(COASTAL_LANDMARKS),
     highways: ["I-5", "I-8", "I-15", "I-805", "CA-52", "CA-56", "CA-78", "CA-163", "CA-125", "CA-94", "CA-67"],
     intro: "Looking for junk removal near you? JunkMD+ covers all of San Diego County — coast to mountains, North County to the South Bay. Based on Morena Blvd in the middle of the city, we're usually close by wherever you are, which is why so much of our work is same-day. Whatever corner of the county you're in, there's a good chance our green truck is already working nearby.",

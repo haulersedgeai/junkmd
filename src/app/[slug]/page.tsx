@@ -19,6 +19,10 @@ import { PRODUCTION_URL, SITE } from "@/lib/constants";
 
 type Params = { slug: string };
 
+function toTitle(s: string) {
+  return s.replace(/\b\w/g, (c) => c.toUpperCase());
+}
+
 const SERVICE_VIDEOS: Record<string, { videoId: string; title: string; description: string; uploadDate: string }> = {
   "estate-cleanout": {
     videoId: "aczlyPwxLpA",
@@ -46,12 +50,19 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
       alternates: { canonical: `/${slug}` },
     };
   const l = LOCATION_BY_SLUG[slug];
-  if (l)
+  if (l) {
+    const title = l.seoLabel
+      ? `Junk Removal ${toTitle(l.seoLabel)} — ${l.name} | JunkMD+`
+      : `Junk Removal in ${l.name}, CA — JunkMD+`;
+    const description = l.seoLabel
+      ? `JunkMD+ provides fast, friendly junk removal ${l.seoLabel} across ${l.name}. Same-day available. Save $20 on your first appointment.`
+      : `JunkMD+ provides fast, friendly, full-service junk removal in ${l.name}, San Diego. Save $20 on your first appointment. Same-day available.`;
     return {
-      title: `Junk Removal in ${l.name}, CA — JunkMD+`,
-      description: `JunkMD+ provides fast, friendly, full-service junk removal in ${l.name}, San Diego. Save $20 on your first appointment. Same-day available.`,
+      title,
+      description,
       alternates: { canonical: `/${slug}` },
     };
+  }
   return {};
 }
 
@@ -352,7 +363,11 @@ function LocationPage({ slug }: { slug: string }) {
               Junk Removal in {l.name}
             </span>
             <h1 className="font-display text-4xl md:text-5xl uppercase mb-3 leading-[1.05]">
-              Junk Removal in <span className="text-[color:var(--brand-green-dark)]">{l.name}</span>
+              {l.seoLabel ? (
+                <>Junk Removal <span className="text-[color:var(--brand-green-dark)]">{toTitle(l.seoLabel)}</span> in {l.name}</>
+              ) : (
+                <>Junk Removal in <span className="text-[color:var(--brand-green-dark)]">{l.name}</span></>
+              )}
             </h1>
             <p className="text-lg text-[color:var(--brand-text)] mb-5">{l.intro}</p>
             <div className="flex flex-wrap gap-3">
