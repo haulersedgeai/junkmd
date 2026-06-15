@@ -39,6 +39,7 @@ export const SERVICES: Service[] = [
   // ───────── RESIDENTIAL ─────────
   {
     slug: "furniture-removal",
+    icon: "Sofa",
     category: "residential",
     title: "Furniture Removal",
     metaTitle: "Furniture Removal San Diego — Couches, Beds, Dressers Hauled Away",
@@ -74,6 +75,7 @@ export const SERVICES: Service[] = [
   },
   {
     slug: "appliance-removal",
+    icon: "WashingMachine",
     category: "residential",
     title: "Appliance Removal",
     metaTitle: "Appliance Removal San Diego — Fridges, Washers, Dryers Hauled Away",
@@ -167,10 +169,11 @@ export const SERVICES: Service[] = [
       { q: "Will I need to repair my deck after?", a: "We're careful, but a hot tub leaves a footprint — sealed planks, stained concrete, or settled pavers. We'll point that out before we start." },
     ],
     related: ["shed-removal", "deck-removal", "playset-swing-set-removal", "concrete-removal"],
-    icon: "Bath",
+    icon: "Waves",
   },
   {
     slug: "estate-cleanout",
+    icon: "Home",
     category: "residential",
     title: "Estate Cleanout",
     metaTitle: "Estate Cleanout San Diego — Whole-House Clearing After Loss or Move",
@@ -203,6 +206,7 @@ export const SERVICES: Service[] = [
   },
   {
     slug: "hoarder-cleanouts",
+    icon: "Boxes",
     category: "residential",
     title: "Hoarder Cleanouts",
     metaTitle: "Hoarder Cleanout San Diego — Discreet, Compassionate, Thorough",
@@ -235,6 +239,7 @@ export const SERVICES: Service[] = [
   },
   {
     slug: "foreclosure-cleanouts",
+    icon: "KeyRound",
     category: "residential",
     title: "Foreclosure Cleanouts",
     metaTitle: "Foreclosure Cleanout San Diego — Realtor & Lender Trusted",
@@ -265,6 +270,7 @@ export const SERVICES: Service[] = [
   },
   {
     slug: "garage-cleanout",
+    icon: "Car",
     category: "residential",
     title: "Garage Cleanout",
     metaTitle: "Garage Cleanout San Diego — Reclaim Your Garage in One House Call",
@@ -296,6 +302,7 @@ export const SERVICES: Service[] = [
   },
   {
     slug: "attic-cleanouts",
+    icon: "ChevronsUp",
     category: "residential",
     title: "Attic Cleanouts",
     metaTitle: "Attic Cleanout San Diego — Decades of Storage Hauled Safely",
@@ -324,6 +331,7 @@ export const SERVICES: Service[] = [
   },
   {
     slug: "basement-cleanouts",
+    icon: "ChevronsDown",
     category: "residential",
     title: "Basement Cleanouts",
     metaTitle: "Basement Cleanout San Diego — Bulk Items & Storage Hauled",
@@ -353,6 +361,7 @@ export const SERVICES: Service[] = [
   },
   {
     slug: "yard-waste-removal",
+    icon: "Leaf",
     category: "residential",
     title: "Yard Waste Removal",
     metaTitle: "Yard Waste Removal San Diego — Branches, Leaves, Sod Hauled",
@@ -382,6 +391,7 @@ export const SERVICES: Service[] = [
   },
   {
     slug: "shed-removal",
+    icon: "Warehouse",
     category: "residential",
     title: "Shed Removal",
     metaTitle: "Shed Removal San Diego — Demolition & Haul-Away in One Visit",
@@ -498,6 +508,7 @@ export const SERVICES: Service[] = [
   // ───────── COMMERCIAL ─────────
   {
     slug: "office-cleanouts",
+    icon: "Building2",
     category: "commercial",
     title: "Office Cleanouts",
     metaTitle: "Office Cleanout San Diego — Furniture, Cubicles, Electronics Hauled",
@@ -552,7 +563,7 @@ export const SERVICES: Service[] = [
       { q: "Do I have to sort first?", a: "No. We can sort on-site with you or just haul it all." },
     ],
     related: ["estate-cleanout", "house-cleanout", "office-cleanouts", "warehouse-cleanouts"],
-    icon: "Boxes",
+    icon: "Container",
   },
   {
     slug: "warehouse-cleanouts",
@@ -641,6 +652,7 @@ export const SERVICES: Service[] = [
   },
   {
     slug: "construction-debris-removal",
+    icon: "Construction",
     category: "commercial",
     title: "Construction Debris Removal",
     metaTitle: "Construction Debris Removal San Diego — Job-Site Hauling",
@@ -670,6 +682,7 @@ export const SERVICES: Service[] = [
   },
   {
     slug: "property-management-cleanouts",
+    icon: "KeyRound",
     category: "commercial",
     title: "Property Management Cleanouts",
     metaTitle: "Property Management Cleanouts San Diego — Turnovers Made Easy",
@@ -758,6 +771,7 @@ export const SERVICES: Service[] = [
   // ───────── DEMOLITION ─────────
   {
     slug: "shed-demolition",
+    icon: "Home",
     category: "demolition",
     title: "Shed Demolition",
     metaTitle: "Shed Demolition San Diego — Tear-Down & Haul-Away in One Visit",
@@ -785,6 +799,7 @@ export const SERVICES: Service[] = [
   },
   {
     slug: "deck-removal",
+    icon: "Layers",
     category: "demolition",
     title: "Deck Removal",
     metaTitle: "Deck Removal San Diego — Wooden & Composite Deck Demolition",
@@ -837,6 +852,7 @@ export const SERVICES: Service[] = [
   },
   {
     slug: "playset-swing-set-removal",
+    icon: "Baby",
     category: "demolition",
     title: "Playset & Swing Set Removal",
     metaTitle: "Playset & Swing Set Removal San Diego — Kids Outgrew It? We Haul It",
@@ -864,6 +880,7 @@ export const SERVICES: Service[] = [
   },
   {
     slug: "concrete-removal",
+    icon: "BrickWall",
     category: "demolition",
     title: "Concrete Removal",
     metaTitle: "Concrete Removal San Diego — Slab & Driveway Demolition",
@@ -914,7 +931,7 @@ export const SERVICES: Service[] = [
       { q: "Will you take the appliances?", a: "Yes — see our appliance removal service." },
     ],
     related: ["bathroom-demolition", "flooring-removal", "drywall-removal", "renovation-waste"],
-    icon: "ChefHat",
+    icon: "CookingPot",
   },
   {
     slug: "bathroom-demolition",
@@ -941,10 +958,11 @@ export const SERVICES: Service[] = [
       { q: "What about an old cast-iron tub?", a: "Yes — we've removed plenty. They're heavy and require two crew, but we handle them." },
     ],
     related: ["kitchen-demolition", "flooring-removal", "drywall-removal", "renovation-waste"],
-    icon: "ShowerHead",
+    icon: "Bath",
   },
   {
     slug: "flooring-removal",
+    icon: "Grid2x2",
     category: "demolition",
     title: "Flooring Removal",
     metaTitle: "Flooring Removal San Diego — Tile, Vinyl, Laminate, Hardwood Ripped Up",
@@ -994,7 +1012,7 @@ export const SERVICES: Service[] = [
       { q: "Can you frame the new wall?", a: "We're demo + haul. Framing is your contractor." },
     ],
     related: ["kitchen-demolition", "bathroom-demolition", "renovation-waste", "construction-debris-removal"],
-    icon: "Hammer",
+    icon: "PanelTop",
   },
 
   // ───────── ECO ─────────
@@ -1144,6 +1162,7 @@ export const SERVICES: Service[] = [
   },
   {
     slug: "renovation-waste",
+    icon: "Hammer",
     category: "what-we-take",
     title: "Renovation Waste Removal",
     metaTitle: "Renovation Waste Removal San Diego — Drywall, Flooring, Cabinets Hauled",
@@ -1253,6 +1272,7 @@ export const SERVICES: Service[] = [
   },
   {
     slug: "property-cleanout",
+    icon: "Building",
     category: "what-we-take",
     title: "Property Cleanout",
     metaTitle: "Property Cleanout San Diego — Whole-Property Clearing",
@@ -1281,6 +1301,7 @@ export const SERVICES: Service[] = [
   },
   {
     slug: "same-day-junk-removal",
+    icon: "Zap",
     category: "what-we-take",
     title: "Same-Day Junk Removal",
     metaTitle: "Same-Day Junk Removal San Diego — On Site Within Hours",
@@ -1308,6 +1329,7 @@ export const SERVICES: Service[] = [
   },
   {
     slug: "couch-removal",
+    icon: "Sofa",
     category: "what-we-take",
     title: "Couch Removal",
     metaTitle: "Couch Removal San Diego — Sofas & Sectionals Hauled (Starting $85)",
