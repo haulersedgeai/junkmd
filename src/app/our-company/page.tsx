@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { CtaSection } from "@/components/cta-section";
 import { JsonLd } from "@/components/json-ld";
+import { ReviewGrid } from "@/components/review-grid";
 import { YoutubeEmbed } from "@/components/youtube-embed";
 import { videoSchema } from "@/lib/jsonld";
 import { BRAND_PHOTOS } from "@/content/photos";
@@ -143,10 +144,18 @@ export default function OurCompanyPage() {
             </p>
 
             <h2>What we believe</h2>
+            <p>
+              <strong>Make space for what matters.</strong> Junk removal sounds simple — pick up
+              the stuff, haul it away. But for our clients, the stuff usually represents something
+              heavier: a parent who passed, a divorce, a long-awaited remodel, a downsize, a fresh
+              start. How we show up matters. So we show up uniformed, on time, kind, and ready to
+              help you reclaim your space without making it weird.
+            </p>
             <ul>
               <li><strong>Show up.</strong> On time, in a uniform, with a clean truck.</li>
-              <li><strong>Quote up-front.</strong> Flat-rate. No surprises. Ever.</li>
-              <li><strong>Donate and recycle first.</strong> The landfill is the last resort, not the default.</li>
+              <li><strong>Quote up-front.</strong> Flat-rate, before we touch your stuff. No surprises.</li>
+              <li><strong>Move fast.</strong> Same-day or next-day on most weekdays. Two-hour arrival windows, Mon–Sat.</li>
+              <li><strong>Donate and recycle first.</strong> Less than 15% of a typical haul ends up in a landfill — the rest goes to Goodwill, Salvation Army, certified e-waste recyclers, metal scrappers, or green-waste facilities.</li>
               <li><strong>Treat clients like neighbors.</strong> Because most of them are.</li>
             </ul>
           </div>
@@ -286,6 +295,8 @@ export default function OurCompanyPage() {
           </div>
         </div>
       </section>
+
+      <ReviewGrid limit={6} />
 
       <CtaSection />
     </>

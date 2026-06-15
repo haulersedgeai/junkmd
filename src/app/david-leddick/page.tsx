@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function DavidPage() {
   return (
     <>
-      <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "About", href: "/about" }, { label: "David Leddick" }]} />
+      <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Our Company", href: "/our-company" }, { label: "David Leddick" }]} />
 
       <section className="py-12 bg-white">
         <div className="container-x grid lg:grid-cols-[1fr_2fr] gap-10">

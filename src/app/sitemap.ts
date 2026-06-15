@@ -7,7 +7,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
   const staticRoutes = [
     "",
-    "about",
     "our-company",
     "why-choose-us",
     "david-leddick",

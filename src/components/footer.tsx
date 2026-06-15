@@ -55,7 +55,6 @@ export function Footer() {
         <div className="lg:col-span-3">
           <p className="label text-white/60 mb-4" style={{ color: "rgba(255,255,255,0.55)" }}>Company</p>
           <ul className="space-y-2 text-[14px]">
-            <li><Link href="/about" className="text-white/75 hover:text-white">About</Link></li>
             <li><Link href="/our-company" className="text-white/75 hover:text-white">Our company</Link></li>
             <li><Link href="/why-choose-us" className="text-white/75 hover:text-white">Why choose us</Link></li>
             <li><Link href="/david-leddick" className="text-white/75 hover:text-white">David Leddick</Link></li>

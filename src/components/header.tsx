@@ -10,9 +10,8 @@ import { cn } from "@/lib/utils";
 const NAV = [
   {
     label: "About",
-    href: "/about",
+    href: "/our-company",
     items: [
-      { label: "About JunkMD+", href: "/about" },
       { label: "Our company", href: "/our-company" },
       { label: "Why choose us", href: "/why-choose-us" },
       { label: "David Leddick — Owner", href: "/david-leddick" },

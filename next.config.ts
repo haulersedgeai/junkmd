@@ -77,6 +77,10 @@ const LOCATION_RENAMES: Array<[string, string]> = [
 // Tier 1 misc one-offs.
 const ONE_OFF_RENAMES: Array<[string, string]> = [
   ["clementia-sandoval", "clemencia-sandoval"],
+  // /about was a new-site-only duplicate of /our-company. /our-company is the
+  // canonical About page (legacy /about-junk-md/ already 301s into it and it
+  // carries the migrated WP equity), so /about folds into /our-company.
+  ["about", "our-company"],
 ];
 
 // Tier 1.5 — service-keyword redirects from the 2026-06-11 sitemap audit.
