@@ -81,7 +81,7 @@ export function PricingTiers() {
                     href={SITE.bookingUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={cn("btn w-full", isPopular ? "btn-accent" : "btn-ghost-soft")}
+                    className="btn btn-accent w-full"
                   >
                     Book this load
                   </a>

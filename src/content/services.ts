@@ -507,6 +507,36 @@ export const SERVICES: Service[] = [
 
   // ───────── COMMERCIAL ─────────
   {
+    slug: "property-management-cleanouts",
+    icon: "KeyRound",
+    category: "commercial",
+    title: "Property Management Cleanouts",
+    metaTitle: "Property Management Cleanouts San Diego — Turnovers Made Easy",
+    metaDescription:
+      "Tenant turnovers, evictions, abandoned units — JunkMD+ partners with San Diego property managers for fast, photo-documented unit clearings. Net terms available.",
+    hero: "Tenant turnovers, evictions, and abandoned units — JunkMD+ is your on-call cleanout partner.",
+    intro:
+      "Property managers need a hauler who shows up on the day, photographs the work, and turns a unit on the timeline. JunkMD+ is a trusted partner for NARPM-affiliated San Diego property managers. " +
+      trustParagraph,
+    includes: [
+      "Full unit cleanouts (apartment, condo, house)",
+      "Furniture, appliances, food waste",
+      "Abandoned mattresses and personal items",
+      "Yard waste and exterior debris",
+      "Photo documentation pre/post",
+      "COI and net terms available",
+    ],
+    pricing: "Per-unit quoting. Portfolio discounts for repeat managers (5+ units/month).",
+    whyJunkMd:
+      "We're a NARPM San Diego Chapter partner. Insured, fast, and used to net-30 invoicing.",
+    faqs: [
+      { q: "Can you bill on net terms?", a: "Yes — net-30 standard for verified property management clients." },
+      { q: "Do you handle hoarder units?", a: "Yes — see our hoarder cleanouts service." },
+    ],
+    related: ["foreclosure-cleanouts", "hoarder-cleanouts", "estate-cleanout", "commercial-junk-removal"],
+    image: "/images/photos/truck/junkmd-truck-san-diego-02.jpg",
+  },
+  {
     slug: "office-cleanouts",
     icon: "Building2",
     category: "commercial",
@@ -679,36 +709,6 @@ export const SERVICES: Service[] = [
     ],
     related: ["demolition-cleanup", "renovation-waste", "concrete-removal"],
     image: "/images/photos/construction-debris/construction-debris-removal-san-diego-02.jpg",
-  },
-  {
-    slug: "property-management-cleanouts",
-    icon: "KeyRound",
-    category: "commercial",
-    title: "Property Management Cleanouts",
-    metaTitle: "Property Management Cleanouts San Diego — Turnovers Made Easy",
-    metaDescription:
-      "Tenant turnovers, evictions, abandoned units — JunkMD+ partners with San Diego property managers for fast, photo-documented unit clearings. Net terms available.",
-    hero: "Tenant turnovers, evictions, and abandoned units — JunkMD+ is your on-call cleanout partner.",
-    intro:
-      "Property managers need a hauler who shows up on the day, photographs the work, and turns a unit on the timeline. JunkMD+ is a trusted partner for NARPM-affiliated San Diego property managers. " +
-      trustParagraph,
-    includes: [
-      "Full unit cleanouts (apartment, condo, house)",
-      "Furniture, appliances, food waste",
-      "Abandoned mattresses and personal items",
-      "Yard waste and exterior debris",
-      "Photo documentation pre/post",
-      "COI and net terms available",
-    ],
-    pricing: "Per-unit quoting. Portfolio discounts for repeat managers (5+ units/month).",
-    whyJunkMd:
-      "We're a NARPM San Diego Chapter partner. Insured, fast, and used to net-30 invoicing.",
-    faqs: [
-      { q: "Can you bill on net terms?", a: "Yes — net-30 standard for verified property management clients." },
-      { q: "Do you handle hoarder units?", a: "Yes — see our hoarder cleanouts service." },
-    ],
-    related: ["foreclosure-cleanouts", "hoarder-cleanouts", "estate-cleanout", "commercial-junk-removal"],
-    image: "/images/photos/truck/junkmd-truck-san-diego-02.jpg",
   },
   {
     slug: "dumpster-overflow-cleanup",

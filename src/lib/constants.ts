@@ -121,7 +121,7 @@ export const PRICING_TIERS = [
     priceFrom: 526,
     priceDisplay: "$526–799",
     fraction: "Full truckload (≈ 6 pickup trucks)",
-    image: "/images/photos/truck/junkmd-truck-san-diego-02.jpg",
+    image: "/images/photos/truck/junkmd-truck-san-diego-banner-01.jpg",
     description:
       "Full truckload — equal to six pickup truck loads. Estate cleanout, hoarder cleanout, whole-house clear-out.",
     includes: [

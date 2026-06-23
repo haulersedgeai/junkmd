@@ -107,7 +107,7 @@ export function Footer() {
 
       {/* Partner row */}
       <div className="border-t border-white/10">
-        <div className="container-x py-6 flex flex-wrap items-center justify-center gap-x-10 gap-y-4 opacity-30">
+        <div className="container-x py-6 flex flex-wrap items-center justify-center gap-x-10 gap-y-4 opacity-90">
           {SITE.partners.map((p) => (
             <Image
               key={p.name}
@@ -115,7 +115,7 @@ export function Footer() {
               alt={p.name}
               width={90}
               height={36}
-              className="h-7 w-auto object-contain"
+              className="h-10 w-auto object-contain"
             />
           ))}
         </div>

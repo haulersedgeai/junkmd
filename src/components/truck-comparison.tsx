@@ -3,13 +3,37 @@ import Image from "next/image";
 function PickupSilhouette() {
   return (
     <svg viewBox="0 0 80 32" width="80" height="32" aria-hidden="true">
+      {/* Cab: roof, A-pillar slope, and door body */}
       <path
-        d="M2 24 V14 L20 14 L26 6 L48 6 L52 14 L72 14 L78 18 V24 H68 a4 4 0 1 1 -8 0 H22 a4 4 0 1 1 -8 0 H2 Z"
+        d="M10 22 V14 Q10 12 12 12 L22 12 L28 6 L40 6 Q42 6 42 8 V22 Z"
         fill="var(--ink-soft)"
-        opacity="0.55"
+        opacity="0.7"
       />
-      <circle cx="18" cy="24" r="3.5" fill="var(--ink)" />
-      <circle cx="64" cy="24" r="3.5" fill="var(--ink)" />
+      {/* Open bed: lower box with visible bed walls */}
+      <path
+        d="M42 22 V10 L72 10 Q74 10 74 12 V22 Z"
+        fill="none"
+        stroke="var(--ink-soft)"
+        strokeWidth="2"
+        strokeLinejoin="round"
+        opacity="0.7"
+      />
+      {/* Cab window cutout */}
+      <path
+        d="M24 12 L28 8 L38 8 Q39 8 39 9 V12 Z"
+        fill="#ffffff"
+        opacity="0.9"
+      />
+      {/* Chassis bar tying cab + bed */}
+      <rect x="10" y="22" width="64" height="2" fill="var(--ink-soft)" opacity="0.7" />
+      {/* Wheel wells (arches) */}
+      <path d="M14 24 a6 6 0 0 1 12 0" fill="none" stroke="var(--ink-soft)" strokeWidth="1.5" opacity="0.7" />
+      <path d="M54 24 a6 6 0 0 1 12 0" fill="none" stroke="var(--ink-soft)" strokeWidth="1.5" opacity="0.7" />
+      {/* Wheels */}
+      <circle cx="20" cy="25" r="4" fill="var(--ink)" />
+      <circle cx="60" cy="25" r="4" fill="var(--ink)" />
+      <circle cx="20" cy="25" r="1.5" fill="#ffffff" />
+      <circle cx="60" cy="25" r="1.5" fill="#ffffff" />
     </svg>
   );
 }
