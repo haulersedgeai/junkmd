@@ -176,7 +176,7 @@ function ServicePage({ slug }: { slug: string }) {
               <>
                 <h2>Pricing</h2>
                 <p>{s.pricing}</p>
-                <p className="text-sm text-[color:var(--brand-muted)]">First-appointment discount of $20 applies to Small Load and up.</p>
+                <p className="text-sm text-[color:var(--brand-muted)]">First-appointment discount of $20 applies to any pickup.</p>
               </>
             )}
           </div>
@@ -342,7 +342,7 @@ function LocationPage({ slug }: { slug: string }) {
     },
     {
       q: `Do you offer the $20 first-appointment discount in ${l.name}?`,
-      a: `Yes — every first-time JunkMD+ booking in ${l.name} earns $20 off any Small Load or larger. Mention it when booking or it applies automatically during the on-site quote.`,
+      a: `Yes — every first-time JunkMD+ booking in ${l.name} earns $20 off any pickup. Mention it when booking or it applies automatically during the on-site quote.`,
     },
   ];
   const faqs = l.faqOverrides ?? locationFaqs;
@@ -427,7 +427,7 @@ function LocationPage({ slug }: { slug: string }) {
             <p>Schedule a two-hour arrival window. Two uniformed pros pull up in a green JunkMD+ truck. We size the job in person, give you a flat up-front price, do all the lifting, and leave the space cleaner than we found it. We donate or recycle as much as possible before anything heads to the landfill.</p>
 
             <h2>Save $20 on Your First {l.name} House Call</h2>
-            <p>First-time JunkMD+ customers in {l.name} save $20 on any Small Load or larger. Mention it when booking or it'll apply automatically.</p>
+            <p>First-time JunkMD+ customers in {l.name} save $20 on any pickup. Mention it when booking or it'll apply automatically.</p>
 
             {l.localSections?.map((section) => (
               <div key={section.heading}>

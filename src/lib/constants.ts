@@ -16,7 +16,7 @@ export const SITE = {
   geo: { lat: 32.8274, lng: -117.2297 },
   hours: "Mon–Sat, 2-hour arrival windows",
   hoursMachine: ["Mo-Sa 08:00-18:00"],
-  priceRange: "$79–$799",
+  priceRange: "$99–$799",
   bookingUrl:
     "https://book.housecallpro.com/book/JunkMD/cbbc4ed5b59a42f8803b491591c78555",
   socials: {
@@ -67,8 +67,8 @@ export const PRICING_TIERS = [
     slug: "single-curbside",
     name: "Single Curbside Pickup",
     short: "1 Item",
-    priceFrom: 79,
-    priceDisplay: "$79",
+    priceFrom: 99,
+    priceDisplay: "$99",
     fraction: "Single item",
     image: "/images/photos/furniture-cleanout/furniture-cleanout-san-diego-01.jpg",
     description:

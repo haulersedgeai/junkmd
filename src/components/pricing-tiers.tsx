@@ -92,7 +92,7 @@ export function PricingTiers() {
         </div>
 
         <p className="mt-6 text-[13px] text-muted max-w-2xl" style={{ fontFamily: "var(--font-geist-mono), monospace" }}>
-          Price ranges shown · final flat price confirmed on site · $20 first-appointment discount applies to Small Load and up
+          Price ranges shown · final flat price confirmed on site · $20 first-appointment discount applies to any pickup
         </p>
       </div>
     </section>
