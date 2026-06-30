@@ -28,6 +28,22 @@ export default function CommercialHub() {
           ))}
         </div>
       </section>
+      <section className="py-12 bg-[color:var(--brand-bg-soft)]">
+        <div className="container-x prose-brand max-w-3xl mx-auto">
+          <h2>Who We Serve</h2>
+          <p>
+            Beyond offices and storefronts, JunkMD+ partners with San Diego communities that need cleanouts handled on a schedule and with care.
+          </p>
+          <h3>Senior Assisted Living</h3>
+          <p>
+            Move-ins, downsizing, and resident transitions generate more than a family can carry out. We clear units and rooms with discretion, work respectfully around residents and staff, and keep turnovers on the facility&apos;s timeline so the next resident can move in without delay.
+          </p>
+          <h3>Retirement Communities</h3>
+          <p>
+            From individual downsizing to unit turnovers and common-area refreshes, we&apos;re an on-call removal partner for San Diego retirement communities. Scheduled, low-disruption visits, insured crews, and COI on file for facility requirements.
+          </p>
+        </div>
+      </section>
       <CtaSection />
     </>
   );
