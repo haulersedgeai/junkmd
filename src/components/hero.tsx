@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Phone, Check } from "lucide-react";
+import { Check } from "lucide-react";
 import { HeroCarousel } from "@/components/hero-carousel";
 import { SITE } from "@/lib/constants";
 
@@ -13,14 +13,14 @@ const VALUE_BITS = [
 export function Hero({
   title,
   subtitle,
-  ctaPrimary = { label: "Book now", href: SITE.bookingUrl, external: true },
-  ctaSecondary = { label: SITE.phone, href: `tel:${SITE.phoneRaw}` },
+  ctaPrimary = { label: "Get a Quote", href: "/#quote" },
+  ctaSecondary = { label: "Book Now", href: SITE.bookingUrl, external: true },
 }: {
   badge?: string;
   title?: React.ReactNode;
   subtitle?: React.ReactNode;
   ctaPrimary?: { label: string; href: string; external?: boolean };
-  ctaSecondary?: { label: string; href: string };
+  ctaSecondary?: { label: string; href: string; external?: boolean };
   image?: string;
   imageAlt?: string;
 }) {
@@ -81,10 +81,13 @@ export function Hero({
           ) : (
             <Link href={ctaPrimary.href} className="btn btn-accent btn-lg">{ctaPrimary.label}</Link>
           )}
-          <a href={ctaSecondary.href} className="btn btn-ghost-white btn-lg">
-            <Phone className="h-4 w-4" />
-            {ctaSecondary.label}
-          </a>
+          {ctaSecondary.external ? (
+            <a href={ctaSecondary.href} target="_blank" rel="noopener noreferrer" className="btn btn-ghost-white btn-lg">
+              {ctaSecondary.label}
+            </a>
+          ) : (
+            <Link href={ctaSecondary.href} className="btn btn-ghost-white btn-lg">{ctaSecondary.label}</Link>
+          )}
         </div>
 
         <ul className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-[14px] text-white/90">

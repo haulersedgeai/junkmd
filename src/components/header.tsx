@@ -110,22 +110,17 @@ export function Header() {
         </nav>
 
         {/* Right side */}
-        <div className="hidden md:flex items-center gap-4 shrink-0">
+        <div className="hidden md:flex items-center gap-2 shrink-0">
+          <Link href="/#quote" className="btn btn-accent">
+            Get a Quote
+          </Link>
           <a
             href={`tel:${SITE.phoneRaw}`}
-            className="inline-flex items-center gap-2 text-[13px] text-ink hover:text-brand-dark transition-colors"
+            className="btn btn-outline inline-flex items-center gap-2"
             style={{ fontFamily: "var(--font-geist-mono), monospace", fontWeight: 500 }}
           >
             <Phone className="h-3.5 w-3.5" />
             {SITE.phone}
-          </a>
-          <a
-            href={SITE.bookingUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-accent"
-          >
-            Book now
           </a>
         </div>
 
@@ -147,22 +142,23 @@ export function Header() {
         )}
       >
         <nav className="container-x py-4">
-          <a
-            href={`tel:${SITE.phoneRaw}`}
-            className="flex items-center gap-2 py-3 text-ink"
-            style={{ fontFamily: "var(--font-geist-mono), monospace", fontWeight: 500 }}
-          >
-            <Phone className="h-4 w-4" />
-            {SITE.phone}
-          </a>
-          <a
-            href={SITE.bookingUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-accent w-full mb-4"
-          >
-            Book now
-          </a>
+          <div className="flex gap-2 mb-4">
+            <Link
+              href="/#quote"
+              onClick={() => setOpen(false)}
+              className="btn btn-accent flex-1"
+            >
+              Get a Quote
+            </Link>
+            <a
+              href={`tel:${SITE.phoneRaw}`}
+              className="btn btn-outline flex-1 inline-flex items-center justify-center gap-2"
+              style={{ fontFamily: "var(--font-geist-mono), monospace", fontWeight: 500 }}
+            >
+              <Phone className="h-4 w-4" />
+              {SITE.phone}
+            </a>
+          </div>
           {NAV.map((section) => (
             <details key={section.label} className="border-t border-border py-1 group">
               <summary className="text-[15px] py-3 cursor-pointer list-none flex items-center justify-between text-ink" style={{ fontWeight: 500 }}>
