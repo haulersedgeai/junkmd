@@ -537,6 +537,38 @@ export const SERVICES: Service[] = [
     image: "/images/photos/truck/junkmd-truck-san-diego-02.jpg",
   },
   {
+    slug: "realtor-cleanouts",
+    icon: "Home",
+    category: "commercial",
+    title: "Realtor & Listing Cleanouts",
+    metaTitle: "Realtor Cleanouts San Diego — Listing-Ready in One Visit",
+    metaDescription:
+      "Pre-listing declutter, post-close trash-outs, staging teardown — JunkMD+ gets San Diego listings photo-ready and closings clean. Fast turnarounds, agent partner rates, COI on file.",
+    hero: "Pre-listing clutter, post-close trash-outs, leftover staging — JunkMD+ gets your listing show-ready and your closings clean.",
+    intro:
+      "When a listing has to be photo-ready by Thursday, you need a hauler who hits the date. JunkMD+ clears seller leftovers, garage and attic clutter, and dead furniture before the photographer arrives — and handles the post-close trash-out when a property changes hands with junk still in it. We work around your showing schedule, document the work, and leave the space broom-clean. " +
+      trustParagraph,
+    includes: [
+      "Pre-listing declutter and full-property cleanouts",
+      "Post-close and trash-out clearings",
+      "Leftover furniture, appliances, and garage/attic junk",
+      "Staging furniture teardown and removal",
+      "Tenant and seller left-behind items",
+      "Broom-clean finish, photo documentation on request",
+    ],
+    pricing:
+      "Per-property quoting with agent partner rates for repeat business. Fast-turnaround scheduling to hit listing and closing dates.",
+    whyJunkMd:
+      "Agents call us because we show up on the day, work around showings, and leave a space that's ready for the camera. Insured, COI available, and used to closing-timeline pressure.",
+    faqs: [
+      { q: "Can you turn a property around before a listing date?", a: "Yes — fast-turnaround and same-week windows are our specialty. Give us the photo or showing date and we'll work backward from it." },
+      { q: "Do you bill the agent or the seller?", a: "Either — whatever the transaction needs. We can invoice the agent, the seller, or the brokerage, and we provide a COI when required." },
+      { q: "Can you remove staging after a sale?", a: "Yes — staging teardown and removal is part of what we do, scheduled around the close." },
+    ],
+    related: ["property-management-cleanouts", "estate-cleanout", "foreclosure-cleanouts", "commercial-junk-removal"],
+    image: "/images/photos/furniture-cleanout/furniture-cleanout-san-diego-01.jpg",
+  },
+  {
     slug: "office-cleanouts",
     icon: "Building2",
     category: "commercial",
