@@ -127,6 +127,11 @@ const SERVICE_KEYWORD_REDIRECTS: Array<[string, string]> = [
   ["locations-we-serve", "locations"],
   ["about-junk-md", "our-company"],
   ["contact-us", "contact"],
+
+  // Tier 1.5 follow-ups — WP pages with no 1:1 destination on the new site.
+  // Mapped to nearest live hub on the cutover-readiness audit (2026-06-30).
+  ["curbside-junk-removal", "junk-removal-services"],
+  ["christmas-tree-pickup", "recycling-services"],
 ];
 
 // WP category index pages.
@@ -138,50 +143,44 @@ const CATEGORY_REDIRECTS: Array<[string, string]> = [
   ["category/junk-removal-san-diego", "blog"],
 ];
 
-// ──────────────────────────────────────────────────────────────────────
-// TIER 2 — PENDING GSC TRAFFIC DATA. Do NOT wire until we see which of
-// these old URLs still earn impressions/clicks. Leaving here so they are
-// not lost from the migration backlog.
-//
-// Long-title WP blog posts (likely → /blog or 410):
-//   /advantages-of-minimalist-living/
-//   /affordable-junk-removal-in-san-diego-for-a-clean-space/
-//   /clean-spaces-made-simple-with-junk-removal-san-diego/
-//   /clear-out-unwanted-items-with-expert-junk-removal/
-//   /clear-the-chaos-with-expert-junk-removal-san-diego/
-//   /clear-your-space-with-expert-junk-removal-san-diego-services/
-//   /declutter-your-life-with-trusted-junk-removal/
-//   /discover-top-junk-removal-san-diego-services-today/
-//   /eco-friendly-junk-removal-in-san-diego-you-can-trust/
-//   /efficient-and-eco-friendly-junk-removal-san-diego-services/
-//   /effortless-mattress-removal-san-diego-made-simple-and-fast/
-//   /fast-and-reliable-junk-removal-in-san-diego-today/
-//   /fast-and-reliable-junk-removal-san-diego-for-any-space/
-//   /fast-clutter-cleanup-with-expert-junk-removal-san-diego/
-//   /fresh-spaces-with-junk-removal-san-diego-made-easy/
-//   /hassle-free-junk-removal-for-a-clean-environment/
-//   /homes-gain-space-through-junk-removal-near-me-services/
-//   /how-junk-removal-can-transform-your-property/
-//   /junk-removal-made-easy-for-homes-and-businesses/
-//   /junk-removal-san-diego-experts-for-hassle-free-cleanup/
-//   /junk-removal-services-for-a-clutter-free-home/
-//   /local-junk-removal-near-me-services-transform-streets/
-//   /property-improvements-driven-by-junk-removal-near-me/
-//   /reclaim-your-space-with-expert-junk-removal-san-diego/
-//   /reliable-furniture-removal-san-diego-experts-you-can-trust/
-//   /san-diego-moms-guide-clutter-free-home/
-//   /simplify-life-today-with-junk-removal-san-diego-team/
-//   /simplify-your-space-fast-with-junk-removal-san-diego/
-//   /smart-junk-removal-solutions-in-san-diego-you-will-love/
-//   /the-benefits-of-professional-junk-removal-san-diego/
-//   /top-junk-removal-san-diego-services-you-can-trust-today/
-//   /top-junk-removal-services-in-san-diego-for-your-home/
-//   /why-junk-removal-san-diego-is-a-local-essential/
-//
-// Low-confidence intent (need GSC + human review):
-//   /coach-removal-san-diego/      — likely WP typo for "couch"; verify before mapping
-//   /christmas-tree-pickup/        — seasonal; no obvious target
-// ──────────────────────────────────────────────────────────────────────
+// Long-title WP blog posts from the pre-cutover sitemap audit. Wired as a
+// blanket 301 to /blog as the safe floor; individual posts can be upgraded
+// to richer destinations later if GSC shows they still earn traffic.
+const BLOG_POST_REDIRECTS = [
+  "advantages-of-minimalist-living",
+  "affordable-junk-removal-in-san-diego-for-a-clean-space",
+  "clean-spaces-made-simple-with-junk-removal-san-diego",
+  "clear-out-unwanted-items-with-expert-junk-removal",
+  "clear-the-chaos-with-expert-junk-removal-san-diego",
+  "clear-your-space-with-expert-junk-removal-san-diego-services",
+  "declutter-your-life-with-trusted-junk-removal",
+  "discover-top-junk-removal-san-diego-services-today",
+  "eco-friendly-junk-removal-in-san-diego-you-can-trust",
+  "efficient-and-eco-friendly-junk-removal-san-diego-services",
+  "effortless-mattress-removal-san-diego-made-simple-and-fast",
+  "fast-and-reliable-junk-removal-in-san-diego-today",
+  "fast-and-reliable-junk-removal-san-diego-for-any-space",
+  "fast-clutter-cleanup-with-expert-junk-removal-san-diego",
+  "fresh-spaces-with-junk-removal-san-diego-made-easy",
+  "hassle-free-junk-removal-for-a-clean-environment",
+  "homes-gain-space-through-junk-removal-near-me-services",
+  "how-junk-removal-can-transform-your-property",
+  "junk-removal-made-easy-for-homes-and-businesses",
+  "junk-removal-san-diego-experts-for-hassle-free-cleanup",
+  "junk-removal-services-for-a-clutter-free-home",
+  "local-junk-removal-near-me-services-transform-streets",
+  "property-improvements-driven-by-junk-removal-near-me",
+  "reclaim-your-space-with-expert-junk-removal-san-diego",
+  "reliable-furniture-removal-san-diego-experts-you-can-trust",
+  "san-diego-moms-guide-clutter-free-home",
+  "simplify-life-today-with-junk-removal-san-diego-team",
+  "simplify-your-space-fast-with-junk-removal-san-diego",
+  "smart-junk-removal-solutions-in-san-diego-you-will-love",
+  "the-benefits-of-professional-junk-removal-san-diego",
+  "top-junk-removal-san-diego-services-you-can-trust-today",
+  "top-junk-removal-services-in-san-diego-for-your-home",
+  "why-junk-removal-san-diego-is-a-local-essential",
+];
 
 const nextConfig: NextConfig = {
   async redirects() {
@@ -209,6 +208,11 @@ const nextConfig: NextConfig = {
       ...CATEGORY_REDIRECTS.map(([from, to]) => ({
         source: `/${from}`,
         destination: `/${to}`,
+        permanent: true,
+      })),
+      ...BLOG_POST_REDIRECTS.map((slug) => ({
+        source: `/${slug}`,
+        destination: "/blog",
         permanent: true,
       })),
     ];
