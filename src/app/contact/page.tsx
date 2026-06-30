@@ -26,7 +26,7 @@ export default function ContactPage() {
               with pictures within minutes during business hours.
             </p>
             <div className="mt-6">
-              <Link href="/#quote" className="btn btn-primary btn-lg inline-flex items-center gap-2">
+              <Link href="/request-a-quote" className="btn btn-primary btn-lg inline-flex items-center gap-2">
                 Get a fast quote
                 <ArrowRight className="h-4 w-4" />
               </Link>

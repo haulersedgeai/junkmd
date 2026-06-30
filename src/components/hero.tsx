@@ -13,7 +13,7 @@ const VALUE_BITS = [
 export function Hero({
   title,
   subtitle,
-  ctaPrimary = { label: "Get a Quote", href: "/#quote" },
+  ctaPrimary = { label: "Get a Quote", href: "/request-a-quote" },
   ctaSecondary = { label: "Book Now", href: SITE.bookingUrl, external: true },
 }: {
   badge?: string;
@@ -73,22 +73,28 @@ export function Hero({
           {sub}
         </p>
 
-        <div className="mt-8 flex flex-wrap gap-3">
-          {ctaPrimary.external ? (
-            <a href={ctaPrimary.href} target="_blank" rel="noopener noreferrer" className="btn btn-accent btn-lg">
-              {ctaPrimary.label}
-            </a>
-          ) : (
-            <Link href={ctaPrimary.href} className="btn btn-accent btn-lg">{ctaPrimary.label}</Link>
-          )}
-          {ctaSecondary.external ? (
-            <a href={ctaSecondary.href} target="_blank" rel="noopener noreferrer" className="btn btn-ghost-white btn-lg">
-              {ctaSecondary.label}
-            </a>
-          ) : (
-            <Link href={ctaSecondary.href} className="btn btn-ghost-white btn-lg">{ctaSecondary.label}</Link>
-          )}
-        </div>
+        {(ctaPrimary.label || ctaSecondary.label) && (
+          <div className="mt-8 flex flex-wrap gap-3">
+            {ctaPrimary.label && (
+              ctaPrimary.external ? (
+                <a href={ctaPrimary.href} target="_blank" rel="noopener noreferrer" className="btn btn-accent btn-lg">
+                  {ctaPrimary.label}
+                </a>
+              ) : (
+                <Link href={ctaPrimary.href} className="btn btn-accent btn-lg">{ctaPrimary.label}</Link>
+              )
+            )}
+            {ctaSecondary.label && (
+              ctaSecondary.external ? (
+                <a href={ctaSecondary.href} target="_blank" rel="noopener noreferrer" className="btn btn-ghost-white btn-lg">
+                  {ctaSecondary.label}
+                </a>
+              ) : (
+                <Link href={ctaSecondary.href} className="btn btn-ghost-white btn-lg">{ctaSecondary.label}</Link>
+              )
+            )}
+          </div>
+        )}
 
         <ul className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-[14px] text-white/90">
           {VALUE_BITS.map((v) => (

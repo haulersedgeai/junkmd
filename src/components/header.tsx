@@ -111,7 +111,7 @@ export function Header() {
 
         {/* Right side */}
         <div className="hidden md:flex items-center gap-2 shrink-0">
-          <Link href="/#quote" className="btn btn-accent">
+          <Link href="/request-a-quote" className="btn btn-accent">
             Get a Quote
           </Link>
           <a
@@ -144,7 +144,7 @@ export function Header() {
         <nav className="container-x py-4">
           <div className="flex gap-2 mb-4">
             <Link
-              href="/#quote"
+              href="/request-a-quote"
               onClick={() => setOpen(false)}
               className="btn btn-accent flex-1"
             >

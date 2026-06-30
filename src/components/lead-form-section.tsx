@@ -10,7 +10,7 @@ const BULLETS = [
 
 export function LeadFormSection() {
   return (
-    <section className="section bg-bg" id="quote">
+    <section className="section bg-bg scroll-mt-20" id="quote">
       <div className="container-x">
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
           {/* Left copy column */}
