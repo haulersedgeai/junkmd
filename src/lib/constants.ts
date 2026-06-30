@@ -19,6 +19,10 @@ export const SITE = {
   priceRange: "$99–$799",
   bookingUrl:
     "https://book.housecallpro.com/book/JunkMD/cbbc4ed5b59a42f8803b491591c78555",
+  leadFormUrl:
+    "https://book.housecallpro.com/lead-form/JunkMD/311d4f60e0c4496cbff0c7b960728bf6",
+  leadFormScriptUrl:
+    "https://online-booking.housecallpro.com/script.js?token=311d4f60e0c4496cbff0c7b960728bf6&orgName=JunkMD",
   socials: {
     facebook: "https://facebook.com/junkmd",
     instagram: "https://instagram.com/thejunkmd",
