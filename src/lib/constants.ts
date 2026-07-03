@@ -44,6 +44,8 @@ export const SITE = {
     { name: "NetVendor Partner", logo: "/images/partners/netvendor.png" },
     { name: "NARPM San Diego Chapter", logo: "/images/partners/narpm.png" },
     { name: "Local Junkers", logo: "/images/partners/local-junkers.png" },
+    { name: "Goodwill Industries", logo: "/images/partners/goodwill.svg" },
+    { name: "The Salvation Army", logo: "/images/partners/salvation-army.svg" },
   ],
   youtube: {
     homeVideoId: "QTe8gUBzODg", // "What is Junk Removal? San Diego, CA"

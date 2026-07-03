@@ -134,7 +134,7 @@ export function ServiceCard({
             <Icon
               className="h-12 w-12"
               strokeWidth={1.75}
-              style={{ color: "#88c24e" }}
+              style={{ color: "var(--brand)" }}
             />
           </div>
         </div>

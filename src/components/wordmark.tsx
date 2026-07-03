@@ -68,9 +68,9 @@ export function Wordmark({ size = "lg", variant = "ink", className }: Props) {
   }
 
   const isLg = size === "lg";
-  const fontSize = isLg ? "26px" : "18px";
-  const crossPx = isLg ? 13 : 9;
-  const marginLeft = isLg ? "3px" : "2px";
+  const fontSize = isLg ? "34px" : "18px";
+  const crossPx = isLg ? 17 : 9;
+  const marginLeft = isLg ? "4px" : "2px";
   const marginTop = isLg ? "1px" : "0";
 
   return (

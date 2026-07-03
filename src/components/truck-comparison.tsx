@@ -6,17 +6,15 @@ function PickupSilhouette() {
       {/* Cab: roof, A-pillar slope, and door body */}
       <path
         d="M10 22 V14 Q10 12 12 12 L22 12 L28 6 L40 6 Q42 6 42 8 V22 Z"
-        fill="var(--ink-soft)"
-        opacity="0.7"
+        fill="var(--brand)"
       />
       {/* Open bed: lower box with visible bed walls */}
       <path
         d="M42 22 V10 L72 10 Q74 10 74 12 V22 Z"
         fill="none"
-        stroke="var(--ink-soft)"
+        stroke="var(--brand)"
         strokeWidth="2"
         strokeLinejoin="round"
-        opacity="0.7"
       />
       {/* Cab window cutout */}
       <path
@@ -25,10 +23,10 @@ function PickupSilhouette() {
         opacity="0.9"
       />
       {/* Chassis bar tying cab + bed */}
-      <rect x="10" y="22" width="64" height="2" fill="var(--ink-soft)" opacity="0.7" />
+      <rect x="10" y="22" width="64" height="2" fill="var(--brand)" />
       {/* Wheel wells (arches) */}
-      <path d="M14 24 a6 6 0 0 1 12 0" fill="none" stroke="var(--ink-soft)" strokeWidth="1.5" opacity="0.7" />
-      <path d="M54 24 a6 6 0 0 1 12 0" fill="none" stroke="var(--ink-soft)" strokeWidth="1.5" opacity="0.7" />
+      <path d="M14 24 a6 6 0 0 1 12 0" fill="none" stroke="var(--brand)" strokeWidth="1.5" />
+      <path d="M54 24 a6 6 0 0 1 12 0" fill="none" stroke="var(--brand)" strokeWidth="1.5" />
       {/* Wheels */}
       <circle cx="20" cy="25" r="4" fill="var(--ink)" />
       <circle cx="60" cy="25" r="4" fill="var(--ink)" />
