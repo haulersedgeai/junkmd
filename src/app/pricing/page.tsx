@@ -11,7 +11,7 @@ import { Calendar, Tag } from "lucide-react";
 export const metadata: Metadata = {
   title: "Pricing — JunkMD+ San Diego Junk Removal",
   description:
-    "Flat-rate junk removal pricing in San Diego. 4 tiers: Single Curbside ($99), Small Load ($197–329), Medium Load ($329–526), Large Load ($526–799). Save $20 first appointment.",
+    "Flat-rate junk removal pricing in San Diego. Nine load sizes from $119 to $899 — flat per-size pricing, no hidden fees. You only pay for the space you use.",
 };
 
 const FAQS = [
@@ -46,8 +46,8 @@ export default function PricingPage() {
       <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Pricing" }]} />
       <Hero
         badge="Flat-Rate, Up-Front Pricing"
-        title="JunkMD+ Pricing — Four Tiers, No Surprises"
-        subtitle="We size the job in person and quote a flat price before we touch a thing. Single items start at $99 — $79 for first-timers. Full truckloads (≈ 6 pickup trucks worth) up to $799."
+        title="JunkMD+ Pricing — Flexible Load Sizes"
+        subtitle="Nine load sizes from $119 to $899. Flat per-size pricing, no hidden fees — you only pay for the space you use. We confirm the flat price on site before we touch a thing."
         image="/images/photos/truck/junkmd-truck-san-diego-banner-01.jpg"
       />
 
