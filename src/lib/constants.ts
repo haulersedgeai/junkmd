@@ -77,7 +77,7 @@ export const PRICING_TIERS = [
     priceDisplay: "$119",
     fill: 6,
     image: "/images/photos/furniture-cleanout/furniture-cleanout-san-diego-01.jpg",
-    description: "A few small items, bags, or appliances",
+    description: "",
   },
   {
     slug: "eighth-truck",
@@ -87,7 +87,7 @@ export const PRICING_TIERS = [
     priceDisplay: "$217",
     fill: 12.5,
     image: "/images/photos/furniture-cleanout/furniture-cleanout-san-diego-01.jpg",
-    description: "Small cleanout: boxes, a chair, yard waste",
+    description: "",
   },
   {
     slug: "sixth-truck",
@@ -97,7 +97,7 @@ export const PRICING_TIERS = [
     priceDisplay: "$272",
     fill: 16.7,
     image: "/images/photos/yard-waste/yard-waste-removal-san-diego-01.jpg",
-    description: "Studio or office cleanout, small furniture",
+    description: "",
   },
   {
     slug: "quarter-truck",
@@ -107,7 +107,7 @@ export const PRICING_TIERS = [
     priceDisplay: "$362",
     fill: 25,
     image: "/images/photos/yard-waste/yard-waste-removal-san-diego-01.jpg",
-    description: "1-2 rooms of furniture or junk",
+    description: "",
   },
   {
     slug: "third-truck",
@@ -117,7 +117,7 @@ export const PRICING_TIERS = [
     priceDisplay: "$467",
     fill: 33.3,
     image: "/images/photos/yard-waste/yard-waste-removal-san-diego-01.jpg",
-    description: "3-room cleanout or large appliances",
+    description: "",
   },
   {
     slug: "half-truck",
@@ -127,7 +127,7 @@ export const PRICING_TIERS = [
     priceDisplay: "$579",
     fill: 50,
     image: "/images/photos/garage-cleanout/garage-cleanout-san-diego-01.jpg",
-    description: "Half a home's worth of junk",
+    description: "",
   },
   {
     slug: "five-eighths-truck",
@@ -137,7 +137,7 @@ export const PRICING_TIERS = [
     priceDisplay: "$697",
     fill: 62.5,
     image: "/images/photos/garage-cleanout/garage-cleanout-san-diego-01.jpg",
-    description: "Large estate or renovation debris",
+    description: "",
   },
   {
     slug: "seven-eighths-truck",
@@ -147,7 +147,7 @@ export const PRICING_TIERS = [
     priceDisplay: "$787",
     fill: 87.5,
     image: "/images/photos/truck/junkmd-truck-san-diego-banner-01.jpg",
-    description: "Nearly full truck — major cleanouts",
+    description: "",
   },
   {
     slug: "full-truck",
@@ -157,7 +157,7 @@ export const PRICING_TIERS = [
     priceDisplay: "$899",
     fill: 100,
     image: "/images/photos/truck/junkmd-truck-san-diego-banner-01.jpg",
-    description: "Complete home, office, or construction job",
+    description: "",
   },
 ] as const;
 

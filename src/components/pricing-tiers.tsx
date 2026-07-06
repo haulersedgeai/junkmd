@@ -63,9 +63,13 @@ export function PricingTiers() {
 
               <div className="hairline my-6" />
 
-              <p className="text-[14px] text-ink-soft leading-[1.55] flex-1 mb-6">
-                {tier.description}
-              </p>
+              {tier.description && (
+                <p className="text-[14px] text-ink-soft leading-[1.55] mb-6">
+                  {tier.description}
+                </p>
+              )}
+
+              <div className="flex-1" aria-hidden="true" />
 
               <a
                 href={SITE.bookingUrl}
