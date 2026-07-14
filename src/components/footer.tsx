@@ -114,9 +114,9 @@ export function Footer() {
               key={p.name}
               src={p.logo}
               alt={p.name}
-              width={90}
-              height={36}
-              className="h-10 w-auto object-contain"
+              width={p.w}
+              height={p.h}
+              className={`${p.heightClass ?? "h-10"} w-auto object-contain`}
             />
           ))}
         </div>

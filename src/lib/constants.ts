@@ -1,3 +1,11 @@
+type Partner = {
+  name: string;
+  logo: string;
+  w: number;
+  h: number;
+  heightClass?: string;
+};
+
 export const SITE = {
   name: "JunkMD+",
   legalName: "JunkMD Inc",
@@ -41,12 +49,12 @@ export const SITE = {
     clientsServed: 15000,
   },
   partners: [
-    { name: "NetVendor Partner", logo: "/images/partners/netvendor.png" },
-    { name: "NARPM San Diego Chapter", logo: "/images/partners/narpm.png" },
-    { name: "Local Junkers", logo: "/images/partners/local-junkers.png" },
-    { name: "Goodwill Industries", logo: "/images/partners/goodwill.svg" },
-    { name: "The Salvation Army", logo: "/images/partners/salvation-army.svg" },
-  ],
+    { name: "NetVendor Partner", logo: "/images/partners/netvendor.png", w: 3115, h: 420, heightClass: "h-8" },
+    { name: "NARPM San Diego Chapter", logo: "/images/partners/narpm.png", w: 186, h: 115, heightClass: "h-12" },
+    { name: "Local Junkers", logo: "/images/partners/local-junkers.png", w: 300, h: 300, heightClass: "h-10" },
+    { name: "Goodwill Industries", logo: "/images/partners/goodwill.svg", w: 341, h: 467, heightClass: "h-10" },
+    { name: "The Salvation Army", logo: "/images/partners/salvation-army.svg", w: 159, h: 187, heightClass: "h-10" },
+  ] satisfies Partner[],
   youtube: {
     homeVideoId: "QTe8gUBzODg", // "What is Junk Removal? San Diego, CA"
     secondVideoId: "3rvDnoEUsQE", // "What we remove"
