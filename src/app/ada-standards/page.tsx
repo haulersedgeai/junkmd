@@ -23,7 +23,7 @@ export default function AdaPage() {
             <li>Plain-language content</li>
           </ul>
           <h2>Feedback</h2>
-          <p>Found an accessibility issue? Email <a href="mailto:support@junkmd.com">support@junkmd.com</a> or call (858) 869-9448. We respond to accessibility requests promptly.</p>
+          <p>Found an accessibility issue? Email <a href="mailto:dave@junkmd.com">dave@junkmd.com</a> or call (858) 869-9448. We respond to accessibility requests promptly.</p>
         </div>
       </section>
     </>

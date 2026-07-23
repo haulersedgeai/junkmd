@@ -33,7 +33,7 @@ export default function PrivacyPage() {
           <h2>How We Don't Use It</h2>
           <p>We don't sell your personal information. We don't share it beyond what's needed to deliver service (our team, our booking system at HouseCall Pro, our email provider).</p>
           <h2>Your Rights</h2>
-          <p>Email <a href="mailto:support@junkmd.com">support@junkmd.com</a> to request a copy of your data or have it deleted.</p>
+          <p>Email <a href="mailto:dave@junkmd.com">dave@junkmd.com</a> to request a copy of your data or have it deleted.</p>
         </div>
       </section>
     </>

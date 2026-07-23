@@ -13,7 +13,7 @@ export const SITE = {
   mission: "Make Space for What Matters.",
   phone: "(858) 869-9448",
   phoneRaw: "+18588699448",
-  email: "support@junkmd.com",
+  email: "dave@junkmd.com",
   address: {
     street: "4901 Morena Blvd #105",
     city: "San Diego",
