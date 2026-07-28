@@ -70,11 +70,11 @@ export const SITE = {
   },
 };
 
-// DEMO MODE: pointed at the Vercel preview alias so canonical, og:url, og:image,
-// and metadataBase resolve correctly while the prospect reviews the demo.
-// SWAP BACK TO "https://junkmd.com" when DNS cuts over to the new site.
-export const PRODUCTION_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://junkmd.vercel.app";
+// Single source of truth for every absolute URL on the site: canonical,
+// og:url, sitemap, and JSON-LD all derive their base from this constant.
+// Hardcoded to the apex domain (DNS cut over to the new site) so no unset or
+// misconfigured env var can silently point canonicals at a preview host.
+export const PRODUCTION_URL = "https://junkmd.com";
 
 export const PRICING_TIERS = [
   {

@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: "Commercial Junk Removal San Diego — JunkMD+",
   description:
     "Commercial junk removal in San Diego — office cleanouts, warehouse cleanouts, restaurants, retail, construction debris, property management. COI-ready, insured.",
+  alternates: { canonical: "/commercial-junk-removal" },
 };
 
 export default function CommercialHub() {

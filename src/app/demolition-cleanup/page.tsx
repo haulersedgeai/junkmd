@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: "Light Demolition & Cleanup San Diego — JunkMD+",
   description:
     "Light demolition + haul-away in one house call. Sheds, decks, fences, concrete, kitchen, bath, flooring, drywall. Insured, flat-rate pricing.",
+  alternates: { canonical: "/demolition-cleanup" },
 };
 
 export default function DemolitionHub() {

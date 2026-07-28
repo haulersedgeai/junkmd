@@ -12,6 +12,7 @@ export const metadata: Metadata = {
   title: "Pricing — JunkMD+ San Diego Junk Removal",
   description:
     "Flat-rate junk removal pricing in San Diego. Nine load sizes from $119 to $899 — flat per-size pricing, no hidden fees. You only pay for the space you use.",
+  alternates: { canonical: "/pricing" },
 };
 
 const FAQS = [

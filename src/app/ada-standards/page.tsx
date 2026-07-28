@@ -4,6 +4,7 @@ import { Breadcrumbs } from "@/components/breadcrumbs";
 export const metadata: Metadata = {
   title: "Accessibility — JunkMD+",
   description: "JunkMD+ accessibility statement. We're committed to WCAG 2.1 AA conformance and welcome accessibility feedback.",
+  alternates: { canonical: "/ada-standards" },
 };
 
 export default function AdaPage() {

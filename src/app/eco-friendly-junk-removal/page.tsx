@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: "Eco-Friendly Junk Removal San Diego — JunkMD+",
   description:
     "JunkMD+ donates and recycles everything we can. Goodwill, Salvation Army, certified e-waste recyclers, scrap yards, green-waste facilities. Less than 15% to landfill.",
+  alternates: { canonical: "/eco-friendly-junk-removal" },
 };
 
 export default function EcoHub() {

@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: "Contact JunkMD+ — San Diego Junk Removal",
   description:
     "Get in touch with JunkMD+. Call (858) 869-9448, text us pictures of your junk, or book online. Same-day & next-day appointments across San Diego County.",
+  alternates: { canonical: "/contact" },
 };
 
 export default function ContactPage() {

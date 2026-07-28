@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   title: "Residential Junk Removal San Diego — JunkMD+",
   description:
     "Residential junk removal in San Diego — furniture, appliances, mattresses, estate cleanouts, garage cleanouts, yard waste, hot tub removal. Same-day available.",
+  alternates: { canonical: "/residential-junk-removal" },
 };
 
 export default function ResidentialHub() {

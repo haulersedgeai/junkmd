@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: "Clemencia Sandoval — Co-Owner of JunkMD+ San Diego",
   description:
     "Meet Clemencia Sandoval — co-owner of JunkMD+ since 2018. Leader behind customer care, operations, and community outreach for San Diego's top-rated junk removal company.",
+  alternates: { canonical: "/clemencia-sandoval" },
 };
 
 export default function ClemenciaPage() {

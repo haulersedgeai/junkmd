@@ -4,6 +4,7 @@ import { Breadcrumbs } from "@/components/breadcrumbs";
 export const metadata: Metadata = {
   title: "Privacy Policy — JunkMD+",
   description: "JunkMD+ privacy policy. How we collect, use, and protect your information.",
+  alternates: { canonical: "/privacy-policy" },
 };
 
 export default function PrivacyPage() {

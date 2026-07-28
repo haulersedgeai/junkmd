@@ -10,6 +10,7 @@ import { faqSchema } from "@/lib/jsonld";
 export const metadata: Metadata = {
   title: "FAQ — JunkMD+ Junk Removal San Diego",
   description: "Frequently asked questions about JunkMD+ junk removal — pricing, scheduling, what we take, recycling, the $20 first-appointment discount.",
+  alternates: { canonical: "/faq" },
 };
 
 export default function FaqPage() {

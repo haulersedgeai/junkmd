@@ -95,7 +95,7 @@ export function videoSchema(input: {
   description: string;
   uploadDate?: string;
 }) {
-  const { videoId, name, description, uploadDate = "2026-06-10" } = input;
+  const { videoId, name, description, uploadDate = "2026-06-10T09:00:00-07:00" } = input;
   return {
     "@context": "https://schema.org",
     "@type": "VideoObject",

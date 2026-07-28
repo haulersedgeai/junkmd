@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: "Careers at JunkMD+ — Join San Diego's Top-Rated Junk Removal Crew",
   description:
     "Looking for a junk removal job in San Diego? JunkMD+ hires hard-working, friendly crew members. Competitive pay, uniformed work, weekends off (Sundays). Apply today.",
+  alternates: { canonical: "/careers" },
 };
 
 const PERKS = [

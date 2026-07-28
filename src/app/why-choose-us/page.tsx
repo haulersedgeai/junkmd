@@ -13,6 +13,7 @@ import { SITE } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Why Choose JunkMD+ — Top-Rated San Diego Junk Removal",
   description: `Why JunkMD+? Family-owned since 2012, ${SITE.reviews.totalDisplay} 5-star reviews, flat-rate pricing, eco-friendly disposal, and a full-service house-call model. Save $20 first appointment.`,
+  alternates: { canonical: "/why-choose-us" },
 };
 
 const PILLARS = [
@@ -97,7 +98,7 @@ export default function WhyChooseUsPage() {
           name: "Benefits of Choosing JunkMD",
           description:
             "Why San Diego picks JunkMD+ — flat-rate house-call pricing, eco-first disposal, and a uniformed crew that shows up on time.",
-          uploadDate: "2026-06-08",
+          uploadDate: "2026-06-08T09:00:00-07:00",
         })}
       />
       <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Why Choose Us" }]} />

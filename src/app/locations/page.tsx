@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   title: "JunkMD+ Service Area — All San Diego County Locations",
   description:
     "JunkMD+ serves all of San Diego County — from La Jolla to Chula Vista, Carlsbad to Coronado. 60+ neighborhoods covered. Same-week service across the region.",
+  alternates: { canonical: "/locations" },
 };
 
 type Region = {

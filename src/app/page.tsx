@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Hero } from "@/components/hero";
 import { LeadFormSection } from "@/components/lead-form-section";
 import { ValuePillars } from "@/components/value-pillars";
@@ -15,6 +16,13 @@ import { GLOBAL_FAQS } from "@/content/faq";
 import { faqSchema } from "@/lib/jsonld";
 import { SITE } from "@/lib/constants";
 import { Check } from "lucide-react";
+
+// Self-referencing canonical only. Title, description, and openGraph are
+// inherited from the root layout — do not redeclare them here, since a
+// page-level openGraph object would replace the layout's rather than merge.
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 const CATEGORIES = [
   {

@@ -4,6 +4,7 @@ import { Breadcrumbs } from "@/components/breadcrumbs";
 export const metadata: Metadata = {
   title: "Terms & Conditions — JunkMD+",
   description: "Terms and conditions for using JunkMD+ services and website.",
+  alternates: { canonical: "/terms-conditions" },
 };
 
 export default function TermsPage() {

@@ -14,7 +14,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "careers",
     "contact",
     "request-a-quote",
-    "book",
+    // "book" is intentionally omitted: /book 307s off-domain to Housecall Pro,
+    // so it is not indexable. The route and every in-app link to it still work.
     "pricing",
     "faq",
     "blog",

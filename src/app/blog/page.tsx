@@ -6,6 +6,7 @@ import { Hero } from "@/components/hero";
 export const metadata: Metadata = {
   title: "Blog — JunkMD+ San Diego Junk Removal",
   description: "JunkMD+ blog — junk removal tips, decluttering guides, eco-friendly disposal advice for San Diego homes and businesses.",
+  alternates: { canonical: "/blog" },
 };
 
 const POSTS = [

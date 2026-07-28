@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: "Junk Removal Services — JunkMD+ San Diego",
   description:
     "Full-service junk removal in San Diego. Furniture, appliances, mattresses, estate cleanouts, hoarder cleanouts, demolition — JunkMD+ does it all.",
+  alternates: { canonical: "/junk-removal-services" },
 };
 
 export default function JunkRemovalHub() {

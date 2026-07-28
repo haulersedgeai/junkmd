@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: "What We Take — JunkMD+ San Diego",
   description:
     "Pianos, safes, exercise equipment, hot tubs, cardboard, renovation debris, couches — if you don't want it, JunkMD+ can probably haul it. Same-day available.",
+  alternates: { canonical: "/what-we-take" },
 };
 
 export default function WhatWeTakePage() {

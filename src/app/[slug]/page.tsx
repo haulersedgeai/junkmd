@@ -29,7 +29,7 @@ const SERVICE_VIDEOS: Record<string, { videoId: string; title: string; descripti
     title: "Stress-Free Property Cleanups Made Simple",
     description:
       "How JunkMD+ runs compassionate, full-service estate and property cleanouts in San Diego — sorting, donating, and hauling so families can focus on what matters.",
-    uploadDate: "2026-02-05",
+    uploadDate: "2026-02-05T09:00:00-08:00",
   },
 };
 

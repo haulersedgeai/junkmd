@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: "David Leddick — Owner of JunkMD+ San Diego",
   description:
     "Meet David Leddick — owner of JunkMD+ since 2012. Grew JunkMD+ from a one-truck operation to a three-truck family business serving 15,000+ San Diegans.",
+  alternates: { canonical: "/david-leddick" },
 };
 
 export default function DavidPage() {

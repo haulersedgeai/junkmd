@@ -13,6 +13,7 @@ export const metadata: Metadata = {
   title: "Our Company — JunkMD+ San Diego",
   description:
     "Learn about JunkMD+ — family-owned San Diego junk removal company since 2012. 15,000+ clients served, eco-friendly disposal, full-service house calls.",
+  alternates: { canonical: "/our-company" },
 };
 
 const STATS = [
@@ -32,7 +33,7 @@ export default function OurCompanyPage() {
           name: "About JunkMD",
           description:
             "Meet JunkMD+ — a family-owned San Diego junk removal company that treats every house call like the only one we're doing today.",
-          uploadDate: "2024-12-06",
+          uploadDate: "2024-12-06T09:00:00-08:00",
         })}
       />
       <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Our Company" }]} />

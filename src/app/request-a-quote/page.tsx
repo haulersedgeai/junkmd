@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: "Request a Quote — JunkMD+ Junk Removal",
   description:
     "Get a free, no-obligation quote from JunkMD+. Tell us what needs to go and we'll come back with a flat-rate quote, usually the same day. Same-day & next-day appointments across San Diego.",
+  alternates: { canonical: "/request-a-quote" },
 };
 
 export default function QuotePage() {
