@@ -49,18 +49,9 @@ const DUMPSTER_REDIRECTS = [
 ];
 
 // Tier 1 location renames — old WP flat city slugs → /junk-removal-<city>.
-//
-// Every target below is either a slug confirmed present in
-// src/content/locations.ts, or the /locations hub. Five legacy cities
-// (4S Ranch, Rancho Peñasquitos, Rolando, Spring Valley, Tierrasanta) have no
-// corresponding entry in locations.ts and therefore no live page, so they land
-// on /locations rather than 301-ing into a 404. They were fuzzy-matched against
-// all 47 location slugs and names first — the closest candidates (Scripps
-// Ranch, Rancho Bernardo, Coronado, Sorrento Valley, Rancho Santa Fe) are all
-// separate places, so pointing at them would be a wrong-destination redirect.
-// If a real page is ever added for one of these, repoint it here.
+// Each target slug is confirmed present in src/content/locations.ts.
 const LOCATION_RENAMES: Array<[string, string]> = [
-  ["4s-ranch", "locations"], // no junk-removal-4s-ranch page
+  ["4s-ranch", "junk-removal-4s-ranch"],
   ["chula-vista", "junk-removal-chula-vista"],
   ["encinitas", "junk-removal-encinitas"],
   ["hillcrest", "junk-removal-hillcrest"],
@@ -69,13 +60,13 @@ const LOCATION_RENAMES: Array<[string, string]> = [
   ["mission-valley", "junk-removal-mission-valley"],
   ["national-city", "junk-removal-national-city"],
   ["old-town", "junk-removal-old-town"],
-  ["rancho-penasquitos", "locations"], // no junk-removal-rancho-penasquitos page
-  ["rolando", "locations"], // no junk-removal-rolando page
+  ["rancho-penasquitos", "junk-removal-rancho-penasquitos"],
+  ["rolando", "junk-removal-rolando"],
   ["santee", "junk-removal-santee"],
   ["sorrento-valley", "junk-removal-sorrento-valley"],
   ["south-park", "junk-removal-south-park"],
-  ["spring-valley", "locations"], // no junk-removal-spring-valley page
-  ["tierrasanta", "locations"], // no junk-removal-tierrasanta page
+  ["spring-valley", "junk-removal-spring-valley"],
+  ["tierrasanta", "junk-removal-tierrasanta"],
   ["university-city", "junk-removal-university-city"],
   // junk-removal-* slug variants
   ["junk-removal-delmar", "junk-removal-del-mar"],
