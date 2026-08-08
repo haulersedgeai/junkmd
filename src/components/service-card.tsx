@@ -145,7 +145,7 @@ export function ServiceCard({
         </h3>
         <p className="mt-2 text-[14px] text-ink-soft leading-[1.55] line-clamp-2">{description}</p>
         <span
-          className="mt-auto pt-4 inline-flex items-center gap-1 text-[13px] text-brand-dark"
+          className="mt-auto pt-4 inline-flex items-center gap-1 text-[13px] text-brand-on-light"
           style={{ fontWeight: 500 }}
         >
           Learn more

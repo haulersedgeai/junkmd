@@ -25,7 +25,7 @@ export function FaqAccordion({ items, title }: { items: FaqItem[]; title?: strin
       <div className="container-x max-w-3xl mx-auto">
         {title && (
           <div className="mb-10">
-            <p className="label" style={{ color: "var(--brand-dark)" }}>FAQ</p>
+            <p className="label" style={{ color: "var(--brand-on-light)" }}>FAQ</p>
             <h2 className="mt-3">{title}</h2>
           </div>
         )}

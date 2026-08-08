@@ -235,7 +235,7 @@ export default function LocationsHub() {
               href={`/${nearMe.slug}`}
               className="block bg-[color:var(--brand-bg-soft)] border-2 border-[color:var(--brand-green)]/40 rounded-xl p-6 hover:border-[color:var(--brand-green)] transition-colors"
             >
-              <p className="label" style={{ color: "var(--brand-green-dark)" }}>Not sure which list you&apos;re in?</p>
+              <p className="label" style={{ color: "var(--brand-on-light)" }}>Not sure which list you&apos;re in?</p>
               <h2 className="font-display text-2xl md:text-3xl uppercase mt-2 leading-tight">
                 Junk removal near me →
               </h2>
@@ -253,7 +253,7 @@ export default function LocationsHub() {
           {grouped.map(({ region, cities }) => (
             <div key={region.key}>
               <div className="mb-6 max-w-2xl">
-                <p className="label" style={{ color: "var(--brand-dark)" }}>
+                <p className="label" style={{ color: "var(--brand-on-light)" }}>
                   {region.title}
                 </p>
                 <h2 className="font-display text-2xl md:text-3xl uppercase mt-2 leading-tight">

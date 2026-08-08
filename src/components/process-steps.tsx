@@ -5,7 +5,7 @@ export function ProcessSteps() {
     <section className="section bg-bg-soft border-y border-border">
       <div className="container-x">
         <div className="max-w-2xl mb-14">
-          <p className="label" style={{ color: "var(--brand-dark)" }}>How it works</p>
+          <p className="label" style={{ color: "var(--brand-on-light)" }}>How it works</p>
           <h2 className="mt-3">Your JunkMD+ house call, step by step.</h2>
         </div>
 

@@ -20,7 +20,7 @@ export function ReviewGrid({ limit }: { limit?: number }) {
     <section className="section bg-bg">
       <div className="container-x">
         <div className="max-w-2xl mb-12">
-          <p className="label" style={{ color: "var(--brand-dark)" }}>Reviews</p>
+          <p className="label" style={{ color: "var(--brand-on-light)" }}>Reviews</p>
           <h2 className="mt-3">5.0 stars from 1,396+ Google reviews.</h2>
         </div>
 

@@ -52,8 +52,11 @@ export default function PricingPage() {
         image="/images/photos/truck/junkmd-truck-san-diego-banner-01.jpg"
       />
 
-      {/* $20-off callout band */}
-      <section className="py-6 bg-[color:var(--brand-green-dark)] text-white">
+      {/* $20-off callout band.
+          Band fill is #3A790F — the same value as --brand-on-light, but written
+          literally because that token is documented text-only. White on #57BE13
+          was 2.39:1; on #3A790F it is 5.35:1. */}
+      <section className="py-6 bg-[#3A790F] text-white">
         <div className="container-x flex flex-wrap items-center justify-between gap-5">
           <div className="flex items-center gap-4 min-w-0">
             <div className="hidden sm:flex h-12 w-12 shrink-0 rounded-full bg-white/15 items-center justify-center">
@@ -86,7 +89,7 @@ export default function PricingPage() {
       <section className="section bg-bg-soft border-y border-border">
         <div className="container-x">
           <div className="max-w-2xl mb-12">
-            <p className="label" style={{ color: "var(--brand-dark)" }}>How pricing works</p>
+            <p className="label" style={{ color: "var(--brand-on-light)" }}>How pricing works</p>
             <h2 className="mt-3">No surprises. Ever.</h2>
             <p className="mt-4 text-[18px] leading-[1.55] text-ink-soft">
               The price you see on-site is the price you pay. Three steps from the truck pulling up to the truck pulling away.

@@ -21,7 +21,7 @@ export function ServiceAreasStrip() {
     <section className="section bg-bg-soft">
       <div className="container-x">
         <div className="max-w-2xl mb-10">
-          <p className="label" style={{ color: "var(--brand-dark)" }}>Service areas</p>
+          <p className="label" style={{ color: "var(--brand-on-light)" }}>Service areas</p>
           <h2 className="mt-3">We cover every city in San Diego County.</h2>
           <p className="mt-4 text-[18px] leading-[1.55] text-ink-soft">
             From La Jolla cliffs to Chula Vista, Carlsbad to Coronado — JunkMD+ trucks run every neighborhood, every day.

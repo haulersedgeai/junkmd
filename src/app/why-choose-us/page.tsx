@@ -159,7 +159,7 @@ export default function WhyChooseUsPage() {
         <div className="container-x grid lg:grid-cols-[1.25fr_1fr] gap-10 items-center">
           <YoutubeEmbed videoId="jFJkU_vllWw" title="Benefits of Choosing JunkMD" />
           <div>
-            <p className="label" style={{ color: "var(--brand-dark)" }}>The 90-second version</p>
+            <p className="label" style={{ color: "var(--brand-on-light)" }}>The 90-second version</p>
             <h2 className="mt-3">See why San Diego picks the green truck.</h2>
             <p className="mt-4 text-[18px] leading-[1.55] text-ink-soft">
               A quick look at the JunkMD+ house call — flat-rate pricing, donation-first
@@ -173,7 +173,7 @@ export default function WhyChooseUsPage() {
       <section className="section bg-bg">
         <div className="container-x">
           <div className="max-w-2xl mb-14">
-            <p className="label" style={{ color: "var(--brand-dark)" }}>The differentiators</p>
+            <p className="label" style={{ color: "var(--brand-on-light)" }}>The differentiators</p>
             <h2 className="mt-3">What makes a JunkMD+ house call different.</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-12">
@@ -192,7 +192,7 @@ export default function WhyChooseUsPage() {
       <section className="section bg-bg-soft border-y border-border">
         <div className="container-x">
           <div className="max-w-2xl mb-12">
-            <p className="label" style={{ color: "var(--brand-dark)" }}>The honest comparison</p>
+            <p className="label" style={{ color: "var(--brand-on-light)" }}>The honest comparison</p>
             <h2 className="mt-3">Three ways to clear a space. We&apos;re biased — but here&apos;s the trade-off.</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
@@ -209,7 +209,7 @@ export default function WhyChooseUsPage() {
                 >
                   <h3
                     className="font-display text-xl uppercase mb-4"
-                    style={{ color: isGood ? "var(--brand-dark)" : "var(--ink)" }}
+                    style={{ color: isGood ? "var(--brand-on-light)" : "var(--ink)" }}
                   >
                     {c.title}
                   </h3>

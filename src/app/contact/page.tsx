@@ -20,7 +20,7 @@ export default function ContactPage() {
       <section className="py-12 bg-white">
         <div className="container-x">
           <div className="max-w-2xl mb-10">
-            <span className="inline-block text-xs font-bold uppercase tracking-widest text-[color:var(--brand-green-dark)] mb-2">Contact Us</span>
+            <span className="inline-block text-xs font-bold uppercase tracking-widest text-[color:var(--brand-on-light)] mb-2">Contact Us</span>
             <h1 className="font-display text-4xl uppercase mb-3">Schedule a JunkMD+ House Call</h1>
             <p className="text-[color:var(--brand-text)] leading-relaxed">
               The fastest way to book a JunkMD+ house call is online or by phone. We respond to texts

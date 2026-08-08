@@ -32,7 +32,7 @@ export default function BlogPage() {
               <p className="text-xs text-[color:var(--brand-muted)] uppercase tracking-wider mb-2">{p.date}</p>
               <h2 className="font-display text-lg uppercase mb-2">{p.title}</h2>
               <p className="text-sm text-[color:var(--brand-text)]">{p.excerpt}</p>
-              <span className="mt-3 inline-block text-sm font-bold text-[color:var(--brand-green-dark)]">Coming soon →</span>
+              <span className="mt-3 inline-block text-sm font-bold text-[color:var(--brand-on-light)]">Coming soon →</span>
             </article>
           ))}
         </div>

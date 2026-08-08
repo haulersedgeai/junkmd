@@ -20,6 +20,12 @@
   --brand-dark: #57BE13;
   --brand-faint: #F0F7E6;
 
+  /* Text-only token for brand green on light backgrounds.
+     Passes WCAG AA at 4.86:1 or better on --bg, --bg-soft, --bg-muted, and
+     --brand-faint. NOT for dark backgrounds — use --brand there
+     (#3A790F on --ink is only 3.70:1). */
+  --brand-on-light: #3A790F;
+
   /* Aliases for legacy --brand-* refs scattered across pages.
      Map to the canonical tokens above so authored color/background/border
      references resolve instead of silently dropping. */
@@ -49,6 +55,7 @@
   --color-brand: var(--brand);
   --color-brand-dark: var(--brand-dark);
   --color-brand-faint: var(--brand-faint);
+  --color-brand-on-light: var(--brand-on-light);
   --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   --font-mono: var(--font-geist-mono), ui-monospace, "SF Mono", Menlo, Consolas, monospace;
 }
@@ -178,7 +185,7 @@ body {
   line-height: 1.4;
   white-space: nowrap;
 }
-.pill-success { background: var(--brand-faint); color: var(--brand-dark); }
+.pill-success { background: var(--brand-faint); color: var(--brand-on-light); }
 .pill-neutral { background: var(--bg-muted); color: var(--ink-soft); }
 .pill-ink { background: var(--ink); color: #ffffff; }
 .pill-outline { border: 1px solid var(--border-strong); color: var(--ink-soft); background: var(--bg); }

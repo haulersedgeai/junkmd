@@ -5,7 +5,7 @@ export function PricingTiers() {
     <section id="pricing" className="section bg-bg-soft">
       <div className="container-x">
         <div className="max-w-2xl mb-12">
-          <p className="label" style={{ color: "var(--brand-dark)" }}>Honest pricing</p>
+          <p className="label" style={{ color: "var(--brand-on-light)" }}>Honest pricing</p>
           <h2 className="mt-3">Nine load sizes — you only pay for the space you use.</h2>
           <p className="mt-4 text-[18px] leading-[1.55] text-ink-soft">
             You only pay for the space you use — no hidden fees.

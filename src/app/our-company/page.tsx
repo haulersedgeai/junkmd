@@ -92,7 +92,7 @@ export default function OurCompanyPage() {
         <div className="container-x grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
           {STATS.map((s) => (
             <div key={s.label}>
-              <p className="font-display text-4xl md:text-5xl text-[color:var(--brand-green-dark)] leading-none">
+              <p className="font-display text-4xl md:text-5xl text-[color:var(--brand-on-light)] leading-none">
                 {s.value}
               </p>
               <p className="mt-2 text-xs md:text-sm uppercase font-bold tracking-wide text-[color:var(--brand-ink)]">
@@ -107,7 +107,7 @@ export default function OurCompanyPage() {
       <section className="py-16 bg-white">
         <div className="container-x grid lg:grid-cols-[1fr_1.25fr] gap-10 items-center">
           <div>
-            <p className="label" style={{ color: "var(--brand-green-dark)" }}>Meet JunkMD</p>
+            <p className="label" style={{ color: "var(--brand-on-light)" }}>Meet JunkMD</p>
             <h2 className="mt-3">A house call, not a hassle.</h2>
             <p className="mt-4 text-[18px] leading-[1.55] text-ink-soft">
               Two minutes with the crew — how the green-truck house call works,
@@ -163,7 +163,7 @@ export default function OurCompanyPage() {
 
           <aside className="lg:sticky lg:top-24 self-start space-y-4">
             <div className="bg-[color:var(--brand-bg-soft)] border border-[color:var(--brand-border)] rounded-xl p-6">
-              <p className="label" style={{ color: "var(--brand-green-dark)" }}>Memberships</p>
+              <p className="label" style={{ color: "var(--brand-on-light)" }}>Memberships</p>
               <ul className="mt-3 space-y-2 text-sm text-[color:var(--brand-text)]">
                 <li>· NARPM San Diego Chapter</li>
                 <li>· NetVendor verified contractor</li>
@@ -172,7 +172,7 @@ export default function OurCompanyPage() {
               </ul>
             </div>
             <div className="bg-white border border-[color:var(--brand-border)] rounded-xl p-6">
-              <p className="label" style={{ color: "var(--brand-green-dark)" }}>Home base</p>
+              <p className="label" style={{ color: "var(--brand-on-light)" }}>Home base</p>
               <p className="mt-3 text-sm text-[color:var(--brand-text)] leading-relaxed">
                 We dispatch from Morena Blvd in Bay Park — central San Diego County, with most jobs
                 inside a 30-minute radius. Two-hour arrival windows, Mon–Sat.
@@ -186,7 +186,7 @@ export default function OurCompanyPage() {
       <section className="py-14 bg-white border-t border-[color:var(--brand-border)]">
         <div className="container-x">
           <div className="max-w-2xl mb-8">
-            <p className="label" style={{ color: "var(--brand-green-dark)" }}>The crew</p>
+            <p className="label" style={{ color: "var(--brand-on-light)" }}>The crew</p>
             <h2 className="mt-3">More of the people behind the green truck.</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -238,7 +238,7 @@ export default function OurCompanyPage() {
       <section className="py-16 bg-[color:var(--brand-bg-soft)] border-y border-[color:var(--brand-border)]">
         <div className="container-x">
           <div className="max-w-2xl mb-10">
-            <p className="label" style={{ color: "var(--brand-green-dark)" }}>The owners</p>
+            <p className="label" style={{ color: "var(--brand-on-light)" }}>The owners</p>
             <h2 className="mt-3">Family-owned and on the truck.</h2>
             <p className="mt-4 text-[18px] leading-[1.55] text-ink-soft">
               You&apos;re working with the people who run the company. No franchise, no call center.
@@ -260,7 +260,7 @@ export default function OurCompanyPage() {
               </div>
               <div className="p-6">
                 <h3 className="font-display text-2xl uppercase mb-1">David Leddick</h3>
-                <p className="text-sm text-[color:var(--brand-green-dark)] font-bold uppercase mb-2">
+                <p className="text-sm text-[color:var(--brand-on-light)] font-bold uppercase mb-2">
                   Owner — Since 2012
                 </p>
                 <p className="text-sm text-[color:var(--brand-text)]">
@@ -284,7 +284,7 @@ export default function OurCompanyPage() {
               </div>
               <div className="p-6">
                 <h3 className="font-display text-2xl uppercase mb-1">Clemencia Sandoval</h3>
-                <p className="text-sm text-[color:var(--brand-green-dark)] font-bold uppercase mb-2">
+                <p className="text-sm text-[color:var(--brand-on-light)] font-bold uppercase mb-2">
                   Co-Owner — Since 2018
                 </p>
                 <p className="text-sm text-[color:var(--brand-text)]">

@@ -73,7 +73,7 @@ export default function HomePage() {
       <section className="section bg-bg-soft">
         <div className="container-x">
           <div className="max-w-2xl mb-12">
-            <p className="label" style={{ color: "var(--brand-dark)" }}>What we haul</p>
+            <p className="label" style={{ color: "var(--brand-on-light)" }}>What we haul</p>
             <h2 className="mt-3">Whatever needs to go, we&rsquo;ll take it.</h2>
             <p className="mt-4 text-[18px] leading-[1.55] text-ink-soft">
               Residential, commercial, demolition, eco-friendly disposal. Five places to start.
@@ -97,7 +97,7 @@ export default function HomePage() {
       <section className="section bg-bg">
         <div className="container-x grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="max-w-xl">
-            <p className="label" style={{ color: "var(--brand-dark)" }}>See it in action</p>
+            <p className="label" style={{ color: "var(--brand-on-light)" }}>See it in action</p>
             <h2 className="mt-3">Two minutes inside a JunkMD+ house call.</h2>
             <p className="mt-4 text-[18px] leading-[1.55] text-ink-soft">
               Watch what we haul, how we price, and what makes the JunkMD+ house call different from every other junk-removal company in San Diego.

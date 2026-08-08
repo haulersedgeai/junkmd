@@ -15,7 +15,7 @@ export function LeadFormSection() {
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
           {/* Left copy column */}
           <div className="lg:col-span-5">
-            <p className="label" style={{ color: "var(--brand-dark)" }}>Get a quote</p>
+            <p className="label" style={{ color: "var(--brand-on-light)" }}>Get a quote</p>
             <h2 className="mt-3" style={{ fontSize: 32, fontWeight: 600, letterSpacing: "-0.02em", lineHeight: 1.15 }}>
               Tell us what needs to go.
             </h2>

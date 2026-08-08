@@ -135,11 +135,11 @@ function ServicePage({ slug }: { slug: string }) {
       <section className="bg-gradient-to-b from-[color:var(--brand-bg-soft)] to-white">
         <div className="container-x py-10 md:py-14 grid lg:grid-cols-2 gap-8 items-center">
           <div>
-            <span className="inline-block text-xs font-bold uppercase tracking-widest text-[color:var(--brand-green-dark)] mb-2">
+            <span className="inline-block text-xs font-bold uppercase tracking-widest text-[color:var(--brand-on-light)] mb-2">
               {hub.label} Junk Removal · San Diego
             </span>
             <h1 className="font-display text-4xl md:text-5xl uppercase mb-3 leading-[1.05]">
-              {s.h1 ?? s.title} <span className="text-[color:var(--brand-green-dark)]">San Diego</span>
+              {s.h1 ?? s.title} <span className="text-[color:var(--brand-on-light)]">San Diego</span>
             </h1>
             <p className="text-lg text-[color:var(--brand-text)] mb-5 max-w-xl">{s.hero}</p>
             <div className="flex flex-wrap gap-3">
@@ -221,7 +221,7 @@ function ServicePage({ slug }: { slug: string }) {
         <section className="py-12 bg-white border-t border-[color:var(--brand-border)]">
           <div className="container-x">
             <div className="max-w-2xl mb-8">
-              <span className="inline-block text-xs font-bold uppercase tracking-widest text-[color:var(--brand-green-dark)] mb-2">
+              <span className="inline-block text-xs font-bold uppercase tracking-widest text-[color:var(--brand-on-light)] mb-2">
                 On the job
               </span>
               <h2 className="font-display text-3xl uppercase leading-[1.1]">Real {s.title.toLowerCase()} jobs in San Diego</h2>
@@ -262,7 +262,7 @@ function ServicePage({ slug }: { slug: string }) {
           <div className="container-x grid lg:grid-cols-[1.1fr_1fr] gap-10 items-center">
             <YoutubeEmbed videoId={serviceVideo.videoId} title={serviceVideo.title} />
             <div>
-              <span className="inline-block text-xs font-bold uppercase tracking-widest text-[color:var(--brand-green-dark)] mb-2">
+              <span className="inline-block text-xs font-bold uppercase tracking-widest text-[color:var(--brand-on-light)] mb-2">
                 See it in action
               </span>
               <h2 className="font-display text-3xl md:text-4xl uppercase mb-3 leading-[1.1]">
@@ -365,14 +365,14 @@ function LocationPage({ slug }: { slug: string }) {
       <section className="bg-gradient-to-b from-[color:var(--brand-bg-soft)] to-white">
         <div className="container-x py-10 md:py-14 grid lg:grid-cols-2 gap-8 items-center">
           <div>
-            <span className="inline-block text-xs font-bold uppercase tracking-widest text-[color:var(--brand-green-dark)] mb-2">
+            <span className="inline-block text-xs font-bold uppercase tracking-widest text-[color:var(--brand-on-light)] mb-2">
               Junk Removal in {l.name}
             </span>
             <h1 className="font-display text-4xl md:text-5xl uppercase mb-3 leading-[1.05]">
               {l.seoLabel ? (
-                <>Junk Removal <span className="text-[color:var(--brand-green-dark)]">{toTitle(l.seoLabel)}</span> in {l.name}</>
+                <>Junk Removal <span className="text-[color:var(--brand-on-light)]">{toTitle(l.seoLabel)}</span> in {l.name}</>
               ) : (
-                <>Junk Removal in <span className="text-[color:var(--brand-green-dark)]">{l.name}</span></>
+                <>Junk Removal in <span className="text-[color:var(--brand-on-light)]">{l.name}</span></>
               )}
             </h1>
             <p className="text-lg text-[color:var(--brand-text)] mb-5">{l.intro}</p>
@@ -466,7 +466,7 @@ function LocationPage({ slug }: { slug: string }) {
                   {l.zips.map((z) => (
                     <span
                       key={z}
-                      className="inline-block text-xs font-bold px-2.5 py-1 rounded bg-[color:var(--brand-green)]/10 text-[color:var(--brand-green-dark)] border border-[color:var(--brand-green)]/30"
+                      className="inline-block text-xs font-bold px-2.5 py-1 rounded bg-[color:var(--brand-green)]/10 text-[color:var(--brand-on-light)] border border-[color:var(--brand-green)]/30"
                     >
                       {z}
                     </span>

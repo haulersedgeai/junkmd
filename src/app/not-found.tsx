@@ -41,7 +41,7 @@ export default function NotFound() {
           <span className="label">404 — Page not found</span>
           <h1 className="display mt-3 mb-4">
             We couldn&apos;t find that{" "}
-            <span className="text-brand-dark">page</span>
+            <span className="text-brand-on-light">page</span>
           </h1>
           <p className="text-lg text-ink-soft mb-7 max-w-xl">
             The page you were looking for has moved or no longer exists. Everything we

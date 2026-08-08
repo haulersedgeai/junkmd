@@ -14,7 +14,7 @@ export function ValuePillars() {
     <section className="section bg-bg">
       <div className="container-x">
         <div className="max-w-2xl mb-14">
-          <p className="label" style={{ color: "var(--brand-dark)" }}>Why JunkMD+</p>
+          <p className="label" style={{ color: "var(--brand-on-light)" }}>Why JunkMD+</p>
           <h2 className="mt-3">The locally-owned crew that goes the extra mile.</h2>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-10 gap-y-10">

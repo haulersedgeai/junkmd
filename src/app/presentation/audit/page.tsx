@@ -144,7 +144,7 @@ export default function AuditPage() {
                   {s.from}
                 </p>
                 <div className="hairline my-5" />
-                <p className="label mb-4" style={{ color: "var(--brand-dark)" }}>To</p>
+                <p className="label mb-4" style={{ color: "var(--brand-on-light)" }}>To</p>
                 <p
                   className="text-ink tnum"
                   style={{

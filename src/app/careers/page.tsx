@@ -120,7 +120,7 @@ export default function CareersPage() {
       <section className="section bg-bg">
         <div className="container-x">
           <div className="max-w-2xl mb-12">
-            <p className="label" style={{ color: "var(--brand-dark)" }}>Why work here</p>
+            <p className="label" style={{ color: "var(--brand-on-light)" }}>Why work here</p>
             <h2 className="mt-3">Local company, real team, room to grow.</h2>
             <p className="mt-4 text-[18px] leading-[1.55] text-ink-soft">
               JunkMD+ has been a family-owned San Diego business since 2012. Three trucks, eight people,
@@ -152,7 +152,7 @@ export default function CareersPage() {
       <section className="section bg-bg-soft border-y border-border">
         <div className="container-x grid lg:grid-cols-2 gap-10 lg:gap-16">
           <div>
-            <p className="label" style={{ color: "var(--brand-dark)" }}>What we look for</p>
+            <p className="label" style={{ color: "var(--brand-on-light)" }}>What we look for</p>
             <h2 className="mt-3">The kind of person who fits.</h2>
             <ul className="mt-6 space-y-3">
               {LOOK_FOR.map((line) => (
@@ -164,7 +164,7 @@ export default function CareersPage() {
             </ul>
           </div>
           <div>
-            <p className="label" style={{ color: "var(--brand-dark)" }}>Open roles</p>
+            <p className="label" style={{ color: "var(--brand-on-light)" }}>Open roles</p>
             <h2 className="mt-3">Where we&apos;re hiring right now.</h2>
             <div className="mt-6 space-y-4">
               {ROLES.map((r) => (
@@ -184,7 +184,7 @@ export default function CareersPage() {
       {/* How to apply */}
       <section className="section bg-bg">
         <div className="container-x max-w-3xl mx-auto text-center">
-          <p className="label" style={{ color: "var(--brand-dark)" }}>How to apply</p>
+          <p className="label" style={{ color: "var(--brand-on-light)" }}>How to apply</p>
           <h2 className="mt-3">Send a resume. We&apos;ll get back fast.</h2>
           <p className="mt-4 text-[18px] leading-[1.55] text-ink-soft">
             Email your resume — or just a short note about yourself — and we&apos;ll set up a call.

@@ -21,7 +21,7 @@ export function EcoProcess() {
     <section className="section bg-bg-soft">
       <div className="container-x">
         <div className="max-w-2xl mb-14">
-          <p className="label" style={{ color: "var(--brand-dark)" }}>How we dispose</p>
+          <p className="label" style={{ color: "var(--brand-on-light)" }}>How we dispose</p>
           <h2 className="mt-3">Donate. Recycle. Dispose.</h2>
           <p className="mt-4 text-[18px] leading-[1.55] text-ink-soft">
             Eco-friendly isn&rsquo;t a sticker on the truck. It&rsquo;s how we sort every load.
@@ -32,7 +32,7 @@ export function EcoProcess() {
           {STEPS.map((s) => (
             <div key={s.n}>
               <p
-                className="text-brand-dark tnum"
+                className="text-brand-on-light tnum"
                 style={{
                   fontFamily: "var(--font-geist-mono), monospace",
                   fontSize: 40,
