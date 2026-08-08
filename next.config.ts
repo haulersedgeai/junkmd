@@ -182,7 +182,39 @@ const BLOG_POST_REDIRECTS = [
   "why-junk-removal-san-diego-is-a-local-essential",
 ];
 
+// Security headers applied to every route.
+//
+// DELIBERATELY OMITTED — do not add these without re-testing the booking flow:
+//   - Content-Security-Policy (in any form, including Report-Only)
+//   - Trusted Types / require-trusted-types-for
+//   - Cross-Origin-Embedder-Policy
+//   - COOP set to plain "same-origin"
+//
+// The site embeds the Housecall Pro booking and lead widgets, which in turn pull
+// in Stripe, Google reCAPTCHA, Google Maps, Appcues, Segment, and Braze. A CSP
+// or COEP breaks booking and lead capture. Lighthouse will keep reporting CSP
+// and Trusted Types as failures under Best Practices — that is expected and
+// accepted, not an oversight.
+//
+// COOP is `same-origin-allow-popups` on purpose: Stripe and reCAPTCHA open popup
+// windows that must retain their `window.opener` reference. Plain `same-origin`
+// severs that and breaks them.
+const SECURITY_HEADERS = [
+  {
+    key: "Strict-Transport-Security",
+    value: "max-age=63072000; includeSubDomains; preload",
+  },
+  { key: "X-Content-Type-Options", value: "nosniff" },
+  { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+  { key: "X-Frame-Options", value: "SAMEORIGIN" },
+  { key: "Cross-Origin-Opener-Policy", value: "same-origin-allow-popups" },
+];
+
 const nextConfig: NextConfig = {
+  async headers() {
+    return [{ source: "/:path*", headers: SECURITY_HEADERS }];
+  },
+
   async redirects() {
     return [
       ...DUMPSTER_REDIRECTS.map((slug) => ({
