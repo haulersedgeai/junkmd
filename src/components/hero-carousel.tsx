@@ -54,12 +54,18 @@ export function HeroCarousel() {
                   animationPlayState: selectedIndex === i ? "running" : "paused",
                 }}
               >
+                {/* Slide 0 is the LCP element: static order, first visible at every
+                    viewport. `preload` (Next 16 replacement for the deprecated
+                    `priority`) puts the <link> in <head>; `fetchPriority` rides along
+                    into that link, lifting it from Low to High. Slides 1+ stay lazy —
+                    eager-loading the whole carousel would regress LCP. */}
                 <Image
                   src={s.src}
                   alt={s.alt}
                   fill
                   sizes="100vw"
-                  priority={i === 0}
+                  preload={i === 0}
+                  fetchPriority={i === 0 ? "high" : undefined}
                   className="object-cover"
                 />
               </div>
