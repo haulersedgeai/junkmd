@@ -91,7 +91,13 @@ function ServicePage({ slug }: { slug: string }) {
     eco: { label: "Eco-Friendly", href: "/eco-friendly-junk-removal" },
     "what-we-take": { label: "What We Take", href: "/what-we-take" },
   };
-  const hub = categoryHubMap[s.category];
+  // Fall back to the services hub rather than dereferencing undefined: a
+  // service authored with a category that isn't mapped above would otherwise
+  // throw on hub.label during SSR and return a 500 for the whole page.
+  const hub = categoryHubMap[s.category] ?? {
+    label: "Junk Removal Services",
+    href: "/junk-removal-services",
+  };
 
   const serviceVideo = SERVICE_VIDEOS[slug];
   const photos = SERVICE_PHOTOS[slug];
