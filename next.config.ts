@@ -72,6 +72,9 @@ const LOCATION_RENAMES: Array<[string, string]> = [
   ["junk-removal-delmar", "junk-removal-del-mar"],
   ["junk-removal-city-heights-ca", "junk-removal-city-heights"],
   ["junk-removal-la-mesa-ca", "junk-removal-la-mesa"],
+  // GSC "Not found (404)" export, 2026-08-16. Old WP flat service-area page;
+  // this was the entry whose Google validation attempt failed.
+  ["linda-vista", "junk-removal-linda-vista"],
 ];
 
 // Tier 1 misc one-offs.
@@ -180,6 +183,36 @@ const BLOG_POST_REDIRECTS = [
   "top-junk-removal-san-diego-services-you-can-trust-today",
   "top-junk-removal-services-in-san-diego-for-your-home",
   "why-junk-removal-san-diego-is-a-local-essential",
+  // GSC "Not found (404)" export, 2026-08-16 — five more posts from the same
+  // WP content farm that the original sitemap audit missed. No 1:1 live post
+  // exists (/blog is an index only), so they take the same /blog floor.
+  "neighborhoods-benefit-from-reliable-junk-removal-near-me",
+  "junk-removal-near-me-helps-communities-stay-organized",
+  "affordable-junk-removal-solutions-in-your-area-today",
+  "junk-removal-near-me-reduces-fire-hazards-in-communities",
+  "local-junk-removal-experts-for-stress-free-cleanouts",
+];
+
+// GSC "Not found (404)" export, 2026-08-16 — WP/infra artifacts and malformed
+// crawl paths. These need raw `source` strings rather than the `/${slug}`
+// mapping used above, either because they contain multiple segments or because
+// they use path-to-regexp syntax.
+const GSC_404_RAW_REDIRECTS = [
+  // WP's RSS endpoint. Nothing serves feeds on the new site; /blog is the
+  // closest live equivalent for anything still pointing here.
+  { source: "/feed", destination: "/blog", permanent: true },
+  // Real old WP post slug that Google keeps crawling with a mangled suffix
+  // (".../junkmd.com///youtu.be/_q9ZDyJIFmQ"). `:path+` catches every trailing
+  // variant if the platform collapses the repeated slashes. There is no live
+  // version of this post, so it lands on /blog.
+  {
+    source: "/how-safe-is-junk-removal-san-diego-service/:path+",
+    destination: "/blog",
+    permanent: true,
+  },
+  // Literal "/*" — crawl garbage from a mis-parsed robots/sitemap entry. The
+  // `*` is escaped so path-to-regexp treats it as a character, not a modifier.
+  { source: "/\\*", destination: "/", permanent: true },
 ];
 
 // Security headers applied to every route.
@@ -247,6 +280,7 @@ const nextConfig: NextConfig = {
         destination: "/blog",
         permanent: true,
       })),
+      ...GSC_404_RAW_REDIRECTS,
     ];
   },
 };
