@@ -188,6 +188,10 @@ const SERVICE_KEYWORD_REDIRECTS: Array<[string, string]> = [
   // Mapped to nearest live hub on the cutover-readiness audit (2026-06-30).
   ["curbside-junk-removal", "junk-removal-services"],
   ["christmas-tree-pickup", "recycling-services"],
+
+  // 2026-08-16 GSC drilldown. The map already had the "-ca" suffixed variant
+  // of this slug; the un-suffixed one was a genuine gap and 404'd in prod.
+  ["garage-clean-out-san-diego", "garage-cleanout"],
 ];
 
 // WP category index pages.
@@ -197,6 +201,9 @@ const CATEGORY_REDIRECTS: Array<[string, string]> = [
   ["category/junk-removal", "blog"],
   ["category/junk-removal-service", "blog"],
   ["category/junk-removal-san-diego", "blog"],
+  // The category page itself already 301s, but its RSS child did not — the
+  // parent rule is an exact match, not a prefix. (2026-08-16 GSC drilldown.)
+  ["category/junk-removal-san-diego/feed", "blog"],
 ];
 
 // Long-title WP blog posts from the pre-cutover sitemap audit. Wired as a
@@ -248,6 +255,12 @@ const BLOG_POST_REDIRECTS = [
   // `/how-safe-.../:path+` rule below. `:path+` requires at least one trailing
   // segment, so the clean URL was still falling through to a 404.
   "how-safe-is-junk-removal-san-diego-service",
+  // GSC "Crawled - currently not indexed" drilldown, 2026-08-16. Three more
+  // WP content-farm posts Google is still crawling. Confirmed 404 in prod, no
+  // live route or content file, not already a source in any block.
+  "local-areas-see-growth-in-eco-junk-removal-near-me",
+  "junk-removal-made-easy-declutter-your-space-today",
+  "junk-removal-near-me-encourages-organized-residential-areas",
 ];
 
 // GSC "Not found (404)" export, 2026-08-16 — WP/infra artifacts and malformed
