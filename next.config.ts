@@ -75,6 +75,59 @@ const LOCATION_RENAMES: Array<[string, string]> = [
   // GSC "Not found (404)" export, 2026-08-16. Old WP flat service-area page;
   // this was the entry whose Google validation attempt failed.
   ["linda-vista", "junk-removal-linda-vista"],
+  // Bare-slug backfill (2026-08-16 patch pass). /linda-vista turned up in GSC
+  // as a 404 only because it was the one bare city slug anybody had linked to
+  // recently — the same gap existed for every other location that never made
+  // the original Tier 1 list. Every location in src/content/locations.ts now
+  // has a bare /<city> → /junk-removal-<city> entry. Verified at generation
+  // time: none of these collide with a live app route, a service slug, a
+  // location slug, or an existing redirect source in any block.
+  ["allied-gardens", "junk-removal-allied-gardens"],
+  ["alpine", "junk-removal-alpine"],
+  ["bankers-hill", "junk-removal-bankers-hill"],
+  ["bay-park", "junk-removal-bay-park"],
+  ["bonita", "junk-removal-bonita"],
+  ["carlsbad", "junk-removal-carlsbad"],
+  ["carmel-valley", "junk-removal-carmel-valley"],
+  ["city-heights", "junk-removal-city-heights"],
+  ["clairemont", "junk-removal-clairemont"],
+  ["college-area", "junk-removal-college-area"],
+  ["coronado", "junk-removal-coronado"],
+  ["del-cerro", "junk-removal-del-cerro"],
+  ["del-mar", "junk-removal-del-mar"],
+  ["eastlake", "junk-removal-eastlake"],
+  ["el-cajon", "junk-removal-el-cajon"],
+  ["escondido", "junk-removal-escondido"],
+  ["fallbrook", "junk-removal-fallbrook"],
+  ["la-jolla", "junk-removal-la-jolla"],
+  ["la-jolla-shores", "junk-removal-la-jolla-shores"],
+  ["la-mesa", "junk-removal-la-mesa"],
+  ["lakeside", "junk-removal-lakeside"],
+  ["lemon-grove", "junk-removal-lemon-grove"],
+  ["mira-mesa", "junk-removal-mira-mesa"],
+  ["mission-beach", "junk-removal-mission-beach"],
+  ["mission-hills", "junk-removal-mission-hills"],
+  ["near-me", "junk-removal-near-me"],
+  ["north-park", "junk-removal-north-park"],
+  ["ocean-beach", "junk-removal-ocean-beach"],
+  ["oceanside", "junk-removal-oceanside"],
+  ["otay-mesa", "junk-removal-otay-mesa"],
+  ["otay-ranch", "junk-removal-otay-ranch"],
+  ["pacific-beach", "junk-removal-pacific-beach"],
+  ["pacific-highlands-ranch", "junk-removal-pacific-highlands-ranch"],
+  ["point-loma", "junk-removal-point-loma"],
+  ["poway", "junk-removal-poway"],
+  ["rancho-bernardo", "junk-removal-rancho-bernardo"],
+  ["rancho-santa-fe", "junk-removal-rancho-santa-fe"],
+  ["san-carlos", "junk-removal-san-carlos"],
+  ["san-diego", "junk-removal-san-diego"],
+  ["san-marcos", "junk-removal-san-marcos"],
+  ["san-ysidro", "junk-removal-san-ysidro"],
+  ["scripps-ranch", "junk-removal-scripps-ranch"],
+  ["solana-beach", "junk-removal-solana-beach"],
+  ["sunset-cliffs", "junk-removal-sunset-cliffs"],
+  ["torrey-pines", "junk-removal-torrey-pines"],
+  ["vista", "junk-removal-vista"],
 ];
 
 // Tier 1 misc one-offs.
@@ -191,6 +244,10 @@ const BLOG_POST_REDIRECTS = [
   "affordable-junk-removal-solutions-in-your-area-today",
   "junk-removal-near-me-reduces-fire-hazards-in-communities",
   "local-junk-removal-experts-for-stress-free-cleanouts",
+  // Bare slug for the post whose malformed variant is handled by the
+  // `/how-safe-.../:path+` rule below. `:path+` requires at least one trailing
+  // segment, so the clean URL was still falling through to a 404.
+  "how-safe-is-junk-removal-san-diego-service",
 ];
 
 // GSC "Not found (404)" export, 2026-08-16 — WP/infra artifacts and malformed
