@@ -18,6 +18,13 @@ const FOOTER_AREA_SLUGS = [
   "junk-removal-chula-vista",
   "junk-removal-oceanside",
   "junk-removal-escondido",
+  // Added 2026-08-16 after a GSC crawl audit: these three live location pages
+  // were reachable only from /locations (and the homepage strip, for Ocean
+  // Beach), so Google had never crawled them. The footer runs site-wide, which
+  // is how San Diego already earns its coverage.
+  "junk-removal-ocean-beach",
+  "junk-removal-solana-beach",
+  "junk-removal-fallbrook",
 ] as const;
 
 const FOOTER_AREAS = FOOTER_AREA_SLUGS.map((slug) => LOCATION_BY_SLUG[slug]);

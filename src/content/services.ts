@@ -533,7 +533,7 @@ export const SERVICES: Service[] = [
       { q: "Can you bill on net terms?", a: "Yes — net-30 standard for verified property management clients." },
       { q: "Do you handle hoarder units?", a: "Yes — see our hoarder cleanouts service." },
     ],
-    related: ["foreclosure-cleanouts", "hoarder-cleanouts", "estate-cleanout", "commercial-junk-removal"],
+    related: ["foreclosure-cleanouts", "hoarder-cleanouts", "estate-cleanout", "commercial-junk-removal", "dumpster-overflow-cleanup"],
     image: "/images/photos/truck/junkmd-truck-san-diego-02.jpg",
   },
   {
@@ -739,7 +739,7 @@ export const SERVICES: Service[] = [
       { q: "Do you take concrete?", a: "Yes — see concrete removal. Note: concrete is dense and may run a higher fee per load." },
       { q: "Can you bring a dumpster?", a: "No — JunkMD+ doesn't rent dumpsters. We're a full-service crew: we bring the truck and haul the debris ourselves." },
     ],
-    related: ["demolition-cleanup", "renovation-waste", "concrete-removal"],
+    related: ["demolition-cleanup", "renovation-waste", "concrete-removal", "dumpster-overflow-cleanup"],
     image: "/images/photos/construction-debris/construction-debris-removal-san-diego-02.jpg",
   },
   {
